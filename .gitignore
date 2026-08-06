@@ -42,3 +42,4 @@ next-env.d.ts
 /work/
 .server-*.log
 .devserver*.log
+/.package-stage/

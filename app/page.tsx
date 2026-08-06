@@ -2,11 +2,12 @@
 
 import { useMemo, useState } from "react";
 
-type Mission = "home" | "discover" | "decide" | "communicate" | "track" | "intelligence";
+type Mission = "home" | "opportunities" | "discover" | "decide" | "communicate" | "track" | "intelligence";
 type WorkspaceKey = "idea" | "company" | "researcher";
 
 const missions: { id: Mission; label: string; glyph: string }[] = [
   { id: "home", label: "Início", glyph: "⌒" },
+  { id: "opportunities", label: "Oportunidades", glyph: "▦" },
   { id: "discover", label: "Descobrir", glyph: "◎" },
   { id: "decide", label: "Decidir", glyph: "◇" },
   { id: "communicate", label: "Comunicar", glyph: "▷" },
@@ -15,15 +16,19 @@ const missions: { id: Mission; label: string; glyph: string }[] = [
 ];
 
 const workspaces = {
-  idea: { eyebrow: "IDEIA", title: "Redes privadas 6G para indústria", meta: "Em exploração · Responsável: Inês M.", tone: "blue" },
+  idea: { eyebrow: "IDEIA", title: "Redes privadas 6G para indústria", meta: "Em exploração · Responsável: Inês Carmo", tone: "blue" },
   company: { eyebrow: "EMPRESA", title: "ABC Energia", meta: "2 ideias ativas · Último contacto há 4 dias", tone: "amber" },
   researcher: { eyebrow: "INVESTIGADORA", title: "Ana Silva", meta: "Pattern and Image Analysis · 3 ideias", tone: "green" },
 };
 
 const opportunities = [
-  { id: "horizon", name: "HORIZON-CL4 — Smart Networks and Services", fit: "Forte adequação", deadline: "14 out 2026", condition: "Consórcio internacional", why: "6G, redes privadas e pilotos industriais", tone: "good" },
-  { id: "eurostars", name: "Eurostars Call 12", fit: "Adequação condicionada", deadline: "19 mar 2027", condition: "PME líder · 2 países", why: "I&D empresarial e protótipo próximo do mercado", tone: "warn" },
-  { id: "compete", name: "COMPETE 2030 — I&D em Copromoção", fit: "Possível", deadline: "29 dez 2026", condition: "Empresa portuguesa líder", why: "Demonstração industrial e participação do IT", tone: "neutral" },
+  { id: "horizon", code: "HORIZON-CL4-2026-SNS", name: "HORIZON-CL4 — Smart Networks and Services", program: "Horizon Europe", area: "Redes & Comunicações", group: "Network Architectures and Protocols", researcher: "A validar", type: "Projeto colaborativo", state: "Aberta", fit: "Forte adequação", deadline: "14 out 2026", days: 69, condition: "Consórcio internacional", why: "6G, redes privadas e pilotos industriais", tone: "good" },
+  { id: "eurostars", code: "EUROSTARS-12", name: "Eurostars Call 12", program: "Eureka", area: "Transversal", group: "Network Applications and Services", researcher: "A validar", type: "I&D empresarial", state: "Prevista", fit: "Adequação condicionada", deadline: "19 mar 2027", days: 225, condition: "PME líder · 2 países", why: "I&D empresarial e protótipo próximo do mercado", tone: "warn" },
+  { id: "compete", code: "MPR-2026-7", name: "COMPETE 2030 — I&D em Copromoção", program: "COMPETE 2030", area: "Transversal", group: "Todos os grupos", researcher: "A validar", type: "I&D empresarial", state: "Aberta", fit: "Possível", deadline: "29 dez 2026", days: 145, condition: "Empresa portuguesa líder", why: "Demonstração industrial e participação do IT", tone: "neutral" },
+  { id: "erc", code: "ERC-2027-STG", name: "ERC Starting Grant 2027", program: "Horizon Europe", area: "Bottom-up", group: "Todos os grupos", researcher: "Perfis elegíveis", type: "Financiamento individual", state: "Aberta", fit: "Estratégica", deadline: "14 out 2026", days: 69, condition: "PI individual", why: "Consolidação de independência científica", tone: "good" },
+  { id: "cost", code: "OC-2026-1", name: "COST Open Call 2026", program: "COST", area: "Networking", group: "Todos os grupos", researcher: "A validar", type: "Networking", state: "Prevista", fit: "Muito alto", deadline: "28 out 2026", days: 83, condition: "Rede europeia", why: "Criação de redes e preparação de consórcios", tone: "good" },
+  { id: "digital", code: "DIGITAL-2026-AI-10", name: "Digital Europe — AI Piloting", program: "Digital Europe", area: "IA & Computer Vision", group: "Pattern and Image Analysis", researcher: "A validar", type: "Projeto colaborativo", state: "Aberta", fit: "Alto", deadline: "03 nov 2026", days: 89, condition: "Consórcio europeu", why: "Pilotos de inteligência artificial aplicada", tone: "good" },
+  { id: "esa", code: "ARTES-BA", name: "ESA ARTES Business Applications", program: "ESA", area: "Espaço & GNSS", group: "Network Applications and Services", researcher: "A validar", type: "I&D aplicada", state: "Aberta", fit: "Condicionada", deadline: "Contínua", days: 999, condition: "Parceiro utilizador", why: "Serviços digitais suportados por ativos espaciais", tone: "warn" },
 ];
 
 const initialTasks = [
@@ -65,6 +70,7 @@ export default function Home() {
   const [tasks, setTasks] = useState(initialTasks);
   const [assistantOpen, setAssistantOpen] = useState(true);
   const [assistantInput, setAssistantInput] = useState("");
+  const [globalSearchOpen, setGlobalSearchOpen] = useState(false);
   const [assistantReply, setAssistantReply] = useState("A melhor próxima ação é confirmar o demonstrador industrial antes de fechar a shortlist.");
   const activeWorkspace = workspaces[workspace];
   const shortlistItems = useMemo(() => opportunities.filter((item) => shortlist.includes(item.id)), [shortlist]);
@@ -95,9 +101,9 @@ export default function Home() {
         </nav>
         <div className="sidebar-spacer" />
         <div className="nav-label">UTILITÁRIOS</div>
-        <button className="utility"><span>⌕</span>Pesquisa global</button>
+        <button className="utility" onClick={() => setGlobalSearchOpen(true)}><span>⌕</span>Pesquisa global</button>
         <button className="utility"><span>⚙</span>Settings</button>
-        <div className="user"><span>IM</span><div><strong>Inês Martins</strong><small>Pre-award manager</small></div></div>
+        <div className="user"><span>IC</span><div><strong>Inês Carmo</strong><small>Pre-award manager</small></div></div>
       </aside>
 
       <section className="main-column">
@@ -126,6 +132,7 @@ export default function Home() {
 
         <div className="content">
           {mission === "home" && <HomeScreen navigate={navigate} setWorkspace={setWorkspace} />}
+          {mission === "opportunities" && <OpportunitiesScreen setDetail={setDetail} navigate={navigate} setGlobalSearchOpen={setGlobalSearchOpen} />}
           {mission === "discover" && <DiscoverScreen shortlist={shortlist} setShortlist={setShortlist} setDetail={setDetail} navigate={navigate} />}
           {mission === "decide" && <DecideScreen items={shortlistItems} recommendation={recommendation} setRecommendation={setRecommendation} navigate={navigate} />}
           {mission === "communicate" && <CommunicateScreen drafted={drafted} setDrafted={setDrafted} sent={sent} setSent={setSent} navigate={navigate} />}
@@ -152,6 +159,7 @@ export default function Home() {
       )}
 
       {detail && <DetailDrawer item={detail} onClose={() => setDetail(null)} onDecide={() => { if (!shortlist.includes(detail.id)) setShortlist([...shortlist, detail.id]); setDetail(null); navigate("decide"); }} />}
+      {globalSearchOpen && <GlobalSearch onClose={() => setGlobalSearchOpen(false)} onOpen={(item) => { setGlobalSearchOpen(false); setDetail(item); }} />}
     </main>
   );
 }
@@ -162,13 +170,13 @@ function ScreenTitle({ eyebrow, title, subtitle, actions }: { eyebrow: string; t
 
 function HomeScreen({ navigate, setWorkspace }: { navigate: (m: Mission) => void; setWorkspace: (w: WorkspaceKey) => void }) {
   return <>
-    <ScreenTitle eyebrow="QUINTA-FEIRA, 6 DE AGOSTO" title="Bom dia, Inês." subtitle="Três decisões precisam da sua atenção hoje." actions={<button className="button" onClick={() => navigate("discover")}>+ Nova análise</button>} />
-    <div className="command-box"><span>✦</span><input placeholder="O que pretende descobrir, decidir ou comunicar?" onKeyDown={(e) => { if (e.key === "Enter") navigate("discover"); }} /><button onClick={() => navigate("discover")}>→</button></div>
+    <ScreenTitle eyebrow="QUINTA-FEIRA, 6 DE AGOSTO" title="Bom dia, Inês." subtitle="A sua área de trabalho de funding intelligence." actions={<button className="button" onClick={() => navigate("discover")}>+ Novo pedido</button>} />
+    <div className="command-box"><span>✦</span><input placeholder="Pesquise uma call ou descreva um pedido de investigador..." onKeyDown={(e) => { if (e.key === "Enter") navigate("discover"); }} /><button onClick={() => navigate("discover")}>→</button></div>
     <div className="briefing-grid">
-      <button className="brief-card urgent" onClick={() => navigate("track")}><strong>3</strong><span>Ações para hoje</span><small>1 deadline em risco</small></button>
-      <button className="brief-card" onClick={() => navigate("discover")}><strong>6</strong><span>Novas oportunidades</span><small>2 com forte adequação</small></button>
-      <button className="brief-card" onClick={() => navigate("decide")}><strong>4</strong><span>Decisões pendentes</span><small>Requerem validação</small></button>
-      <button className="brief-card" onClick={() => navigate("intelligence")}><strong>2</strong><span>Sinais estratégicos</span><small>AI e energia em crescimento</small></button>
+      <button className="brief-card urgent" onClick={() => navigate("track")}><strong>3</strong><span>As minhas ações</span><small>1 deadline em risco</small></button>
+      <button className="brief-card" onClick={() => navigate("opportunities")}><strong>92</strong><span>Oportunidades</span><small>31 abertas · 18 previstas</small></button>
+      <button className="brief-card" onClick={() => navigate("discover")}><strong>7</strong><span>Os meus Workspaces</span><small>3 precisam de decisão</small></button>
+      <button className="brief-card" onClick={() => navigate("communicate")}><strong>4</strong><span>As minhas comunicações</span><small>2 rascunhos · 2 agendadas</small></button>
     </div>
     <div className="home-columns">
       <section className="panel"><div className="panel-heading"><div><span className="section-label">REQUER ATENÇÃO</span><h2>Próximas decisões</h2></div><button onClick={() => navigate("track")}>Ver todas</button></div>
@@ -178,11 +186,24 @@ function HomeScreen({ navigate, setWorkspace }: { navigate: (m: Mission) => void
           <button onClick={() => { setWorkspace("researcher"); navigate("communicate"); }}><span className="attention-icon">AS</span><div><strong>Responder a Ana Silva</strong><small>Shortlist validada · resposta por enviar</small></div><Tag>Hoje</Tag></button>
         </div>
       </section>
-      <section className="panel"><div className="panel-heading"><div><span className="section-label">INTELLIGENCE BRIEFING</span><h2>O que mudou</h2></div><button onClick={() => navigate("intelligence")}>Explorar</button></div>
+      <section className="panel"><div className="panel-heading"><div><span className="section-label">A MINHA ATIVIDADE</span><h2>Comunicações e sinais</h2></div><button onClick={() => navigate("communicate")}>Ver comunicações</button></div>
+        <div className="signal"><span>✉</span><div><strong>Radar ERC · rascunho</strong><p>Segmento: investigadores elegíveis · 8 destinatários.</p><button onClick={() => navigate("communicate")}>Continuar →</button></div></div>
         <div className="signal"><span>↗</span><div><strong>Nova call DIGITAL para AI aplicada</strong><p>Relacionada com 3 ideias e 7 investigadores.</p><button onClick={() => navigate("discover")}>Ver impacto →</button></div></div>
-        <div className="signal"><span>◴</span><div><strong>Deadline Horizon prorrogada</strong><p>Mais 21 dias para completar o consórcio da ideia 6G.</p><button onClick={() => navigate("decide")}>Rever decisão →</button></div></div>
       </section>
     </div>
+  </>;
+}
+
+function OpportunitiesScreen({ setDetail, navigate, setGlobalSearchOpen }: { setDetail: (v: typeof opportunities[number]) => void; navigate: (m: Mission) => void; setGlobalSearchOpen: (v: boolean) => void }) {
+  const [query, setQuery] = useState("");
+  const [state, setState] = useState("Todos");
+  const visible = opportunities.filter(item => (state === "Todos" || item.state === state) && `${item.name} ${item.code} ${item.program} ${item.area} ${item.group}`.toLowerCase().includes(query.toLowerCase()));
+  return <>
+    <ScreenTitle eyebrow="EXPLORAÇÃO LIVRE" title="Oportunidades" subtitle="Navegue em todas as calls, independentemente de um Workspace." actions={<><button className="button secondary" onClick={() => setGlobalSearchOpen(true)}>Filtros avançados</button><button className="button" onClick={() => navigate("discover")}>Analisar um pedido</button></>} />
+    <div className="library-toolbar"><div className="search-box"><span>⌕</span><input value={query} onChange={e => setQuery(e.target.value)} placeholder="Pesquisar por call, código, programa, área ou grupo..." /></div><select value={state} onChange={e => setState(e.target.value)}><option>Todos</option><option>Aberta</option><option>Prevista</option></select></div>
+    <div className="saved-views"><span>Vistas rápidas</span><button onClick={() => setState("Aberta")}>Abertas</button><button onClick={() => setState("Prevista")}>Previstas</button><button>≤ 90 dias</button><button>Com empresa</button><button>Financiamento individual</button></div>
+    <section className="opportunity-table"><header><span>Oportunidade</span><span>Programa</span><span>Tipo</span><span>Estado</span><span>Deadline</span><span>Grupo IT</span></header>{visible.map(item => <button key={item.id} onClick={() => setDetail(item)}><span><strong>{item.name}</strong><small>{item.code} · {item.area}</small></span><span>{item.program}</span><span>{item.type}</span><span><Tag tone={item.state === "Aberta" ? "good" : "warn"}>{item.state}</Tag></span><span><strong>{item.deadline}</strong><small>{item.days < 900 ? `${item.days} dias` : "Contínua"}</small></span><span>{item.group}</span></button>)}</section>
+    <div className="table-footer"><span>A mostrar {visible.length} de 92 oportunidades</span><button>1</button><button>2</button><button>3</button><button>…</button><button>12</button></div>
   </>;
 }
 
@@ -217,13 +238,16 @@ function DecideScreen({ items, recommendation, setRecommendation, navigate }: { 
 }
 
 function CommunicateScreen({ drafted, setDrafted, sent, setSent, navigate }: { drafted: boolean; setDrafted: (v: boolean) => void; sent: boolean; setSent: (v: boolean) => void; navigate: (m: Mission) => void }) {
+  const [mode, setMode] = useState<"campaign" | "reply">("campaign");
+  const [campaign, setCampaign] = useState("Radar de oportunidades");
   return <>
-    <ScreenTitle eyebrow="MISSÃO 03" title="Comunicar" subtitle="Converta a decisão numa mensagem clara, segmentada e auditável." />
+    <ScreenTitle eyebrow="MISSÃO 03" title="Comunicar" subtitle="Transforme inteligência em divulgação segmentada ou numa resposta contextual." actions={<div className="mode-switch"><button className={mode === "campaign" ? "active" : ""} onClick={() => { setMode("campaign"); setDrafted(false); }}>Divulgação</button><button className={mode === "reply" ? "active" : ""} onClick={() => { setMode("reply"); setDrafted(false); }}>Resposta individual</button></div>} />
+    {mode === "campaign" && <div className="campaign-summary"><button className="active"><strong>4</strong><span>Os meus rascunhos</span></button><button><strong>2</strong><span>Agendadas</span></button><button><strong>8</strong><span>Enviadas este mês</span></button><button><strong>312</strong><span>Destinatários alcançados</span></button></div>}
     <div className="communication-layout">
-      <aside className="config-panel"><span className="section-label">CONFIGURAÇÃO</span><label>Tipo<select><option>Resposta ao investigador</option><option>Divulgação segmentada</option><option>Pedido de validação</option></select></label><label>Audiência<div className="person-chip">AS <span>Ana Silva</span><button>×</button></div></label><label>Tom<select><option>Institucional e direto</option><option>Exploratório</option></select></label><div className="check-list"><strong>Incluir</strong><label><input type="checkbox" defaultChecked /> Oportunidade recomendada</label><label><input type="checkbox" defaultChecked /> Alternativa</label><label><input type="checkbox" defaultChecked /> Parceiros necessários</label><label><input type="checkbox" defaultChecked /> Próximos passos</label></div><button className="button wide" onClick={() => setDrafted(true)}>✦ Gerar rascunho</button></aside>
-      <section className="draft-panel"><div className="draft-toolbar"><span>PRÉ-VISUALIZAÇÃO</span><div><button>A−</button><button>A+</button></div></div>{!drafted ? <div className="empty-draft"><span>✎</span><h3>Pronto para criar a resposta</h3><p>Confirme a audiência e os elementos a incluir.</p><button className="button" onClick={() => setDrafted(true)}>Gerar rascunho</button></div> : <div className="draft-content"><label>Assunto<input defaultValue="Oportunidades de financiamento para a ideia de redes privadas 6G" /></label><div className="editable" contentEditable suppressContentEditableWarning><p>Olá Ana,</p><p>Na sequência da análise da ideia sobre <strong>redes privadas 6G para aplicações industriais</strong>, identificámos uma oportunidade com forte alinhamento.</p><div className="message-call"><strong>HORIZON-CL4 — Smart Networks and Services</strong><span>Deadline: 14 de outubro de 2026</span><p>O IT poderá participar como parceiro científico. Será necessário completar um consórcio internacional e confirmar um demonstrador industrial.</p></div><p>Como alternativa, recomendamos acompanhar a próxima call Eurostars.</p><p><strong>Próximo passo:</strong> reunião breve para confirmar maturidade, demonstrador e parceiros existentes.</p></div></div>}</section>
+      <aside className="config-panel"><span className="section-label">{mode === "campaign" ? "SEGMENTAÇÃO" : "CONFIGURAÇÃO"}</span>{mode === "campaign" ? <><label>Formato<select value={campaign} onChange={e => setCampaign(e.target.value)}><option>Radar de oportunidades</option><option>Alerta urgente</option><option>Convite para webinar</option><option>Brokerage / partner search</option><option>Bolsas e carreira</option></select></label><label>Segmento principal<select><option>Grupo IT</option><option>Programa</option><option>Área científica</option><option>Tipo de oportunidade</option><option>Empresas</option></select></label><div className="segment-builder"><span>Pattern and Image Analysis <button>×</button></span><span>AI & Computer Vision <button>×</button></span><span>Digital Europe <button>×</button></span><button>+ Adicionar critério</button></div><label>Canal<select><option>Email + Teams</option><option>Email</option><option>Teams</option><option>LinkedIn</option></select></label><div className="audience-estimate"><strong>24 destinatários</strong><span>18 investigadores · 6 contactos empresariais</span><button>Pré-visualizar audiência</button></div></> : <><label>Tipo<select><option>Resposta ao investigador</option><option>Pedido de validação</option></select></label><label>Audiência<div className="person-chip">AS <span>Ana Silva</span><button>×</button></div></label><label>Tom<select><option>Institucional e direto</option><option>Exploratório</option></select></label></>}<div className="check-list"><strong>Incluir</strong><label><input type="checkbox" defaultChecked /> Oportunidades selecionadas</label><label><input type="checkbox" defaultChecked /> Prazos e elegibilidade</label><label><input type="checkbox" defaultChecked /> Chamada à ação</label><label><input type="checkbox" defaultChecked /> Contacto pre-award</label></div><button className="button wide" onClick={() => setDrafted(true)}>✦ Gerar rascunho</button></aside>
+      <section className="draft-panel"><div className="draft-toolbar"><span>PRÉ-VISUALIZAÇÃO · {mode === "campaign" ? campaign : "RESPOSTA"}</span><div><button>A−</button><button>A+</button></div></div>{!drafted ? <div className="empty-draft"><span>✎</span><h3>{mode === "campaign" ? "Defina o segmento da divulgação" : "Pronto para criar a resposta"}</h3><p>{mode === "campaign" ? "A audiência atual inclui 24 contactos relevantes." : "Confirme a audiência e os elementos a incluir."}</p><button className="button" onClick={() => setDrafted(true)}>Gerar rascunho</button></div> : <div className="draft-content"><label>Assunto<input defaultValue={mode === "campaign" ? "IT Funding Radar · AI, dados e oportunidades digitais" : "Oportunidades para a ideia de redes privadas 6G"} /></label><div className="editable" contentEditable suppressContentEditableWarning><p>{mode === "campaign" ? "Caras/os colegas," : "Olá Ana,"}</p><p>{mode === "campaign" ? "Partilhamos uma seleção de oportunidades com alinhamento nas áreas de inteligência artificial, visão computacional e tecnologias digitais." : "Na sequência da análise da ideia sobre redes privadas 6G, identificámos uma oportunidade com forte alinhamento."}</p><div className="message-call"><strong>{mode === "campaign" ? "Digital Europe — AI Piloting" : "HORIZON-CL4 — Smart Networks and Services"}</strong><span>Deadline: {mode === "campaign" ? "3 de novembro de 2026" : "14 de outubro de 2026"}</span><p>{mode === "campaign" ? "Projetos colaborativos para pilotos de IA aplicada. Requer consórcio europeu." : "O IT poderá participar como parceiro científico. É necessário completar o consórcio."}</p></div><p><strong>Manifestação de interesse:</strong> responder até 4 de setembro para apoio ao enquadramento e identificação de parceiros.</p></div></div>}</section>
     </div>
-    {drafted && <div className="communication-footer"><div><Tag tone={sent ? "good" : "warn"}>{sent ? "Registada como enviada" : "1 informação por confirmar"}</Tag><span>Financiamento nacional Eurostars</span></div><button className="button secondary">Exportar</button><button className="button" onClick={() => { setSent(true); setTimeout(() => navigate("track"), 600); }}>{sent ? "Enviada ✓" : "Registar como enviada"}</button></div>}
+    {drafted && <div className="communication-footer"><div><Tag tone={sent ? "good" : "warn"}>{sent ? "Registada como enviada" : mode === "campaign" ? "24 destinatários · 3 oportunidades" : "1 informação por confirmar"}</Tag><span>{mode === "campaign" ? "Segmentação guardada por Inês Carmo" : "Financiamento nacional Eurostars"}</span></div><button className="button secondary">Guardar rascunho</button><button className="button secondary">Agendar</button><button className="button" onClick={() => { setSent(true); setTimeout(() => navigate("track"), 600); }}>{sent ? "Enviada ✓" : "Registar envio"}</button></div>}
   </>;
 }
 
@@ -244,6 +268,24 @@ function IntelligenceScreen({ navigate }: { navigate: (m: Mission) => void }) {
     <div className="insight-grid"><article className="insight-card"><div className="insight-icon">↗</div><Tag tone="good">Oportunidade</Tag><h3>DIGITAL reforça AI aplicada</h3><p>Três novas oportunidades cruzam saúde, energia e dados.</p><div className="impact"><span>7 investigadores</span><span>3 ideias</span></div><button onClick={() => navigate("discover")}>Explorar impacto →</button></article><article className="insight-card"><div className="insight-icon">!</div><Tag tone="warn">Lacuna</Tag><h3>Parceiros industriais insuficientes</h3><p>Quatro ideias dependem de empresas com capacidade de demonstração.</p><div className="impact"><span>4 ideias</span><span>2 deadlines</span></div><button onClick={() => navigate("track")}>Ver ações →</button></article><article className="insight-card"><div className="insight-icon">◎</div><Tag>Tendência</Tag><h3>Próximas aberturas ERC</h3><p>Cinco perfis internos poderão beneficiar de preparação antecipada.</p><div className="impact"><span>5 investigadores</span><span>2027</span></div><button>Ver perfis →</button></article></div>
     <section className="coverage-panel"><div className="panel-heading"><div><span className="section-label">COBERTURA ESTRATÉGICA</span><h2>Onde temos oportunidades e capacidade</h2></div><div className="view-switch"><button className="active">Temas</button><button>Grupos</button><button>Programas</button></div></div><div className="coverage-row"><span>AI & Computer Vision</span><div className="bar"><i style={{width:"84%"}} /></div><strong>Alta</strong><small>18 oportunidades</small></div><div className="coverage-row"><span>Redes & Comunicações</span><div className="bar"><i style={{width:"70%"}} /></div><strong>Alta</strong><small>14 oportunidades</small></div><div className="coverage-row"><span>Energia & Power Electronics</span><div className="bar"><i style={{width:"48%"}} /></div><strong>Média</strong><small>9 oportunidades</small></div><div className="coverage-row"><span>Quantum</span><div className="bar low"><i style={{width:"22%"}} /></div><strong>Baixa</strong><small>Competência externa</small></div></section>
   </>;
+}
+
+function GlobalSearch({ onClose, onOpen }: { onClose: () => void; onOpen: (item: typeof opportunities[number]) => void }) {
+  const [query, setQuery] = useState("");
+  const [filters, setFilters] = useState({ program: "Todos", area: "Todas", group: "Todos", researcher: "Todos", type: "Todos", state: "Todos", deadline: "Qualquer" });
+  const set = (key: keyof typeof filters, value: string) => setFilters({ ...filters, [key]: value });
+  const results = opportunities.filter(item => {
+    const text = `${item.name} ${item.code} ${item.program} ${item.area} ${item.group} ${item.researcher} ${item.type}`.toLowerCase();
+    return text.includes(query.toLowerCase()) &&
+      (filters.program === "Todos" || item.program === filters.program) &&
+      (filters.area === "Todas" || item.area === filters.area) &&
+      (filters.group === "Todos" || item.group === filters.group) &&
+      (filters.researcher === "Todos" || item.researcher === filters.researcher) &&
+      (filters.type === "Todos" || item.type === filters.type) &&
+      (filters.state === "Todos" || item.state === filters.state) &&
+      (filters.deadline === "Qualquer" || item.days <= Number(filters.deadline));
+  });
+  return <div className="search-overlay"><section className="global-search"><header><div><span className="section-label">PESQUISA GLOBAL</span><h2>Pesquisar em toda a plataforma</h2></div><button onClick={onClose}>×</button></header><div className="global-query"><span>⌕</span><input autoFocus value={query} onChange={e => setQuery(e.target.value)} placeholder="Call, código, programa, área, grupo ou investigador..." /><kbd>ESC</kbd></div><div className="global-layout"><aside><strong>Filtros</strong><label>Programa<select value={filters.program} onChange={e => set("program", e.target.value)}><option>Todos</option><option>Horizon Europe</option><option>Digital Europe</option><option>Eureka</option><option>COMPETE 2030</option><option>COST</option><option>ESA</option></select></label><label>Área<select value={filters.area} onChange={e => set("area", e.target.value)}><option>Todas</option><option>Redes & Comunicações</option><option>IA & Computer Vision</option><option>Espaço & GNSS</option><option>Transversal</option><option>Bottom-up</option><option>Networking</option></select></label><label>Grupo IT<select value={filters.group} onChange={e => set("group", e.target.value)}><option>Todos</option><option>Todos os grupos</option><option>Network Architectures and Protocols</option><option>Network Applications and Services</option><option>Pattern and Image Analysis</option></select></label><label>Investigador<select value={filters.researcher} onChange={e => set("researcher", e.target.value)}><option>Todos</option><option>A validar</option><option>Perfis elegíveis</option></select></label><label>Tipo<select value={filters.type} onChange={e => set("type", e.target.value)}><option>Todos</option><option>Projeto colaborativo</option><option>I&D empresarial</option><option>Financiamento individual</option><option>Networking</option></select></label><label>Estado<select value={filters.state} onChange={e => set("state", e.target.value)}><option>Todos</option><option>Aberta</option><option>Prevista</option></select></label><label>Deadline<select value={filters.deadline} onChange={e => set("deadline", e.target.value)}><option>Qualquer</option><option value="30">≤ 30 dias</option><option value="90">≤ 90 dias</option><option value="180">≤ 180 dias</option></select></label><button className="text-button" onClick={() => setFilters({ program: "Todos", area: "Todas", group: "Todos", researcher: "Todos", type: "Todos", state: "Todos", deadline: "Qualquer" })}>Limpar filtros</button></aside><div className="global-results"><div><strong>{results.length} resultados</strong><span>Oportunidades · Workspaces · Investigadores · Comunicações</span></div>{results.map(item => <button key={item.id} onClick={() => onOpen(item)}><span className="result-icon">▦</span><span><small>OPORTUNIDADE · {item.code}</small><strong>{item.name}</strong><em>{item.program} · {item.area} · {item.group}</em></span><Tag tone={item.state === "Aberta" ? "good" : "warn"}>{item.state}</Tag><span className="result-deadline">{item.deadline}</span></button>)}{results.length === 0 && <div className="no-results">Nenhum resultado com estes critérios.</div>}</div></div></section></div>;
 }
 
 function DetailDrawer({ item, onClose, onDecide }: { item: typeof opportunities[number]; onClose: () => void; onDecide: () => void }) {
