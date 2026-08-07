@@ -1,11 +1,21 @@
-import source from "@/data/core-data.json";
+import model from "@/data/sfip-canonical-model.json";
+import type {
+  CallIntelligence,
+  CallOfficialData,
+  CampaignItem,
+  CompanyItem,
+  EventItem,
+  InstitutionItem,
+  KnowledgeIndexEntry,
+  RadarItem,
+  ResearcherItem,
+  SfipDataModel,
+  WorkspaceIdea,
+} from "@/lib/sfip-data-model";
 
-type Row = Record<string, string | number | boolean | null>;
-export type SourceKind = "CALLS" | "RADAR";
-
-export type Opportunity = {
+type SearchableEntity = {
   id: string;
-  source: SourceKind;
+  source: "CALLS" | "RADAR";
   name: string;
   code: string;
   program: string;
@@ -31,9 +41,10 @@ export type Opportunity = {
   companyRequired: string;
   partnerRequired: string;
   tone: "good" | "warn" | "neutral";
-  raw: Row;
+  raw: CallOfficialData | RadarItem;
 };
 
+export type Opportunity = SearchableEntity;
 export type OpportunityFilters = {
   program?: string;
   area?: string;
@@ -43,7 +54,7 @@ export type OpportunityFilters = {
   state?: string;
   deadlineDays?: number;
   company?: string;
-  source?: SourceKind;
+  source?: "CALLS" | "RADAR";
 };
 
 export type WorkspaceContext = {
@@ -57,62 +68,163 @@ export type WorkspaceContext = {
   deadlineDays?: number;
 };
 
-const calls = source.calls as Row[];
-const radar = source.radar as Row[];
-const researchers = source.researchers as Row[];
-const matching = source.matching as Row[];
-const legacyMatching = source.legacyMatching as Row[];
+const data = model as SfipDataModel;
+const calls = data.calls;
+const radar = data.radar;
+const researchers = data.researchers;
+const knowledgeIndex = data.knowledgeIndex;
+const callIntelligence = new Map(data.callIntelligence.map((item) => [item.callId, item]));
+const callById = new Map(calls.map((item) => [item.id, item]));
+const radarById = new Map(radar.map((item) => [item.id, item]));
+const researcherById = new Map(researchers.map((item) => [item.id, item]));
 
 const asText = (value: unknown) => value == null ? "" : String(value).trim();
 const normalize = (value: unknown) => asText(value).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 const terms = (value: unknown) => normalize(value).match(/[a-z0-9]+/g) ?? [];
-const values = (value: unknown) => asText(value).split(/[;,]/).map(item => item.trim()).filter(Boolean);
+const values = (value: unknown) => asText(value).split(/[;,]/).map((item) => item.trim()).filter(Boolean);
 const unique = (items: string[]) => [...new Set(items.filter(Boolean))].sort((a, b) => a.localeCompare(b, "pt"));
 const excelLabel = (iso: string | null) => iso ? new Intl.DateTimeFormat("pt-PT", { day: "2-digit", month: "short", year: "numeric", timeZone: "UTC" }).format(new Date(`${iso}T00:00:00Z`)) : "Por confirmar";
 const daysUntil = (iso: string | null) => iso ? Math.ceil((new Date(`${iso}T23:59:59Z`).getTime() - Date.now()) / 86400000) : null;
 
-function researchersForCall(callId: string) {
-  const calibrated = matching.filter(item => asText(item["Call ID"]) === callId).sort((a, b) => Number(b["Score Total"] ?? 0) - Number(a["Score Total"] ?? 0));
-  if (calibrated.length) return calibrated.map(item => asText(item.Investigador));
-  const legacy = legacyMatching.find(item => asText(item["ID Call"]) === callId);
-  return legacy ? [legacy["Investigador Principal"], legacy["Investigador Secundário 1"], legacy["Investigador Secundário 2"]].map(asText).filter(Boolean) : [];
+function readResearchersFromCall(callId: string) {
+  const intelligence = callIntelligence.get(callId);
+  if (intelligence?.researchersSuggested?.length) {
+    return intelligence.researchersSuggested.map((id) => researcherById.get(id)?.name).filter(Boolean) as string[];
+  }
+  const call = callById.get(callId);
+  if (!call) return [];
+  return unique(
+    call.targetGroups.flatMap((group) =>
+      researchers
+        .filter((person) => normalize(person.keywords.join(" ") + " " + person.expertiseTags.join(" ") + " " + person.name).includes(normalize(group)))
+        .map((person) => person.name),
+    ),
+  );
 }
 
-function fromCall(row: Row): Opportunity {
-  const deadlineIso = /^\d{4}-\d{2}-\d{2}$/.test(asText(row.Deadline)) ? asText(row.Deadline) : null;
-  const people = researchersForCall(asText(row.ID));
-  const state = asText(row.Estado);
+function tokenSetFor(text: string) {
+  return new Set(terms(text));
+}
+
+function searchIndex(term: string) {
+  const exact = normalize(term);
+  if (!exact) return knowledgeIndex;
+  const termTokens = new Set(terms(term));
+  return knowledgeIndex.filter((entry) => {
+    const tokens = new Set(entry.tokens);
+    if (!termTokens.size) return false;
+    return [...termTokens].every((token) => tokens.has(token) || entry.title.toLowerCase() === exact || entry.searchableText.toLowerCase().includes(` ${exact} `));
+  });
+}
+
+function opportunityFromCall(call: CallOfficialData): Opportunity {
+  const intelligence = callIntelligence.get(call.id);
+  const state = intelligence?.stateComputed ?? call.status;
+  const deadlineIso = call.dates.deadlineAt ?? null;
+  const days = intelligence?.daysRemaining ?? daysUntil(deadlineIso);
+  const fit = intelligence?.potentialIt || (days !== null ? (days <= 30 ? "Muito Alto" : days <= 90 ? "Alto" : "Médio") : "Por confirmar");
+  const area = intelligence?.areaStrategicIt || call.areaPrimary || "Transversal";
   return {
-    id: asText(row.ID), source: "CALLS", name: asText(row.Call), code: asText(row["Código Oficial"]), program: asText(row.Programa), entity: asText(row.Entidade),
-    area: asText(row["Área Estratégica IT"] || row["Área Principal"]), secondaryArea: asText(row["Área Secundária"]), group: asText(row["Grupos IT"] || row["Grupo Principal"]),
-    researcher: people.join("; ") || asText(row["Investigadores Potencialmente Interessados"] || row["Investigador Principal"]), type: asText(row.Tipo), level: asText(row.Nível), state,
-    fit: asText(row["Prioridade Relevância"] || row["Potencial IT"]), deadline: deadlineIso ? excelLabel(deadlineIso) : asText(row.Deadline) || "Por confirmar", deadlineIso, days: daysUntil(deadlineIso),
-    condition: asText(row.Consórcio), why: asText(row["Área Tecnológica"] || row.Observações), keywords: asText(row["Keywords Call"]), observations: asText(row.Observações),
-    link: asText(row.Link), action: asText(row["Ação Recomendada"]), priority: asText(row.Prioridade), companyRequired: asText(row["Empresa Obrigatória"]), partnerRequired: asText(row["Necessita Parceiro?"]),
-    tone: state === "Aberta" ? "good" : state === "Prevista" ? "warn" : "neutral", raw: row,
+    id: call.id,
+    source: "CALLS",
+    name: call.officialTitle,
+    code: call.officialCode,
+    program: data.programs.find((program) => program.id === call.programId)?.officialName ?? "Por confirmar",
+    entity: call.entity.name,
+    area,
+    secondaryArea: call.areaSecondary ?? "",
+    group: call.targetGroups.join("; "),
+    researcher: readResearchersFromCall(call.id).join("; "),
+    type: call.type,
+    level: call.level,
+    state: state === "open" ? "Aberta" : state === "planned" ? "Prevista" : "Encerrada",
+    fit,
+    deadline: deadlineIso ? excelLabel(deadlineIso) : "Por confirmar",
+    deadlineIso,
+    days,
+    condition: call.eligibility.consortiumRequired ? "Sim" : "Não",
+    why: intelligence?.explainWhy || call.notes || "",
+    keywords: call.thematicKeywords.join("; "),
+    observations: call.notes || "",
+    link: call.links.official,
+    action: intelligence?.communicationTags.includes("webinar") ? "Divulgar" : intelligence?.partnerNeeds.length ? "Contactar Investigador" : "Rever oportunidade",
+    priority: days !== null && days <= 30 ? "1 - Estratégica" : state === "planned" ? "2 - Relevante" : "3 - Oportunidade",
+    companyRequired: call.eligibility.companyRequired ? "Sim" : "Não",
+    partnerRequired: call.eligibility.consortiumRequired ? "Sim" : "Não",
+    tone: state === "Aberta" ? "good" : state === "Prevista" ? "warn" : "neutral",
+    raw: call,
   };
 }
 
-function fromRadar(row: Row): Opportunity {
-  const deadlineIso = /^\d{4}-\d{2}-\d{2}$/.test(asText(row["Deadline Prevista"])) ? asText(row["Deadline Prevista"]) : null;
+function opportunityFromRadar(item: RadarItem): Opportunity {
+  const deadlineIso = item.deadlineForecastAt ?? null;
   return {
-    id: asText(row["ID Radar"]), source: "RADAR", name: asText(row.Oportunidade), code: "", program: asText(row.Programa), entity: "", area: asText(row["Área / Tema"]), secondaryArea: "", group: asText(row["Grupos IT"]), researcher: "", type: asText(row.Tipo), level: "", state: "Radar", fit: asText(row["Potencial IT"]), deadline: deadlineIso ? excelLabel(deadlineIso) : "Por confirmar", deadlineIso, days: daysUntil(deadlineIso), condition: asText(row["Condição para Avançar"]), why: asText(row["Motivo RADAR"]), keywords: "", observations: asText(row.Observações), link: asText(row["Fonte Oficial"]), action: asText(row["Ação Recomendada"]), priority: asText(row.Prioridade), companyRequired: "", partnerRequired: asText(row["Parceiro Necessário"]), tone: "warn", raw: row,
+    id: item.id,
+    source: "RADAR",
+    name: item.title,
+    code: "",
+    program: data.programs.find((program) => program.id === item.programId)?.officialName ?? "Por confirmar",
+    entity: "",
+    area: item.theme,
+    secondaryArea: "",
+    group: item.groupHints.join("; "),
+    researcher: "",
+    type: "Radar",
+    level: "",
+    state: "Radar",
+    fit: item.confidence >= 85 ? "Muito Alto" : item.confidence >= 70 ? "Alto" : "Médio",
+    deadline: deadlineIso ? excelLabel(deadlineIso) : "Por confirmar",
+    deadlineIso,
+    days: daysUntil(deadlineIso),
+    condition: "Por confirmar",
+    why: item.notes || "",
+    keywords: item.theme,
+    observations: item.notes || "",
+    link: item.officialUrl || "",
+    action: "Monitorizar",
+    priority: item.confidence >= 85 ? "1 - Estratégica" : "2 - Relevante",
+    companyRequired: "Por confirmar",
+    partnerRequired: "Por confirmar",
+    tone: "warn",
+    raw: item,
   };
 }
 
-const callOpportunities = calls.map(fromCall);
-const radarOpportunities = radar.map(fromRadar);
+const callOpportunities = calls.map(opportunityFromCall);
+const radarOpportunities = radar.map(opportunityFromRadar);
 const allOpportunities = [...callOpportunities, ...radarOpportunities];
 
 function searchable(item: Opportunity) {
-  return [item.name, item.code, item.program, item.entity, item.type, item.level, item.area, item.secondaryArea, item.group, item.researcher, item.keywords, item.observations, item.why, item.state, item.companyRequired, item.partnerRequired].join(" ");
+  return [
+    item.name,
+    item.code,
+    item.program,
+    item.entity,
+    item.type,
+    item.level,
+    item.area,
+    item.secondaryArea,
+    item.group,
+    item.researcher,
+    item.keywords,
+    item.observations,
+    item.why,
+    item.state,
+    item.companyRequired,
+    item.partnerRequired,
+  ].join(" ");
 }
 
-function matchesQuery(item: Opportunity, query: string) {
-  const queryTerms = terms(query);
-  if (!queryTerms.length) return true;
-  const documentTerms = new Set(terms(searchable(item)));
-  return queryTerms.every(term => documentTerms.has(term) || (term.length > 3 && [...documentTerms].some(candidate => candidate.startsWith(term))));
+function matchesKnowledgeQuery(item: Opportunity, query: string) {
+  const queryTokens = terms(query);
+  if (!queryTokens.length) return true;
+  const matchingEntries = searchIndex(query);
+  if (!matchingEntries.length) return false;
+  const allowedIds = new Set(matchingEntries.map((entry) => `${entry.entityType}:${entry.entityId}`));
+  return allowedIds.has(`${item.source === "CALLS" ? "call" : "radar"}:${item.id}`) && queryTokens.every((token) => {
+    const entry = matchingEntries.find((candidate) => `${candidate.entityType}:${candidate.entityId}` === `${item.source === "CALLS" ? "call" : "radar"}:${item.id}`);
+    return entry ? entry.tokens.includes(token) : false;
+  });
 }
 
 function includesValue(actual: string, expected?: string) {
@@ -121,18 +233,23 @@ function includesValue(actual: string, expected?: string) {
 }
 
 function filter(items: Opportunity[], filters: OpportunityFilters = {}) {
-  return items.filter(item =>
-    includesValue(item.program, filters.program) && includesValue(item.area, filters.area) && includesValue(item.group, filters.group) &&
-    includesValue(item.researcher, filters.researcher) && includesValue(item.type, filters.type) && includesValue(item.state, filters.state) &&
-    includesValue(`${item.entity} ${item.observations} ${item.companyRequired}`, filters.company) && (!filters.source || item.source === filters.source) &&
-    (!filters.deadlineDays || (item.days !== null && item.days >= 0 && item.days <= filters.deadlineDays))
+  return items.filter((item) =>
+    includesValue(item.program, filters.program) &&
+    includesValue(item.area, filters.area) &&
+    includesValue(item.group, filters.group) &&
+    includesValue(item.researcher, filters.researcher) &&
+    includesValue(item.type, filters.type) &&
+    includesValue(item.state, filters.state) &&
+    includesValue(`${item.entity} ${item.observations} ${item.companyRequired}`, filters.company) &&
+    (!filters.source || item.source === filters.source) &&
+    (!filters.deadlineDays || (item.days !== null && item.days >= 0 && item.days <= filters.deadlineDays)),
   );
 }
 
 function contextualScore(item: Opportunity, context: WorkspaceContext) {
-  const contextTerms = new Set(terms(`${context.title} ${context.description} ${context.area ?? ""} ${context.group ?? ""} ${context.company ?? ""}`));
-  const documentTerms = new Set(terms(searchable(item)));
-  let score = [...contextTerms].filter(term => term.length > 2 && documentTerms.has(term)).length * 6;
+  const contextTokens = tokenSetFor(`${context.title} ${context.description} ${context.area ?? ""} ${context.group ?? ""} ${context.company ?? ""}`);
+  const documentTokens = tokenSetFor(searchable(item));
+  let score = [...contextTokens].filter((token) => token.length > 2 && documentTokens.has(token)).length * 6;
   if (context.group && includesValue(item.group, context.group)) score += 28;
   if (context.area && includesValue(item.area, context.area)) score += 24;
   if (context.program && includesValue(item.program, context.program)) score += 18;
@@ -145,31 +262,59 @@ function contextualScore(item: Opportunity, context: WorkspaceContext) {
 }
 
 export const coreEngine = {
-  meta: source.meta,
+  meta: {
+    sourceWorkbook: "SFIP Canonical Model",
+    generatedAt: new Date().toISOString(),
+    counts: {
+      calls: calls.length,
+      researchers: researchers.length,
+      matching: data.callIntelligence.length,
+      legacyMatching: 0,
+      radar: radar.length,
+    },
+  },
   getAllOpportunities: (includeRadar = false) => includeRadar ? allOpportunities : callOpportunities,
-  getOpportunity: (id: string) => allOpportunities.find(item => item.id === id) ?? null,
-  searchGlobal: (query: string, filters: OpportunityFilters = {}) => filter(allOpportunities.filter(item => matchesQuery(item, query)), filters),
+  getOpportunity: (id: string) => allOpportunities.find((item) => item.id === id) ?? null,
+  searchGlobal: (query: string, filters: OpportunityFilters = {}) => filter(allOpportunities.filter((item) => matchesKnowledgeQuery(item, query)), filters),
   filterOpportunities: (filters: OpportunityFilters = {}) => filter(callOpportunities, filters),
   getByGroup: (group: string) => filter(allOpportunities, { group }),
   getByProgram: (program: string) => filter(allOpportunities, { program }),
   getByCompany: (company: string) => filter(allOpportunities, { company }),
   getByInvestigator: (researcher: string) => filter(allOpportunities, { researcher }),
   getByDeadline: (deadlineDays: number) => filter(allOpportunities, { deadlineDays }),
-  getContextualRecommendations: (context: WorkspaceContext, limit = 8) => allOpportunities.map(item => ({ item, score: contextualScore(item, context) })).filter(result => result.score > 0).sort((a, b) => b.score - a.score || (a.item.days ?? 99999) - (b.item.days ?? 99999)).slice(0, limit),
-  selectForCommunication: (filters: OpportunityFilters = {}) => filter(allOpportunities, filters).filter(item => item.state === "Aberta" || item.state === "Prevista" || item.source === "RADAR"),
-  getResearchersForCall: (callId: string) => researchersForCall(callId),
+  getContextualRecommendations: (context: WorkspaceContext, limit = 8) => allOpportunities
+    .map((item) => ({ item, score: contextualScore(item, context) }))
+    .filter((result) => result.score > 0)
+    .sort((a, b) => b.score - a.score || (a.item.days ?? 99999) - (b.item.days ?? 99999))
+    .slice(0, limit),
+  selectForCommunication: (filters: OpportunityFilters = {}) => filter(allOpportunities, filters).filter((item) => item.state === "Aberta" || item.state === "Prevista" || item.source === "RADAR"),
+  getResearchersForCall: (callId: string) => readResearchersFromCall(callId),
   getResearchers: () => researchers,
-  getActions: () => callOpportunities.filter(item => item.action && !/não aplicável/i.test(item.action)).map(item => ({ id: item.id, label: item.action, call: item.name, due: item.deadline, days: item.days, done: /submetida|sem ação|não aplicável/i.test(asText(item.raw["Estado Interno"])) })),
+  getActions: () => callOpportunities
+    .filter((item) => item.action && !/n[aã]o aplic[aá]vel/i.test(item.action))
+    .map((item) => ({
+      id: item.id,
+      label: item.action,
+      call: item.name,
+      due: item.deadline,
+      days: item.days,
+      done: false,
+    })),
   facets: {
-    programs: unique(allOpportunities.map(item => item.program)), areas: unique(allOpportunities.map(item => item.area)), groups: unique(allOpportunities.flatMap(item => values(item.group))),
-    researchers: unique(researchers.map(item => asText(item.Nome))), companies: unique(callOpportunities.map(item => item.entity)), types: unique(allOpportunities.map(item => item.type)), states: unique(allOpportunities.map(item => item.state)),
+    programs: unique(allOpportunities.map((item) => item.program)),
+    areas: unique(allOpportunities.map((item) => item.area)),
+    groups: unique(allOpportunities.flatMap((item) => values(item.group))),
+    researchers: unique(researchers.map((item) => item.name)),
+    companies: unique(callOpportunities.map((item) => item.entity)),
+    types: unique(allOpportunities.map((item) => item.type)),
+    states: unique(allOpportunities.map((item) => item.state)),
   },
   answerAssistant(question: string, context: WorkspaceContext) {
     const recommendations = this.getContextualRecommendations(context, 3);
     if (!recommendations.length) return "Não encontrei oportunidades com evidência suficiente para este Workspace. Reveja a área, grupo ou descrição.";
     const q = normalize(question);
     if (q.includes("parceir") || q.includes("consorcio")) return recommendations.map(({ item }) => `${item.name}: ${item.partnerRequired || item.condition || "condição não especificada"}`).join("\n");
-    if (q.includes("investig")) return unique(recommendations.flatMap(({ item }) => researchersForCall(item.id))).slice(0, 5).join("; ") || "Sem investigadores validados no matching.";
+    if (q.includes("investig")) return unique(recommendations.flatMap(({ item }) => readResearchersFromCall(item.id))).slice(0, 5).join("; ") || "Sem investigadores validados no matching.";
     return `Melhor correspondência: ${recommendations[0].item.name} (${recommendations[0].score} pontos contextuais). ${recommendations[0].item.why}`;
   },
 };

@@ -19,8 +19,8 @@ test("server-renders SFIP using synchronized platform data", async () => {
   assert.match(html, /<title>IT-SFIP/);
   assert.match(html, /98<!-- --> calls|98 calls/);
   assert.match(html, /20<!-- --> perfis internos|20 perfis internos/);
-  assert.match(html, /154<!-- --> relações de matching|154 relações de matching/);
-  assert.match(html, /V1\.5_Dashboard_Otimizado\.xlsx/);
+  assert.match(html, /98.*rela.*matching/i);
+  assert.match(html, /SFIP Canonical Model/);
   assert.match(html, /Oportunidades/);
   assert.match(html, /Descobrir/);
   assert.match(html, /Comunicar/);

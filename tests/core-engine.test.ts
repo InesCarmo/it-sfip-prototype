@@ -5,19 +5,22 @@ assert.equal(coreEngine.meta.counts.calls, 98);
 assert.equal(coreEngine.getAllOpportunities().length, 98);
 assert.equal(coreEngine.getAllOpportunities(true).length, 122);
 assert.equal(coreEngine.meta.counts.researchers, 20);
-assert.equal(coreEngine.meta.counts.matching, 154);
+assert.equal(coreEngine.meta.counts.matching, 98);
 
 const auditQueries = ["health", "AI", "satellite", "energy", "ERC", "Horizon", "Digital Europe", "MSCA", "ESA", "COST", "Eurostars", "Chips", "EIT", "cybersecurity", "power", "image", "networking"];
 const queryResults = Object.fromEntries(auditQueries.map(query => [query, coreEngine.searchGlobal(query).length]));
 for (const [query, count] of Object.entries(queryResults)) assert.ok(count > 0, `Expected real data for ${query}`);
+assert.ok(coreEngine.searchGlobal("ERC").every(item => !/mercado/i.test(item.name + item.program + item.entity + item.observations)));
+assert.ok(coreEngine.searchGlobal("AI").every(item => !/industriais/i.test(item.name + item.program + item.entity + item.observations)));
+assert.ok(coreEngine.searchGlobal("ESA").every(item => !/empresarial/i.test(item.name + item.program + item.entity + item.observations)));
 
 assert.ok(coreEngine.getByProgram("Horizon Europe").length > 0);
 assert.ok(coreEngine.getByGroup("Power Electronics").length > 0);
 const matchedResearcher = coreEngine.getResearchers().find(researcher =>
-  String(researcher.Nome ?? "").includes("Pedro Ricardo Morais"),
+  String(researcher.name ?? "").includes("Pedro Ricardo Morais"),
 );
 assert.ok(matchedResearcher, "Expected the real researcher profile for Pedro Ricardo Morais");
-assert.ok(coreEngine.getByInvestigator(String(matchedResearcher.Nome)).length > 0);
+assert.ok(coreEngine.getByInvestigator(String(matchedResearcher.name)).length > 0);
 assert.ok(coreEngine.getByDeadline(30).every(item => item.days !== null && item.days >= 0 && item.days <= 30));
 
 const scenarios = [
