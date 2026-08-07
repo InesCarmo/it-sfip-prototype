@@ -43,3 +43,6 @@ next-env.d.ts
 .server-*.log
 .devserver*.log
 /.package-stage/
+/.test-build/
+/scripts/node_modules
+/.tmp/
