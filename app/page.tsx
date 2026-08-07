@@ -1,7 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { coreEngine, type Opportunity, type WorkspaceContext } from "@/lib/core-engine";
+import { loadSfipState, saveSfipState } from "@/lib/sfip-state-store";
 
 type Mission = "home" | "opportunities" | "discover" | "decide" | "communicate" | "track" | "intelligence";
 
@@ -44,6 +45,7 @@ export default function Home() {
   const [shortlist, setShortlist] = useState<string[]>([]);
   const [detail, setDetail] = useState<typeof opportunities[number] | null>(null);
   const [recommendation, setRecommendation] = useState("");
+  const [decisionValidated, setDecisionValidated] = useState(false);
   const [drafted, setDrafted] = useState(false);
   const [sent, setSent] = useState(false);
   const [tasks, setTasks] = useState(initialTasks);
@@ -51,8 +53,35 @@ export default function Home() {
   const [assistantInput, setAssistantInput] = useState("");
   const [globalSearchOpen, setGlobalSearchOpen] = useState(false);
   const [assistantReply, setAssistantReply] = useState("Descreva a ideia ou faça uma pergunta sobre o Workspace ativo.");
+  const [stateLoaded, setStateLoaded] = useState(false);
   const activeWorkspace = workspace;
   const shortlistItems = useMemo(() => opportunities.filter((item) => shortlist.includes(item.id)), [shortlist]);
+
+  useEffect(() => {
+    const saved = loadSfipState(window.localStorage);
+    if (saved) {
+      setMission(saved.mission);
+      setWorkspace(saved.workspace);
+      setShortlist(saved.shortlist);
+      setRecommendation(saved.recommendation);
+      setDecisionValidated(saved.decisionValidated);
+      setDrafted(saved.drafted);
+      setSent(saved.sent);
+      setTasks(saved.tasks);
+      setAssistantOpen(saved.assistantOpen);
+      setAssistantInput(saved.assistantInput);
+      setAssistantReply(saved.assistantReply);
+    }
+    setStateLoaded(true);
+  }, []);
+
+  useEffect(() => {
+    if (!stateLoaded) return;
+    saveSfipState(window.localStorage, {
+      mission, workspace, shortlist, recommendation, decisionValidated, drafted, sent, tasks,
+      assistantOpen, assistantInput, assistantReply,
+    });
+  }, [stateLoaded, mission, workspace, shortlist, recommendation, decisionValidated, drafted, sent, tasks, assistantOpen, assistantInput, assistantReply]);
 
   const navigate = (next: Mission) => { setMission(next); setDetail(null); };
   const askAssistant = () => {
@@ -96,7 +125,7 @@ export default function Home() {
           {mission === "home" && <HomeScreen navigate={navigate} />}
           {mission === "opportunities" && <OpportunitiesScreen setDetail={setDetail} navigate={navigate} setGlobalSearchOpen={setGlobalSearchOpen} />}
           {mission === "discover" && <DiscoverScreen workspace={workspace} setWorkspace={setWorkspace} shortlist={shortlist} setShortlist={setShortlist} setDetail={setDetail} navigate={navigate} />}
-          {mission === "decide" && <DecideScreen items={shortlistItems} recommendation={recommendation} setRecommendation={setRecommendation} navigate={navigate} />}
+          {mission === "decide" && <DecideScreen items={shortlistItems} recommendation={recommendation} setRecommendation={setRecommendation} validated={decisionValidated} setValidated={setDecisionValidated} navigate={navigate} />}
           {mission === "communicate" && <CommunicateScreen drafted={drafted} setDrafted={setDrafted} sent={sent} setSent={setSent} navigate={navigate} />}
           {mission === "track" && <TrackScreen tasks={tasks} setTasks={setTasks} />}
           {mission === "intelligence" && <IntelligenceScreen navigate={navigate} />}
@@ -189,8 +218,7 @@ function DiscoverScreen({ workspace, setWorkspace, shortlist, setShortlist, setD
   </>;
 }
 
-function DecideScreen({ items, recommendation, setRecommendation, navigate }: { items: Opportunity[]; recommendation: string; setRecommendation: (v: string) => void; navigate: (m: Mission) => void }) {
-  const [validated, setValidated] = useState(false);
+function DecideScreen({ items, recommendation, setRecommendation, validated, setValidated, navigate }: { items: Opportunity[]; recommendation: string; setRecommendation: (v: string) => void; validated: boolean; setValidated: (v: boolean) => void; navigate: (m: Mission) => void }) {
   const selected = items.find(item => item.id === recommendation) ?? items[0];
   return <>
     <ScreenTitle eyebrow="MISSÃO 02" title="Decidir" subtitle="Compare alternativas e registe uma recomendação fundamentada." actions={<button className="button secondary">+ Adicionar opção</button>} />
