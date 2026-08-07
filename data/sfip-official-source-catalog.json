@@ -1,0 +1,930 @@
+{
+  "title": "Catálogo Oficial de Fontes da SFIP",
+  "version": "1.0",
+  "generatedAt": "2026-08-07",
+  "scope": "Fontes oficiais relevantes para o Instituto de Telecomunicações já representadas na SFIP, organizadas para aquisição de dados, monitorização e comunicação.",
+  "notes": [
+    "Este catálogo é orientado por famílias de fontes oficiais e não por cada call individual.",
+    "Quando uma família tem várias páginas de calls, a cobertura refere explicitamente os exemplos atualmente relevantes na base de dados.",
+    "A validação humana continua obrigatória para estado, elegibilidade, prazos e financiamento sempre que a fonte não forneça estes campos de forma inequívoca."
+  ],
+  "categories": [
+    {
+      "name": "Programas de Financiamento",
+      "sources": [
+        {
+          "name": "FCT - Concursos",
+          "officialUrl": "https://www.fct.pt/concursos/",
+          "coverage": "Concursos nacionais, cooperações bilaterais, computação avançada e restantes chamadas FCT relevantes para o IT.",
+          "informationType": "Calls abertas, anúncios futuros, condições de elegibilidade e documentação oficial.",
+          "monitoringFrequency": "Diária",
+          "priority": "Alta",
+          "automation": "Semi-automática",
+          "humanValidation": "Obrigatória",
+          "fieldsToCollect": [
+            "Nome oficial",
+            "Programa",
+            "Entidade",
+            "Estado",
+            "Data de abertura",
+            "Deadline",
+            "Financiamento",
+            "Duração",
+            "Beneficiários",
+            "Elegibilidade",
+            "Link oficial",
+            "Fonte Verificação",
+            "Notas"
+          ],
+          "sfipModules": [
+            "Oportunidades",
+            "Descobrir",
+            "Decidir",
+            "Comunicar",
+            "Acompanhar",
+            "Inteligência",
+            "Pesquisa Global",
+            "Assistant"
+          ]
+        },
+        {
+          "name": "Portugal 2030 - Avisos",
+          "officialUrl": "https://portugal2030.pt/",
+          "coverage": "Avisos do Portugal 2030, STEP e oportunidades nacionais com impacto direto para o IT.",
+          "informationType": "Calls abertas, chamadas previstas, prioridade estratégica e notas operacionais.",
+          "monitoringFrequency": "Diária",
+          "priority": "Alta",
+          "automation": "Semi-automática",
+          "humanValidation": "Obrigatória",
+          "fieldsToCollect": [
+            "Nome oficial",
+            "Programa",
+            "Origem",
+            "Estado",
+            "Data de abertura",
+            "Deadline",
+            "Dotação",
+            "Tipo",
+            "Área temática",
+            "Beneficiários",
+            "Link oficial",
+            "Fonte Verificação",
+            "Observações"
+          ],
+          "sfipModules": [
+            "Oportunidades",
+            "Descobrir",
+            "Comunicar",
+            "Acompanhar",
+            "Inteligência",
+            "Pesquisa Global"
+          ]
+        },
+        {
+          "name": "COMPETE 2030 - Avisos",
+          "officialUrl": "https://compete2030.gov.pt/avisos/",
+          "coverage": "STEP, SIID, SICE e restantes avisos empresariais e de I&D empresarial relevantes para o IT.",
+          "informationType": "Calls abertas, anúncios futuros, regras nacionais e notas de elegibilidade empresarial.",
+          "monitoringFrequency": "Diária",
+          "priority": "Alta",
+          "automation": "Semi-automática",
+          "humanValidation": "Obrigatória",
+          "fieldsToCollect": [
+            "Nome oficial",
+            "Programa",
+            "Entidade",
+            "Estado",
+            "Data de abertura",
+            "Deadline",
+            "Dotação da call",
+            "Financiamento Máx.",
+            "Financiamento Numérico",
+            "Tipo",
+            "Consórcio",
+            "Empresa obrigatória",
+            "Fonte Verificação"
+          ],
+          "sfipModules": [
+            "Oportunidades",
+            "Decidir",
+            "Comunicar",
+            "Acompanhar",
+            "Inteligência",
+            "Pesquisa Global"
+          ]
+        },
+        {
+          "name": "Centro 2030 - Avisos",
+          "officialUrl": "https://centro2030.pt/",
+          "coverage": "Avisos operacionais, STEP, iniciativas territoriais e chamadas associadas ao Centro 2030.",
+          "informationType": "Calls abertas, previsões oficiais e documentos de aviso.",
+          "monitoringFrequency": "Diária",
+          "priority": "Alta",
+          "automation": "Semi-automática",
+          "humanValidation": "Obrigatória",
+          "fieldsToCollect": [
+            "Nome oficial",
+            "Programa",
+            "Entidade",
+            "Estado",
+            "Deadline",
+            "Dotação",
+            "Tipo",
+            "Área principal",
+            "Área secundária",
+            "Fonte Verificação"
+          ],
+          "sfipModules": [
+            "Oportunidades",
+            "Descobrir",
+            "Comunicar",
+            "Acompanhar",
+            "Inteligência"
+          ]
+        },
+        {
+          "name": "Algarve 2030 - STEP",
+          "officialUrl": "https://algarve.portugal2030.pt/aviso-2024/step-idi-empresarial-digital-e-biotecnologia/",
+          "coverage": "Avisos STEP e chamadas regionais do Algarve 2030 já representadas na SFIP.",
+          "informationType": "Calls abertas e documentação de aviso.",
+          "monitoringFrequency": "Semanal",
+          "priority": "Média",
+          "automation": "Semi-automática",
+          "humanValidation": "Obrigatória",
+          "fieldsToCollect": [
+            "Nome oficial",
+            "Programa",
+            "Estado",
+            "Deadline",
+            "Dotação",
+            "Tipo",
+            "Fonte Verificação"
+          ],
+          "sfipModules": [
+            "Oportunidades",
+            "Descobrir",
+            "Inteligência"
+          ]
+        },
+        {
+          "name": "Horizon Europe - Topic Pages",
+          "officialUrl": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/home",
+          "coverage": "Topic-details pages, call documents e anexos Horizon Europe, incluindo clusters, MSCA, ERC, EuroHPC e outros topics específicos.",
+          "informationType": "Calls abertas, chamadas futuras, work programmes, topic conditions e anexos oficiais.",
+          "monitoringFrequency": "Diária",
+          "priority": "Alta",
+          "automation": "Semi-automática",
+          "humanValidation": "Obrigatória",
+          "fieldsToCollect": [
+            "Nome oficial",
+            "Código",
+            "Programa",
+            "Entidade",
+            "Estado",
+            "Abertura",
+            "Deadline",
+            "Tipo",
+            "Orçamento",
+            "TRL",
+            "Consórcio",
+            "Países elegíveis",
+            "Link oficial",
+            "Fonte Verificação"
+          ],
+          "sfipModules": [
+            "Oportunidades",
+            "Descobrir",
+            "Decidir",
+            "Comunicar",
+            "Acompanhar",
+            "Inteligência",
+            "Pesquisa Global",
+            "Assistant"
+          ]
+        },
+        {
+          "name": "European Research Council - ERC",
+          "officialUrl": "https://erc.europa.eu/apply-grant/starting-grant",
+          "coverage": "Starting Grant, Consolidator Grant, Advanced Grant, Proof of Concept, Synergy Grant e respetivos work programmes.",
+          "informationType": "Calls abertas, futuras, condições de elegibilidade, financiamento e duração.",
+          "monitoringFrequency": "Diária",
+          "priority": "Alta",
+          "automation": "Semi-automática",
+          "humanValidation": "Obrigatória",
+          "fieldsToCollect": [
+            "Nome oficial",
+            "Código",
+            "Programa",
+            "Estado",
+            "Abertura",
+            "Deadline",
+            "Financiamento base",
+            "Financiamento adicional",
+            "Duração",
+            "Elegibilidade",
+            "Link oficial",
+            "Fonte Verificação"
+          ],
+          "sfipModules": [
+            "Oportunidades",
+            "Descobrir",
+            "Decidir",
+            "Comunicar",
+            "Acompanhar",
+            "Inteligência",
+            "Pesquisa Global",
+            "Assistant"
+          ]
+        },
+        {
+          "name": "MSCA - Marie Skłodowska-Curie Actions",
+          "officialUrl": "https://marie-sklodowska-curie-actions.ec.europa.eu/funding",
+          "coverage": "Postdoctoral Fellowships, Doctoral Networks e páginas oficiais REA associadas.",
+          "informationType": "Calls abertas, futuras, calendários e elegibilidade para mobilidade e bolsas.",
+          "monitoringFrequency": "Diária",
+          "priority": "Alta",
+          "automation": "Semi-automática",
+          "humanValidation": "Obrigatória",
+          "fieldsToCollect": [
+            "Nome oficial",
+            "Código",
+            "Programa",
+            "Estado",
+            "Abertura",
+            "Deadline",
+            "Beneficiários",
+            "Duração",
+            "Financiamento",
+            "Link oficial",
+            "Fonte Verificação"
+          ],
+          "sfipModules": [
+            "Oportunidades",
+            "Descobrir",
+            "Comunicar",
+            "Acompanhar",
+            "Inteligência"
+          ]
+        },
+        {
+          "name": "Digital Europe / HaDEA",
+          "officialUrl": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-AI-PILOTING-10-SCREENING",
+          "coverage": "Topics DIGITAL, HaDEA call pages e páginas oficiais associadas às chamadas digitais.",
+          "informationType": "Calls abertas, páginas de topic conditions, informação de elegibilidade e documentação oficial.",
+          "monitoringFrequency": "Diária",
+          "priority": "Alta",
+          "automation": "Semi-automática",
+          "humanValidation": "Obrigatória",
+          "fieldsToCollect": [
+            "Nome oficial",
+            "Código",
+            "Programa",
+            "Estado",
+            "Abertura",
+            "Deadline",
+            "Tipo",
+            "Orçamento",
+            "Duração",
+            "Consórcio",
+            "Link oficial"
+          ],
+          "sfipModules": [
+            "Oportunidades",
+            "Descobrir",
+            "Comunicar",
+            "Acompanhar",
+            "Inteligência",
+            "Pesquisa Global"
+          ]
+        },
+        {
+          "name": "European Innovation Council - EIC",
+          "officialUrl": "https://eic.ec.europa.eu/eic-funding-opportunities_en",
+          "coverage": "EIC Accelerator e restantes oportunidades de financiamento do EIC.",
+          "informationType": "Calls abertas, documentos do work programme e informação para PME e startups.",
+          "monitoringFrequency": "Semanal",
+          "priority": "Alta",
+          "automation": "Semi-automática",
+          "humanValidation": "Obrigatória",
+          "fieldsToCollect": [
+            "Nome oficial",
+            "Código",
+            "Programa",
+            "Estado",
+            "Deadline",
+            "TRL",
+            "Financiamento",
+            "Consórcio",
+            "Empresa obrigatória",
+            "Link oficial"
+          ],
+          "sfipModules": [
+            "Oportunidades",
+            "Descobrir",
+            "Comunicar",
+            "Inteligência"
+          ]
+        },
+        {
+          "name": "EuroHPC JU",
+          "officialUrl": "https://www.eurohpc-ju.europa.eu/quantum-machine-learning_en",
+          "coverage": "Topics e ações do EuroHPC JU relevantes para HPC, quantum, AI e infraestrutura digital.",
+          "informationType": "Calls abertas, futuras e documentos de topic conditions.",
+          "monitoringFrequency": "Diária",
+          "priority": "Alta",
+          "automation": "Semi-automática",
+          "humanValidation": "Obrigatória",
+          "fieldsToCollect": [
+            "Nome oficial",
+            "Código",
+            "Estado",
+            "Deadline",
+            "Tipo oficial de ação",
+            "Orçamento total",
+            "Contribuição UE",
+            "Consórcio",
+            "TRL",
+            "Link oficial"
+          ],
+          "sfipModules": [
+            "Oportunidades",
+            "Descobrir",
+            "Decidir",
+            "Inteligência"
+          ]
+        },
+        {
+          "name": "Chips JU / ECS 2026",
+          "officialUrl": "https://www.chips-ju.europa.eu/Call-Details/?id=89c5feaf-d070-f111-ab0e-000d3ab6c0a4",
+          "coverage": "Concursos ECS 2026 e páginas nacionais FCT associadas às regras portuguesas.",
+          "informationType": "Calls abertas, regras internacionais, mecanismo nacional e condições portuguesas.",
+          "monitoringFrequency": "Diária",
+          "priority": "Alta",
+          "automation": "Semi-automática",
+          "humanValidation": "Obrigatória",
+          "fieldsToCollect": [
+            "Nome oficial",
+            "Código",
+            "Estado",
+            "Deadline",
+            "Consórcio",
+            "Países elegíveis",
+            "Mecanismo nacional",
+            "Taxa máxima IT",
+            "Duração",
+            "Fonte Verificação"
+          ],
+          "sfipModules": [
+            "Oportunidades",
+            "Descobrir",
+            "Decidir",
+            "Acompanhar",
+            "Inteligência"
+          ]
+        },
+        {
+          "name": "EEA Grants - Bilateral Fund",
+          "officialUrl": "https://eeagrants.org/pt/portugal/programmes/bilateral-fund",
+          "coverage": "Fundos bilaterais e oportunidades associadas a cooperação internacional.",
+          "informationType": "Calls abertas, regras do programa e documentação oficial.",
+          "monitoringFrequency": "Semanal",
+          "priority": "Média",
+          "automation": "Semi-automática",
+          "humanValidation": "Obrigatória",
+          "fieldsToCollect": [
+            "Nome oficial",
+            "Programa",
+            "Estado",
+            "Deadline",
+            "Elegibilidade",
+            "Financiamento",
+            "Link oficial",
+            "Fonte Verificação"
+          ],
+          "sfipModules": [
+            "Oportunidades",
+            "Inteligência",
+            "Comunicar"
+          ]
+        },
+        {
+          "name": "Interreg Programmes",
+          "officialUrl": "https://interreg-sudoe.eu/pt-pt/las-convocatorias-sudoe-ya-estan-abiertas/convocatoria/",
+          "coverage": "Interreg SUDOE, Interreg North Sea e Interreg Euro-MED; chamadas abertas e pré-anúncios relevantes para o IT.",
+          "informationType": "Calls abertas, futuras, guiões, regras de consórcio e oportunidades de cooperação transnacional.",
+          "monitoringFrequency": "Semanal",
+          "priority": "Média",
+          "automation": "Semi-automática",
+          "humanValidation": "Obrigatória",
+          "fieldsToCollect": [
+            "Nome oficial",
+            "Programa",
+            "Estado",
+            "Deadline",
+            "Consórcio",
+            "Países elegíveis",
+            "Financiamento",
+            "Link oficial",
+            "Fonte Verificação"
+          ],
+          "sfipModules": [
+            "Oportunidades",
+            "Descobrir",
+            "Comunicar",
+            "Acompanhar",
+            "Inteligência"
+          ]
+        },
+        {
+          "name": "EIT KIC Portals",
+          "officialUrl": "https://eithealth.eu/opportunity/innovation-uptake/",
+          "coverage": "EIT Health, EIT Urban Mobility e EIT Culture & Creativity; oportunidades de inovação, formação e mobilidade.",
+          "informationType": "Calls, fellowships, courses, innovation uptake e oportunidades de ecossistema.",
+          "monitoringFrequency": "Semanal",
+          "priority": "Média",
+          "automation": "Semi-automática",
+          "humanValidation": "Obrigatória",
+          "fieldsToCollect": [
+            "Nome oficial",
+            "Programa",
+            "Estado",
+            "Deadline",
+            "Tipo",
+            "Público-alvo",
+            "Link oficial",
+            "Fonte Verificação"
+          ],
+          "sfipModules": [
+            "Comunicar",
+            "Descobrir",
+            "Inteligência"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Brokerage & Networking",
+      "sources": [
+        {
+          "name": "COST",
+          "officialUrl": "https://www.cost.eu/how-to-apply/",
+          "coverage": "Open Call, networking actions, training schools, STSMs e mecanismos de participação COST.",
+          "informationType": "Oportunidades de networking e mobilidade, não financiamento tradicional de I&D.",
+          "monitoringFrequency": "Semanal",
+          "priority": "Média",
+          "automation": "Semi-automática",
+          "humanValidation": "Obrigatória",
+          "fieldsToCollect": [
+            "Nome oficial",
+            "Código",
+            "Estado",
+            "Abertura",
+            "Deadline",
+            "Tipo de oportunidade",
+            "Duração",
+            "Forma de participação",
+            "Link oficial"
+          ],
+          "sfipModules": [
+            "Comunicar",
+            "Acompanhar",
+            "Inteligência",
+            "Pesquisa Global"
+          ]
+        },
+        {
+          "name": "ESA Opportunities",
+          "officialUrl": "https://resilience.esa.int/open-call-proposals",
+          "coverage": "NAVISP, ARTES, Resilience, EO4Society, GSTP e outras oportunidades ESA já representadas na SFIP.",
+          "informationType": "Open calls, invitations to tender, procurement-like opportunities e documentação operacional.",
+          "monitoringFrequency": "Semanal",
+          "priority": "Média",
+          "automation": "Semi-automática",
+          "humanValidation": "Obrigatória",
+          "fieldsToCollect": [
+            "Nome oficial",
+            "Código",
+            "Programa",
+            "Estado",
+            "Deadline",
+            "Tipo",
+            "Orçamento",
+            "Consórcio",
+            "Link oficial"
+          ],
+          "sfipModules": [
+            "Oportunidades",
+            "Descobrir",
+            "Comunicar",
+            "Acompanhar",
+            "Inteligência"
+          ]
+        },
+        {
+          "name": "Eureka Network / Eurostars / Clusters",
+          "officialUrl": "https://www.eurekanetwork.org/programmes-and-calls/eurostars/eurostars-call-for-projects-september-2026/",
+          "coverage": "Eurostars, Celtic-NEXT, EuroGIA2030, ITEA e Xecs, incluindo chamadas futuras e pré-anúncios.",
+          "informationType": "Calls abertas, futuras, calendários internacionais e articulação com mecanismos nacionais.",
+          "monitoringFrequency": "Diária",
+          "priority": "Alta",
+          "automation": "Semi-automática",
+          "humanValidation": "Obrigatória",
+          "fieldsToCollect": [
+            "Nome oficial",
+            "Código",
+            "Programa",
+            "Estado",
+            "Abertura",
+            "Deadline operacional",
+            "Consórcio",
+            "Empresa obrigatória",
+            "Mecanismo nacional",
+            "Link oficial"
+          ],
+          "sfipModules": [
+            "Oportunidades",
+            "Descobrir",
+            "Decidir",
+            "Comunicar",
+            "Acompanhar",
+            "Inteligência"
+          ]
+        },
+        {
+          "name": "ANI - Rede Eureka",
+          "officialUrl": "https://ani.pt/rede-eureka/",
+          "coverage": "Validação nacional, enquadramento português para Eureka/Eurostars/Clusters e ligação com os avisos nacionais.",
+          "informationType": "Informação institucional, regras nacionais, elegibilidade portuguesa e articulação com financiamento nacional.",
+          "monitoringFrequency": "Semanal",
+          "priority": "Alta",
+          "automation": "Semi-automática",
+          "humanValidation": "Obrigatória",
+          "fieldsToCollect": [
+            "Programa",
+            "Mecanismo nacional",
+            "Condição para financiamento do IT",
+            "Taxa máxima IT",
+            "Duração máxima aplicável",
+            "Link oficial",
+            "Fonte PT"
+          ],
+          "sfipModules": [
+            "Decidir",
+            "Acompanhar",
+            "Inteligência"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Radar Estratégico",
+      "sources": [
+        {
+          "name": "Portugal 2030 - Plano Anual de Avisos",
+          "officialUrl": "https://portugal2030.pt/plano-anual-de-avisos/",
+          "coverage": "Pré-publicações, janelas temporais previstas, STEP e avisos futuros ainda não publicados.",
+          "informationType": "Radar de oportunidades futuras e alterações de calendário.",
+          "monitoringFrequency": "Semanal",
+          "priority": "Alta",
+          "automation": "Semi-automática",
+          "humanValidation": "Obrigatória",
+          "fieldsToCollect": [
+            "Nome do aviso",
+            "Programa",
+            "Estado previsto",
+            "Período previsto",
+            "Dotação",
+            "Link oficial",
+            "Fonte Verificação",
+            "Observações"
+          ],
+          "sfipModules": [
+            "Inteligência",
+            "Acompanhar",
+            "Comunicar"
+          ]
+        },
+        {
+          "name": "Centro 2030 - Plano Anual de Avisos",
+          "officialUrl": "https://centro2030.pt/plano-anual-de-avisos/",
+          "coverage": "Avisos previstos do Centro 2030 ainda não publicados e respetivas janelas temporais.",
+          "informationType": "Radar de chamadas futuras e alterações de calendário.",
+          "monitoringFrequency": "Semanal",
+          "priority": "Alta",
+          "automation": "Semi-automática",
+          "humanValidation": "Obrigatória",
+          "fieldsToCollect": [
+            "Nome do aviso",
+            "Programa",
+            "Estado previsto",
+            "Período previsto",
+            "Dotação",
+            "Link oficial",
+            "Fonte Verificação"
+          ],
+          "sfipModules": [
+            "Inteligência",
+            "Acompanhar"
+          ]
+        },
+        {
+          "name": "European Commission - Work Programmes / R&I repository",
+          "officialUrl": "https://research-and-innovation.ec.europa.eu/document/download/87a8c19b-2643-49ec-8d07-37781ceb516e_en",
+          "coverage": "Work programmes, draft calls, annual planning and official pre-publication material used to anticipate Horizon and Digital Europe topics.",
+          "informationType": "Radar estratégico para calls 2027, tópicos futuros e alterações de calendário.",
+          "monitoringFrequency": "Semanal",
+          "priority": "Alta",
+          "automation": "Semi-automática",
+          "humanValidation": "Obrigatória",
+          "fieldsToCollect": [
+            "Programa",
+            "Código",
+            "Estado previsto",
+            "Abertura prevista",
+            "Deadline prevista",
+            "Nota de validade",
+            "Link oficial"
+          ],
+          "sfipModules": [
+            "Inteligência",
+            "Acompanhar",
+            "Oportunidades"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Webinars & Info Days",
+      "sources": [
+        {
+          "name": "Digital Strategy - Info Sessions",
+          "officialUrl": "https://digital-strategy.ec.europa.eu/en/events/info-session-call-proposals-digital-solutions-regulatory-compliance-through-data",
+          "coverage": "Info sessions, webinars e sessões de esclarecimento para chamadas digitais e regulatórias.",
+          "informationType": "Datas, agendas, registo, materiais e perguntas frequentes.",
+          "monitoringFrequency": "Semanal",
+          "priority": "Média",
+          "automation": "Semi-automática",
+          "humanValidation": "Recomendada",
+          "fieldsToCollect": [
+            "Título do evento",
+            "Data",
+            "Hora",
+            "Programa/call associado",
+            "Público-alvo",
+            "Link oficial",
+            "Materiais"
+          ],
+          "sfipModules": [
+            "Comunicar",
+            "Inteligência",
+            "Acompanhar"
+          ]
+        },
+        {
+          "name": "Digital Strategy - Guidance Library",
+          "officialUrl": "https://digital-strategy.ec.europa.eu/en/library/info-session-overview-call-common-research-framework-information-integrity",
+          "coverage": "Overviews, guias e materiais oficiais associados a chamadas digitais, regulações e frameworks de pesquisa.",
+          "informationType": "Materiais de apoio, apresentações e sínteses de info days.",
+          "monitoringFrequency": "Semanal",
+          "priority": "Média",
+          "automation": "Semi-automática",
+          "humanValidation": "Recomendada",
+          "fieldsToCollect": [
+            "Título",
+            "Call associada",
+            "Data",
+            "Documentos",
+            "Link oficial"
+          ],
+          "sfipModules": [
+            "Comunicar",
+            "Inteligência"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Empresas & Ecossistema",
+      "sources": [
+        {
+          "name": "COMPETE 2030 - Rede de Fornecedores Inovadores",
+          "officialUrl": "https://compete2030.gov.pt/avisos/aviso-a-manifestacao-de-interesse-de-empresas-para-integrar-a-rede-de-fornecedores-inovadores_mpr-2026-5/",
+          "coverage": "Manifestação de interesse de empresas, integração em redes de fornecedores e futuras ações de ecossistema.",
+          "informationType": "Opções de parceria empresarial, segmentação por empresa e preparação de consórcios.",
+          "monitoringFrequency": "Semanal",
+          "priority": "Alta",
+          "automation": "Semi-automática",
+          "humanValidation": "Obrigatória",
+          "fieldsToCollect": [
+            "Empresa",
+            "Programa",
+            "Estado",
+            "Oportunidade",
+            "Parceiro necessário",
+            "Grupo IT",
+            "Papel potencial IT",
+            "Link oficial"
+          ],
+          "sfipModules": [
+            "Comunicar",
+            "Descobrir",
+            "Assistant",
+            "Inteligência"
+          ]
+        },
+        {
+          "name": "EIC Accelerator",
+          "officialUrl": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en",
+          "coverage": "Financiamento para PME/startups, deep tech e oportunidades ligadas à escalabilidade tecnológica.",
+          "informationType": "Calls, critérios para empresas, elegibilidade e oportunidades de investimento.",
+          "monitoringFrequency": "Semanal",
+          "priority": "Alta",
+          "automation": "Semi-automática",
+          "humanValidation": "Obrigatória",
+          "fieldsToCollect": [
+            "Empresa",
+            "Programa",
+            "Estado",
+            "Deadline",
+            "TRL",
+            "Financiamento",
+            "Parceiros",
+            "Link oficial"
+          ],
+          "sfipModules": [
+            "Descobrir",
+            "Comunicar",
+            "Decidir",
+            "Inteligência"
+          ]
+        },
+        {
+          "name": "ESA Commercialisation",
+          "officialUrl": "https://commercialisation.esa.int/opportunities/navisp-open-call-for-proposals/",
+          "coverage": "NAVISP, ARTES Business Applications e oportunidades de comercialização/transferência com empresas.",
+          "informationType": "Open calls, procurement-like opportunities e colaboração com o ecossistema empresarial.",
+          "monitoringFrequency": "Semanal",
+          "priority": "Média",
+          "automation": "Semi-automática",
+          "humanValidation": "Obrigatória",
+          "fieldsToCollect": [
+            "Empresa",
+            "Programa",
+            "Estado",
+            "Deadline",
+            "Tipo",
+            "Consórcio",
+            "Parceiro necessário",
+            "Link oficial"
+          ],
+          "sfipModules": [
+            "Descobrir",
+            "Comunicar",
+            "Inteligência"
+          ]
+        },
+        {
+          "name": "EIT Innovation Uptake / Mobility / Culture",
+          "officialUrl": "https://eithealth.eu/opportunity/innovation-uptake/",
+          "coverage": "EIT Health Innovation Uptake, EIT Urban Mobility e EIT Culture & Creativity para inovação, formação e mobilidade.",
+          "informationType": "Oportunidades de ecossistema, formação, mobilidade e ligação a empresas.",
+          "monitoringFrequency": "Semanal",
+          "priority": "Média",
+          "automation": "Semi-automática",
+          "humanValidation": "Recomendada",
+          "fieldsToCollect": [
+            "Programa",
+            "Tipo de oportunidade",
+            "Estado",
+            "Deadline",
+            "Público-alvo",
+            "Grupo IT",
+            "Link oficial"
+          ],
+          "sfipModules": [
+            "Comunicar",
+            "Descobrir",
+            "Inteligência"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Instituições",
+      "sources": [
+        {
+          "name": "ANI",
+          "officialUrl": "https://ani.pt/",
+          "coverage": "Validação nacional, rede Eureka, avisos e articulação institucional com instrumentos internacionais.",
+          "informationType": "Regras nacionais, validação de elegibilidade e enquadramento institucional.",
+          "monitoringFrequency": "Semanal",
+          "priority": "Alta",
+          "automation": "Semi-automática",
+          "humanValidation": "Obrigatória",
+          "fieldsToCollect": [
+            "Programa",
+            "Mecanismo nacional",
+            "Condição para financiamento do IT",
+            "Taxa máxima IT",
+            "Fonte PT",
+            "Link oficial"
+          ],
+          "sfipModules": [
+            "Decidir",
+            "Acompanhar",
+            "Inteligência"
+          ]
+        },
+        {
+          "name": "European Commission",
+          "officialUrl": "https://commission.europa.eu/",
+          "coverage": "Página institucional e páginas de referência para funding, policy e validação de contexto europeu.",
+          "informationType": "Enquadramento institucional, orientações gerais e validação de fontes oficiais.",
+          "monitoringFrequency": "Semanal",
+          "priority": "Alta",
+          "automation": "Manual",
+          "humanValidation": "Obrigatória",
+          "fieldsToCollect": [
+            "Instituição",
+            "Programa",
+            "Página de referência",
+            "Link oficial",
+            "Data da última verificação"
+          ],
+          "sfipModules": [
+            "Inteligência",
+            "Acompanhar",
+            "Settings"
+          ]
+        },
+        {
+          "name": "Portugal 2030",
+          "officialUrl": "https://portugal2030.pt/",
+          "coverage": "Portal institucional, plano anual de avisos e comunicações de enquadramento nacional.",
+          "informationType": "Validação institucional, contexto nacional e referência para a camada de aquisição.",
+          "monitoringFrequency": "Semanal",
+          "priority": "Alta",
+          "automation": "Semi-automática",
+          "humanValidation": "Obrigatória",
+          "fieldsToCollect": [
+            "Programa",
+            "Aviso",
+            "Estado",
+            "Link oficial",
+            "Fonte Verificação"
+          ],
+          "sfipModules": [
+            "Inteligência",
+            "Acompanhar",
+            "Comunicar"
+          ]
+        },
+        {
+          "name": "COMPETE 2030",
+          "officialUrl": "https://compete2030.gov.pt/",
+          "coverage": "Portal institucional do programa, avisos, STEP e documentos oficiais de enquadramento.",
+          "informationType": "Validação institucional, contexto programático e referência para calls nacionais.",
+          "monitoringFrequency": "Semanal",
+          "priority": "Alta",
+          "automation": "Semi-automática",
+          "humanValidation": "Obrigatória",
+          "fieldsToCollect": [
+            "Programa",
+            "Aviso",
+            "Estado",
+            "Dotação",
+            "Link oficial",
+            "Fonte Verificação"
+          ],
+          "sfipModules": [
+            "Inteligência",
+            "Acompanhar",
+            "Comunicar"
+          ]
+        },
+        {
+          "name": "FCT",
+          "officialUrl": "https://www.fct.pt/",
+          "coverage": "Portal institucional da FCT, concursos, notas de enquadramento e documentação oficial.",
+          "informationType": "Validação institucional, enquadramento nacional e referência de suporte para calls FCT.",
+          "monitoringFrequency": "Semanal",
+          "priority": "Alta",
+          "automation": "Semi-automática",
+          "humanValidation": "Obrigatória",
+          "fieldsToCollect": [
+            "Programa",
+            "Aviso",
+            "Estado",
+            "Link oficial",
+            "Fonte Verificação"
+          ],
+          "sfipModules": [
+            "Inteligência",
+            "Acompanhar",
+            "Comunicar"
+          ]
+        }
+      ]
+    }
+  ]
+}

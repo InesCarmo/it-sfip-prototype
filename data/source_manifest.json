@@ -1,0 +1,1825 @@
+{
+  "title": "SFIP Source Manifest",
+  "version": 1,
+  "generatedAt": "2026-08-07T14:44:55.998Z",
+  "sourceCatalogRef": "data/sfip-official-source-catalog.json",
+  "pipelineStages": [
+    "Discovery",
+    "Validation",
+    "Enrichment",
+    "Publication"
+  ],
+  "fieldProfiles": {
+    "funding_open_call": [
+      "Official title",
+      "Official code",
+      "Programme",
+      "Entity",
+      "State",
+      "Opening date",
+      "Deadline",
+      "Type",
+      "Area",
+      "Objectives",
+      "Beneficiaries",
+      "Consortium",
+      "Funding amount",
+      "Funding rate",
+      "Duration",
+      "Link",
+      "Verification source",
+      "Last verified"
+    ],
+    "funding_erc": [
+      "Official title",
+      "Official code",
+      "Programme",
+      "State",
+      "Opening date",
+      "Deadline",
+      "PhD window / eligibility",
+      "Base funding",
+      "Additional funding",
+      "Duration",
+      "Link",
+      "Verification source",
+      "Last verified"
+    ],
+    "radar_forecast": [
+      "Forecast title",
+      "Programme",
+      "Forecast state",
+      "Planned window",
+      "Indicative budget",
+      "Link",
+      "Verification source",
+      "Last verified"
+    ],
+    "event_info": [
+      "Event title",
+      "Date",
+      "Time",
+      "Associated call",
+      "Audience",
+      "Registration link",
+      "Materials",
+      "Link",
+      "Verification source",
+      "Last verified"
+    ],
+    "company_ecosystem": [
+      "Company / organisation",
+      "Programme",
+      "State",
+      "Opportunity",
+      "Partner need",
+      "Relevant group",
+      "Potential role",
+      "Link",
+      "Verification source",
+      "Last verified"
+    ],
+    "institution_reference": [
+      "Institution",
+      "Programme",
+      "Reference page",
+      "Rule / guidance",
+      "Link",
+      "Verification source",
+      "Last verified"
+    ],
+    "networking_action": [
+      "Action title",
+      "Code",
+      "Programme",
+      "State",
+      "Opening date",
+      "Deadline / cut-off",
+      "Type",
+      "Duration",
+      "Participation form",
+      "Link",
+      "Verification source",
+      "Last verified"
+    ]
+  },
+  "scheduledTasks": {
+    "Discovery": {
+      "when": "Daily at 05:00 Europe/Lisbon",
+      "sources": [
+        "fct_concursos",
+        "portugal_2030_avisos",
+        "compete_2030_avisos",
+        "centro_2030_avisos",
+        "algarve_2030_step",
+        "horizon_europe_topic_pages",
+        "european_research_council_erc",
+        "msca_marie_sk_odowska_curie_actions",
+        "digital_europe_hadea",
+        "european_innovation_council_eic",
+        "eurohpc_ju",
+        "chips_ju_ecs_2026",
+        "eea_grants_bilateral_fund",
+        "interreg_programmes",
+        "eit_kic_portals",
+        "cost",
+        "esa_opportunities",
+        "eureka_network_eurostars_clusters",
+        "ani_rede_eureka",
+        "portugal_2030_plano_anual_de_avisos",
+        "centro_2030_plano_anual_de_avisos",
+        "european_commission_work_programmes_r_i_repository",
+        "digital_strategy_info_sessions",
+        "digital_strategy_guidance_library",
+        "compete_2030_rede_de_fornecedores_inovadores",
+        "eic_accelerator",
+        "esa_commercialisation",
+        "eit_innovation_uptake_mobility_culture",
+        "ani",
+        "european_commission",
+        "portugal_2030",
+        "compete_2030",
+        "fct"
+      ],
+      "reads": [
+        "catalog",
+        "source_manifest",
+        "raw source snapshots"
+      ],
+      "writes": [
+        "raw_snapshots",
+        "discovery_queue",
+        "change_log"
+      ],
+      "stopConditions": [
+        "Source unavailable or blocked",
+        "No content change detected",
+        "Mandatory metadata missing from the source"
+      ],
+      "humanReviewTriggers": [
+        "New source path or layout change",
+        "Ambiguous title/code/deadline",
+        "Source returns mixed open and forecast content"
+      ]
+    },
+    "Validation": {
+      "when": "Daily at 06:00 Europe/Lisbon",
+      "sources": [
+        "fct_concursos",
+        "portugal_2030_avisos",
+        "compete_2030_avisos",
+        "centro_2030_avisos",
+        "algarve_2030_step",
+        "horizon_europe_topic_pages",
+        "european_research_council_erc",
+        "msca_marie_sk_odowska_curie_actions",
+        "digital_europe_hadea",
+        "european_innovation_council_eic",
+        "eurohpc_ju",
+        "chips_ju_ecs_2026",
+        "eea_grants_bilateral_fund",
+        "interreg_programmes",
+        "eit_kic_portals",
+        "cost",
+        "esa_opportunities",
+        "eureka_network_eurostars_clusters",
+        "ani_rede_eureka",
+        "portugal_2030_plano_anual_de_avisos",
+        "centro_2030_plano_anual_de_avisos",
+        "european_commission_work_programmes_r_i_repository",
+        "digital_strategy_info_sessions",
+        "digital_strategy_guidance_library",
+        "compete_2030_rede_de_fornecedores_inovadores",
+        "eic_accelerator",
+        "esa_commercialisation",
+        "eit_innovation_uptake_mobility_culture",
+        "ani",
+        "european_commission",
+        "portugal_2030",
+        "compete_2030",
+        "fct"
+      ],
+      "reads": [
+        "discovery_queue",
+        "raw_snapshots",
+        "source_manifest"
+      ],
+      "writes": [
+        "validation_queue",
+        "staging_calls",
+        "staging_radar",
+        "staging_events",
+        "validation_log"
+      ],
+      "stopConditions": [
+        "Normalized record fails schema validation",
+        "Duplicate key already confirmed",
+        "Official source does not support the extracted values"
+      ],
+      "humanReviewTriggers": [
+        "Funding or deadline inferred rather than explicit",
+        "Conflicting official sources",
+        "Confidence below threshold"
+      ]
+    },
+    "Enrichment": {
+      "when": "Daily at 06:30 Europe/Lisbon",
+      "sources": [
+        "fct_concursos",
+        "portugal_2030_avisos",
+        "compete_2030_avisos",
+        "centro_2030_avisos",
+        "algarve_2030_step",
+        "horizon_europe_topic_pages",
+        "european_research_council_erc",
+        "msca_marie_sk_odowska_curie_actions",
+        "digital_europe_hadea",
+        "european_innovation_council_eic",
+        "eurohpc_ju",
+        "chips_ju_ecs_2026",
+        "eea_grants_bilateral_fund",
+        "interreg_programmes",
+        "eit_kic_portals",
+        "cost",
+        "esa_opportunities",
+        "eureka_network_eurostars_clusters",
+        "ani_rede_eureka",
+        "portugal_2030_plano_anual_de_avisos",
+        "centro_2030_plano_anual_de_avisos",
+        "european_commission_work_programmes_r_i_repository",
+        "digital_strategy_info_sessions",
+        "digital_strategy_guidance_library",
+        "compete_2030_rede_de_fornecedores_inovadores",
+        "eic_accelerator",
+        "esa_commercialisation",
+        "eit_innovation_uptake_mobility_culture",
+        "ani",
+        "european_commission",
+        "portugal_2030",
+        "compete_2030",
+        "fct"
+      ],
+      "reads": [
+        "staging_calls",
+        "staging_radar",
+        "tblInvestigadores",
+        "tblMatching",
+        "tblRadar"
+      ],
+      "writes": [
+        "enriched_calls",
+        "enriched_radar",
+        "enriched_events",
+        "enriched_companies",
+        "enrichment_log"
+      ],
+      "stopConditions": [
+        "No validated items to enrich",
+        "Reference data unavailable",
+        "Matching score below minimum confidence"
+      ],
+      "humanReviewTriggers": [
+        "Group or investigator match is only indicative",
+        "Communication audience is incomplete",
+        "Opportunity could fit multiple modules with equal score"
+      ]
+    },
+    "Publication": {
+      "when": "Daily at 07:00 Europe/Lisbon and on-demand after review approval",
+      "sources": [
+        "fct_concursos",
+        "portugal_2030_avisos",
+        "compete_2030_avisos",
+        "centro_2030_avisos",
+        "algarve_2030_step",
+        "horizon_europe_topic_pages",
+        "european_research_council_erc",
+        "msca_marie_sk_odowska_curie_actions",
+        "digital_europe_hadea",
+        "european_innovation_council_eic",
+        "eurohpc_ju",
+        "chips_ju_ecs_2026",
+        "eea_grants_bilateral_fund",
+        "interreg_programmes",
+        "eit_kic_portals",
+        "cost",
+        "esa_opportunities",
+        "eureka_network_eurostars_clusters",
+        "ani_rede_eureka",
+        "portugal_2030_plano_anual_de_avisos",
+        "centro_2030_plano_anual_de_avisos",
+        "european_commission_work_programmes_r_i_repository",
+        "digital_strategy_info_sessions",
+        "digital_strategy_guidance_library",
+        "compete_2030_rede_de_fornecedores_inovadores",
+        "eic_accelerator",
+        "esa_commercialisation",
+        "eit_innovation_uptake_mobility_culture",
+        "ani",
+        "european_commission",
+        "portugal_2030",
+        "compete_2030",
+        "fct"
+      ],
+      "reads": [
+        "enriched_calls",
+        "enriched_radar",
+        "enriched_events",
+        "enriched_companies",
+        "approval_queue"
+      ],
+      "writes": [
+        "tblCalls",
+        "tblRadar",
+        "tblEvents",
+        "tblCompanies",
+        "tblInstitutions",
+        "tblMatching",
+        "tblSourceSnapshots",
+        "tblChangeLog"
+      ],
+      "stopConditions": [
+        "Pending human approval for mandatory-review items",
+        "Duplicate conflict unresolved",
+        "Required destination table unavailable"
+      ],
+      "humanReviewTriggers": [
+        "Any record with approval_required = true",
+        "Any record with confidence below source threshold",
+        "Any duplicate or state transition from radar to call"
+      ]
+    }
+  },
+  "sources": [
+    {
+      "source_id": "fct_concursos",
+      "name": "FCT - Concursos",
+      "category": "Programas de Financiamento",
+      "priority": "high",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblCalls"
+      ],
+      "field_profile": "funding_open_call",
+      "fields_to_extract": [
+        "Official title",
+        "Official code",
+        "Programme",
+        "Entity",
+        "State",
+        "Opening date",
+        "Deadline",
+        "Type",
+        "Area",
+        "Objectives",
+        "Beneficiaries",
+        "Consortium",
+        "Funding amount",
+        "Funding rate",
+        "Duration",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability"
+        ]
+      },
+      "deduplication_policy": "official_code + normalized_title + deadline",
+      "confidence_level": "high",
+      "human_approval_required": "mandatory"
+    },
+    {
+      "source_id": "portugal_2030_avisos",
+      "name": "Portugal 2030 - Avisos",
+      "category": "Programas de Financiamento",
+      "priority": "high",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblCalls"
+      ],
+      "field_profile": "funding_open_call",
+      "fields_to_extract": [
+        "Official title",
+        "Official code",
+        "Programme",
+        "Entity",
+        "State",
+        "Opening date",
+        "Deadline",
+        "Type",
+        "Area",
+        "Objectives",
+        "Beneficiaries",
+        "Consortium",
+        "Funding amount",
+        "Funding rate",
+        "Duration",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability"
+        ]
+      },
+      "deduplication_policy": "official_code + normalized_title + deadline",
+      "confidence_level": "high",
+      "human_approval_required": "mandatory"
+    },
+    {
+      "source_id": "compete_2030_avisos",
+      "name": "COMPETE 2030 - Avisos",
+      "category": "Programas de Financiamento",
+      "priority": "high",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblCalls"
+      ],
+      "field_profile": "funding_open_call",
+      "fields_to_extract": [
+        "Official title",
+        "Official code",
+        "Programme",
+        "Entity",
+        "State",
+        "Opening date",
+        "Deadline",
+        "Type",
+        "Area",
+        "Objectives",
+        "Beneficiaries",
+        "Consortium",
+        "Funding amount",
+        "Funding rate",
+        "Duration",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability"
+        ]
+      },
+      "deduplication_policy": "official_code + normalized_title + deadline",
+      "confidence_level": "high",
+      "human_approval_required": "mandatory"
+    },
+    {
+      "source_id": "centro_2030_avisos",
+      "name": "Centro 2030 - Avisos",
+      "category": "Programas de Financiamento",
+      "priority": "high",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblCalls"
+      ],
+      "field_profile": "funding_open_call",
+      "fields_to_extract": [
+        "Official title",
+        "Official code",
+        "Programme",
+        "Entity",
+        "State",
+        "Opening date",
+        "Deadline",
+        "Type",
+        "Area",
+        "Objectives",
+        "Beneficiaries",
+        "Consortium",
+        "Funding amount",
+        "Funding rate",
+        "Duration",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability"
+        ]
+      },
+      "deduplication_policy": "official_code + normalized_title + deadline",
+      "confidence_level": "high",
+      "human_approval_required": "mandatory"
+    },
+    {
+      "source_id": "algarve_2030_step",
+      "name": "Algarve 2030 - STEP",
+      "category": "Programas de Financiamento",
+      "priority": "high",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblCalls"
+      ],
+      "field_profile": "funding_open_call",
+      "fields_to_extract": [
+        "Official title",
+        "Official code",
+        "Programme",
+        "Entity",
+        "State",
+        "Opening date",
+        "Deadline",
+        "Type",
+        "Area",
+        "Objectives",
+        "Beneficiaries",
+        "Consortium",
+        "Funding amount",
+        "Funding rate",
+        "Duration",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability"
+        ]
+      },
+      "deduplication_policy": "official_code + normalized_title + deadline",
+      "confidence_level": "high",
+      "human_approval_required": "mandatory"
+    },
+    {
+      "source_id": "horizon_europe_topic_pages",
+      "name": "Horizon Europe - Topic Pages",
+      "category": "Programas de Financiamento",
+      "priority": "high",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblCalls"
+      ],
+      "field_profile": "funding_open_call",
+      "fields_to_extract": [
+        "Official title",
+        "Official code",
+        "Programme",
+        "Entity",
+        "State",
+        "Opening date",
+        "Deadline",
+        "Type",
+        "Area",
+        "Objectives",
+        "Beneficiaries",
+        "Consortium",
+        "Funding amount",
+        "Funding rate",
+        "Duration",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability"
+        ]
+      },
+      "deduplication_policy": "official_code + normalized_title + deadline",
+      "confidence_level": "high",
+      "human_approval_required": "mandatory"
+    },
+    {
+      "source_id": "european_research_council_erc",
+      "name": "European Research Council - ERC",
+      "category": "Programas de Financiamento",
+      "priority": "high",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblCalls"
+      ],
+      "field_profile": "funding_erc",
+      "fields_to_extract": [
+        "Official title",
+        "Official code",
+        "Programme",
+        "State",
+        "Opening date",
+        "Deadline",
+        "PhD window / eligibility",
+        "Base funding",
+        "Additional funding",
+        "Duration",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous",
+        "phd_window_or_poc_eligibility_required"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability"
+        ]
+      },
+      "deduplication_policy": "official_code + normalized_title + deadline",
+      "confidence_level": "high",
+      "human_approval_required": "mandatory"
+    },
+    {
+      "source_id": "msca_marie_sk_odowska_curie_actions",
+      "name": "MSCA - Marie Skłodowska-Curie Actions",
+      "category": "Programas de Financiamento",
+      "priority": "high",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblCalls"
+      ],
+      "field_profile": "funding_open_call",
+      "fields_to_extract": [
+        "Official title",
+        "Official code",
+        "Programme",
+        "Entity",
+        "State",
+        "Opening date",
+        "Deadline",
+        "Type",
+        "Area",
+        "Objectives",
+        "Beneficiaries",
+        "Consortium",
+        "Funding amount",
+        "Funding rate",
+        "Duration",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability"
+        ]
+      },
+      "deduplication_policy": "official_code + normalized_title + deadline",
+      "confidence_level": "high",
+      "human_approval_required": "mandatory"
+    },
+    {
+      "source_id": "digital_europe_hadea",
+      "name": "Digital Europe / HaDEA",
+      "category": "Programas de Financiamento",
+      "priority": "high",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblCalls"
+      ],
+      "field_profile": "funding_open_call",
+      "fields_to_extract": [
+        "Official title",
+        "Official code",
+        "Programme",
+        "Entity",
+        "State",
+        "Opening date",
+        "Deadline",
+        "Type",
+        "Area",
+        "Objectives",
+        "Beneficiaries",
+        "Consortium",
+        "Funding amount",
+        "Funding rate",
+        "Duration",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability"
+        ]
+      },
+      "deduplication_policy": "official_code + normalized_title + deadline",
+      "confidence_level": "high",
+      "human_approval_required": "mandatory"
+    },
+    {
+      "source_id": "european_innovation_council_eic",
+      "name": "European Innovation Council - EIC",
+      "category": "Programas de Financiamento",
+      "priority": "high",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblCalls"
+      ],
+      "field_profile": "funding_open_call",
+      "fields_to_extract": [
+        "Official title",
+        "Official code",
+        "Programme",
+        "Entity",
+        "State",
+        "Opening date",
+        "Deadline",
+        "Type",
+        "Area",
+        "Objectives",
+        "Beneficiaries",
+        "Consortium",
+        "Funding amount",
+        "Funding rate",
+        "Duration",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability"
+        ]
+      },
+      "deduplication_policy": "official_code + normalized_title + deadline",
+      "confidence_level": "high",
+      "human_approval_required": "mandatory"
+    },
+    {
+      "source_id": "eurohpc_ju",
+      "name": "EuroHPC JU",
+      "category": "Programas de Financiamento",
+      "priority": "high",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblCalls"
+      ],
+      "field_profile": "funding_open_call",
+      "fields_to_extract": [
+        "Official title",
+        "Official code",
+        "Programme",
+        "Entity",
+        "State",
+        "Opening date",
+        "Deadline",
+        "Type",
+        "Area",
+        "Objectives",
+        "Beneficiaries",
+        "Consortium",
+        "Funding amount",
+        "Funding rate",
+        "Duration",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability"
+        ]
+      },
+      "deduplication_policy": "official_code + normalized_title + deadline",
+      "confidence_level": "high",
+      "human_approval_required": "mandatory"
+    },
+    {
+      "source_id": "chips_ju_ecs_2026",
+      "name": "Chips JU / ECS 2026",
+      "category": "Programas de Financiamento",
+      "priority": "high",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblCalls"
+      ],
+      "field_profile": "funding_open_call",
+      "fields_to_extract": [
+        "Official title",
+        "Official code",
+        "Programme",
+        "Entity",
+        "State",
+        "Opening date",
+        "Deadline",
+        "Type",
+        "Area",
+        "Objectives",
+        "Beneficiaries",
+        "Consortium",
+        "Funding amount",
+        "Funding rate",
+        "Duration",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability"
+        ]
+      },
+      "deduplication_policy": "official_code + normalized_title + deadline",
+      "confidence_level": "high",
+      "human_approval_required": "mandatory"
+    },
+    {
+      "source_id": "eea_grants_bilateral_fund",
+      "name": "EEA Grants - Bilateral Fund",
+      "category": "Programas de Financiamento",
+      "priority": "high",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblCalls"
+      ],
+      "field_profile": "funding_open_call",
+      "fields_to_extract": [
+        "Official title",
+        "Official code",
+        "Programme",
+        "Entity",
+        "State",
+        "Opening date",
+        "Deadline",
+        "Type",
+        "Area",
+        "Objectives",
+        "Beneficiaries",
+        "Consortium",
+        "Funding amount",
+        "Funding rate",
+        "Duration",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability"
+        ]
+      },
+      "deduplication_policy": "official_code + normalized_title + deadline",
+      "confidence_level": "high",
+      "human_approval_required": "mandatory"
+    },
+    {
+      "source_id": "interreg_programmes",
+      "name": "Interreg Programmes",
+      "category": "Programas de Financiamento",
+      "priority": "high",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblCalls",
+        "tblRadar"
+      ],
+      "field_profile": "funding_open_call",
+      "fields_to_extract": [
+        "Official title",
+        "Official code",
+        "Programme",
+        "Entity",
+        "State",
+        "Opening date",
+        "Deadline",
+        "Type",
+        "Area",
+        "Objectives",
+        "Beneficiaries",
+        "Consortium",
+        "Funding amount",
+        "Funding rate",
+        "Duration",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability"
+        ]
+      },
+      "deduplication_policy": "official_code + normalized_title + deadline",
+      "confidence_level": "high",
+      "human_approval_required": "mandatory"
+    },
+    {
+      "source_id": "eit_kic_portals",
+      "name": "EIT KIC Portals",
+      "category": "Programas de Financiamento",
+      "priority": "high",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblCalls",
+        "tblEvents"
+      ],
+      "field_profile": "event_info",
+      "fields_to_extract": [
+        "Event title",
+        "Date",
+        "Time",
+        "Associated call",
+        "Audience",
+        "Registration link",
+        "Materials",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability"
+        ]
+      },
+      "deduplication_policy": "official_code + normalized_title + deadline",
+      "confidence_level": "high",
+      "human_approval_required": "mandatory"
+    },
+    {
+      "source_id": "cost",
+      "name": "COST",
+      "category": "Brokerage & Networking",
+      "priority": "high",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblCalls",
+        "tblEvents"
+      ],
+      "field_profile": "networking_action",
+      "fields_to_extract": [
+        "Action title",
+        "Code",
+        "Programme",
+        "State",
+        "Opening date",
+        "Deadline / cut-off",
+        "Type",
+        "Duration",
+        "Participation form",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability",
+          "call_cutoff_change"
+        ]
+      },
+      "deduplication_policy": "official_code + normalized_title + deadline",
+      "confidence_level": "high",
+      "human_approval_required": "mandatory"
+    },
+    {
+      "source_id": "esa_opportunities",
+      "name": "ESA Opportunities",
+      "category": "Brokerage & Networking",
+      "priority": "high",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblCalls",
+        "tblRadar"
+      ],
+      "field_profile": "funding_open_call",
+      "fields_to_extract": [
+        "Official title",
+        "Official code",
+        "Programme",
+        "Entity",
+        "State",
+        "Opening date",
+        "Deadline",
+        "Type",
+        "Area",
+        "Objectives",
+        "Beneficiaries",
+        "Consortium",
+        "Funding amount",
+        "Funding rate",
+        "Duration",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability"
+        ]
+      },
+      "deduplication_policy": "official_code + normalized_title + deadline",
+      "confidence_level": "high",
+      "human_approval_required": "mandatory"
+    },
+    {
+      "source_id": "eureka_network_eurostars_clusters",
+      "name": "Eureka Network / Eurostars / Clusters",
+      "category": "Brokerage & Networking",
+      "priority": "high",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblCalls"
+      ],
+      "field_profile": "funding_open_call",
+      "fields_to_extract": [
+        "Official title",
+        "Official code",
+        "Programme",
+        "Entity",
+        "State",
+        "Opening date",
+        "Deadline",
+        "Type",
+        "Area",
+        "Objectives",
+        "Beneficiaries",
+        "Consortium",
+        "Funding amount",
+        "Funding rate",
+        "Duration",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous",
+        "national_mechanism_validation_required"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability",
+          "deadline_shift",
+          "phase_change"
+        ]
+      },
+      "deduplication_policy": "official_code + normalized_title + programme + deadline + phase",
+      "confidence_level": "high",
+      "human_approval_required": "mandatory"
+    },
+    {
+      "source_id": "ani_rede_eureka",
+      "name": "ANI - Rede Eureka",
+      "category": "Brokerage & Networking",
+      "priority": "high",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblInstitutions"
+      ],
+      "field_profile": "funding_open_call",
+      "fields_to_extract": [
+        "Official title",
+        "Official code",
+        "Programme",
+        "Entity",
+        "State",
+        "Opening date",
+        "Deadline",
+        "Type",
+        "Area",
+        "Objectives",
+        "Beneficiaries",
+        "Consortium",
+        "Funding amount",
+        "Funding rate",
+        "Duration",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous",
+        "national_mechanism_validation_required"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability",
+          "deadline_shift",
+          "phase_change"
+        ]
+      },
+      "deduplication_policy": "official_code + normalized_title + programme + deadline + phase",
+      "confidence_level": "high",
+      "human_approval_required": "mandatory"
+    },
+    {
+      "source_id": "portugal_2030_plano_anual_de_avisos",
+      "name": "Portugal 2030 - Plano Anual de Avisos",
+      "category": "Radar Estratégico",
+      "priority": "high",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblRadar"
+      ],
+      "field_profile": "radar_forecast",
+      "fields_to_extract": [
+        "Forecast title",
+        "Programme",
+        "Forecast state",
+        "Planned window",
+        "Indicative budget",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous",
+        "do_not_promote_to_calls_without_official_opening"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability",
+          "calendar_window_change"
+        ]
+      },
+      "deduplication_policy": "forecast_title + programme + window",
+      "confidence_level": "medium",
+      "human_approval_required": "mandatory"
+    },
+    {
+      "source_id": "centro_2030_plano_anual_de_avisos",
+      "name": "Centro 2030 - Plano Anual de Avisos",
+      "category": "Radar Estratégico",
+      "priority": "high",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblRadar"
+      ],
+      "field_profile": "radar_forecast",
+      "fields_to_extract": [
+        "Forecast title",
+        "Programme",
+        "Forecast state",
+        "Planned window",
+        "Indicative budget",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous",
+        "do_not_promote_to_calls_without_official_opening"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability",
+          "calendar_window_change"
+        ]
+      },
+      "deduplication_policy": "forecast_title + programme + window",
+      "confidence_level": "medium",
+      "human_approval_required": "mandatory"
+    },
+    {
+      "source_id": "european_commission_work_programmes_r_i_repository",
+      "name": "European Commission - Work Programmes / R&I repository",
+      "category": "Radar Estratégico",
+      "priority": "high",
+      "acquisition_method": "PDF",
+      "destination": [
+        "tblRadar",
+        "tblCalls"
+      ],
+      "field_profile": "radar_forecast",
+      "fields_to_extract": [
+        "Forecast title",
+        "Programme",
+        "Forecast state",
+        "Planned window",
+        "Indicative budget",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous",
+        "do_not_promote_to_calls_without_official_opening"
+      ],
+      "change_detection": {
+        "strategy": "pdf_checksum_and_text_hash",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability",
+          "pdf_text_diff",
+          "calendar_window_change"
+        ]
+      },
+      "deduplication_policy": "forecast_title + programme + window",
+      "confidence_level": "medium",
+      "human_approval_required": "recommended"
+    },
+    {
+      "source_id": "digital_strategy_info_sessions",
+      "name": "Digital Strategy - Info Sessions",
+      "category": "Webinars & Info Days",
+      "priority": "medium",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblEvents",
+        "tblRadar"
+      ],
+      "field_profile": "event_info",
+      "fields_to_extract": [
+        "Event title",
+        "Date",
+        "Time",
+        "Associated call",
+        "Audience",
+        "Registration link",
+        "Materials",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous",
+        "event_link_and_datetime_required"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability",
+          "event_datetime_change"
+        ]
+      },
+      "deduplication_policy": "event_title + date + associated_call",
+      "confidence_level": "medium",
+      "human_approval_required": "recommended"
+    },
+    {
+      "source_id": "digital_strategy_guidance_library",
+      "name": "Digital Strategy - Guidance Library",
+      "category": "Webinars & Info Days",
+      "priority": "medium",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblEvents",
+        "tblRadar"
+      ],
+      "field_profile": "event_info",
+      "fields_to_extract": [
+        "Event title",
+        "Date",
+        "Time",
+        "Associated call",
+        "Audience",
+        "Registration link",
+        "Materials",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous",
+        "event_link_and_datetime_required"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability",
+          "event_datetime_change"
+        ]
+      },
+      "deduplication_policy": "event_title + date + associated_call",
+      "confidence_level": "medium",
+      "human_approval_required": "recommended"
+    },
+    {
+      "source_id": "compete_2030_rede_de_fornecedores_inovadores",
+      "name": "COMPETE 2030 - Rede de Fornecedores Inovadores",
+      "category": "Empresas & Ecossistema",
+      "priority": "high",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblCompanies",
+        "tblCalls"
+      ],
+      "field_profile": "company_ecosystem",
+      "fields_to_extract": [
+        "Company / organisation",
+        "Programme",
+        "State",
+        "Opportunity",
+        "Partner need",
+        "Relevant group",
+        "Potential role",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous",
+        "company_entity_presence_required"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability"
+        ]
+      },
+      "deduplication_policy": "company + programme + opportunity",
+      "confidence_level": "high",
+      "human_approval_required": "mandatory"
+    },
+    {
+      "source_id": "eic_accelerator",
+      "name": "EIC Accelerator",
+      "category": "Empresas & Ecossistema",
+      "priority": "high",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblCalls"
+      ],
+      "field_profile": "company_ecosystem",
+      "fields_to_extract": [
+        "Company / organisation",
+        "Programme",
+        "State",
+        "Opportunity",
+        "Partner need",
+        "Relevant group",
+        "Potential role",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous",
+        "company_entity_presence_required"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability"
+        ]
+      },
+      "deduplication_policy": "company + programme + opportunity",
+      "confidence_level": "high",
+      "human_approval_required": "mandatory"
+    },
+    {
+      "source_id": "esa_commercialisation",
+      "name": "ESA Commercialisation",
+      "category": "Empresas & Ecossistema",
+      "priority": "high",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblCalls",
+        "tblCompanies"
+      ],
+      "field_profile": "company_ecosystem",
+      "fields_to_extract": [
+        "Company / organisation",
+        "Programme",
+        "State",
+        "Opportunity",
+        "Partner need",
+        "Relevant group",
+        "Potential role",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous",
+        "company_entity_presence_required"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability"
+        ]
+      },
+      "deduplication_policy": "company + programme + opportunity",
+      "confidence_level": "high",
+      "human_approval_required": "mandatory"
+    },
+    {
+      "source_id": "eit_innovation_uptake_mobility_culture",
+      "name": "EIT Innovation Uptake / Mobility / Culture",
+      "category": "Empresas & Ecossistema",
+      "priority": "high",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblCalls",
+        "tblEvents"
+      ],
+      "field_profile": "company_ecosystem",
+      "fields_to_extract": [
+        "Company / organisation",
+        "Programme",
+        "State",
+        "Opportunity",
+        "Partner need",
+        "Relevant group",
+        "Potential role",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous",
+        "company_entity_presence_required"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability"
+        ]
+      },
+      "deduplication_policy": "company + programme + opportunity",
+      "confidence_level": "high",
+      "human_approval_required": "mandatory"
+    },
+    {
+      "source_id": "ani",
+      "name": "ANI",
+      "category": "Instituições",
+      "priority": "high",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblInstitutions"
+      ],
+      "field_profile": "institution_reference",
+      "fields_to_extract": [
+        "Institution",
+        "Programme",
+        "Reference page",
+        "Rule / guidance",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous",
+        "reference_only_no_opportunity_autopublish"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability"
+        ]
+      },
+      "deduplication_policy": "institution + reference_page",
+      "confidence_level": "medium",
+      "human_approval_required": "mandatory"
+    },
+    {
+      "source_id": "european_commission",
+      "name": "European Commission",
+      "category": "Instituições",
+      "priority": "high",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblInstitutions"
+      ],
+      "field_profile": "institution_reference",
+      "fields_to_extract": [
+        "Institution",
+        "Programme",
+        "Reference page",
+        "Rule / guidance",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous",
+        "reference_only_no_opportunity_autopublish"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability"
+        ]
+      },
+      "deduplication_policy": "institution + reference_page",
+      "confidence_level": "medium",
+      "human_approval_required": "mandatory"
+    },
+    {
+      "source_id": "portugal_2030",
+      "name": "Portugal 2030",
+      "category": "Instituições",
+      "priority": "high",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblInstitutions"
+      ],
+      "field_profile": "institution_reference",
+      "fields_to_extract": [
+        "Institution",
+        "Programme",
+        "Reference page",
+        "Rule / guidance",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous",
+        "reference_only_no_opportunity_autopublish"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability"
+        ]
+      },
+      "deduplication_policy": "institution + reference_page",
+      "confidence_level": "medium",
+      "human_approval_required": "mandatory"
+    },
+    {
+      "source_id": "compete_2030",
+      "name": "COMPETE 2030",
+      "category": "Instituições",
+      "priority": "high",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblInstitutions"
+      ],
+      "field_profile": "institution_reference",
+      "fields_to_extract": [
+        "Institution",
+        "Programme",
+        "Reference page",
+        "Rule / guidance",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous",
+        "reference_only_no_opportunity_autopublish"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability"
+        ]
+      },
+      "deduplication_policy": "institution + reference_page",
+      "confidence_level": "medium",
+      "human_approval_required": "mandatory"
+    },
+    {
+      "source_id": "fct",
+      "name": "FCT",
+      "category": "Instituições",
+      "priority": "high",
+      "acquisition_method": "HTML",
+      "destination": [
+        "tblInstitutions"
+      ],
+      "field_profile": "institution_reference",
+      "fields_to_extract": [
+        "Institution",
+        "Programme",
+        "Reference page",
+        "Rule / guidance",
+        "Link",
+        "Verification source",
+        "Last verified"
+      ],
+      "validation_rules": [
+        "official_url_required",
+        "normalize_title_program_code",
+        "block_non_official_domains",
+        "human_review_when_ambiguous",
+        "reference_only_no_opportunity_autopublish"
+      ],
+      "change_detection": {
+        "strategy": "normalized_dom_diff",
+        "signals": [
+          "checksum_or_hash",
+          "normalized_field_diff",
+          "official_url_stability"
+        ]
+      },
+      "deduplication_policy": "institution + reference_page",
+      "confidence_level": "medium",
+      "human_approval_required": "mandatory"
+    }
+  ]
+}

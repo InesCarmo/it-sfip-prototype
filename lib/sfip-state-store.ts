@@ -1,3 +1,5 @@
+import type { Mission } from "@/lib/sfip-types";
+
 export const SFIP_STATE_KEY = "it-sfip:workspace-state:v1";
 
 export type StoredTask = {
@@ -12,7 +14,7 @@ export type StoredTask = {
 export type StoredSfipState = {
   version: 1;
   savedAt: string;
-  mission: "home" | "opportunities" | "discover" | "decide" | "communicate" | "track" | "intelligence";
+  mission: Mission;
   workspace: {
     title: string;
     description: string;

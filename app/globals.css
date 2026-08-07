@@ -101,3 +101,83 @@ button { cursor: pointer; }
 .context-evidence { display:grid; grid-template-columns:1fr 1.3fr 1.25fr; background:#edf3f5; border:1px solid #cbdadf; margin:-13px 0 22px; }.context-evidence>div { padding:10px 13px; border-right:1px solid #cbdadf; }.context-evidence>div:last-child { border:0; }.context-evidence small,.context-evidence strong { display:block; }.context-evidence small { color:var(--blue); font-size:7px; letter-spacing:.1em; font-weight:800; }.context-evidence strong { font-size:9px; margin-top:4px; }.global-search>header p { margin:4px 0 0; color:var(--muted); font-size:9px; }
 .campaign-steps { display:flex; align-items:center; justify-content:center; margin:-6px 0 17px; }.campaign-steps span { display:flex; align-items:center; gap:6px; color:var(--muted); font-size:9px; font-weight:700; }.campaign-steps span b { width:22px; height:22px; border:1px solid var(--line); border-radius:50%; display:grid; place-items:center; background:white; }.campaign-steps span.active { color:var(--navy); }.campaign-steps span.active b { background:var(--navy); border-color:var(--navy); color:white; }.campaign-steps i { width:55px; height:1px; background:var(--line); margin:0 8px; }.campaign-builder { display:grid; grid-template-columns:1.15fr .85fr; gap:14px; }.segment-panel,.eligible-panel,.channel-composer { background:white; border:1px solid var(--line); padding:17px; }.segment-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }.segment-grid label,.composer-body aside label { display:grid; gap:4px; color:var(--muted); font-size:8px; font-weight:700; }.segment-grid select,.composer-body select { border:1px solid var(--line); background:white; padding:7px; font-size:9px; color:var(--ink); }.audience-card { margin-top:14px; border-left:3px solid var(--blue); background:#e8f1f4; padding:11px; display:flex; justify-content:space-between; align-items:center; }.audience-card small,.audience-card strong,.audience-card span { display:block; }.audience-card small { color:var(--blue); font-size:7px; }.audience-card strong { font-size:16px; margin:3px 0; }.audience-card span { color:var(--muted); font-size:8px; }.audience-card button { border:1px solid #b8ccd4; background:white; padding:6px 8px; color:var(--blue); font-size:8px; }.eligible-panel { display:flex; flex-direction:column; }.eligible-item { display:grid; grid-template-columns:18px 1fr auto; gap:9px; align-items:center; border-top:1px solid var(--line); padding:11px 0; }.eligible-item small,.eligible-item strong,.eligible-item em { display:block; }.eligible-item small { color:var(--blue); font-size:7px; }.eligible-item strong { font-size:10px; margin:3px 0; }.eligible-item em { color:var(--muted); font-size:8px; font-style:normal; }.eligible-panel>.button { margin-top:auto; }.eligible-panel .button:disabled { opacity:.4; }.channel-composer { margin-top:14px; padding:0; }.channel-tabs { display:flex; align-items:center; border-bottom:1px solid var(--line); padding:9px 14px; }.channel-tabs>span { margin-right:auto; color:var(--blue); font-size:8px; font-weight:800; letter-spacing:.08em; }.channel-tabs button { border:0; background:transparent; padding:7px 10px; font-size:9px; }.channel-tabs button.active { background:var(--navy); color:white; }.composer-body { display:grid; grid-template-columns:1fr 210px; gap:0; }.composer-body>div { padding:20px 24px; min-height:300px; }.composer-body>div>small { color:var(--blue); font-size:8px; }.composer-body h2 { font-size:18px; }.composer-body p { font-size:10px; line-height:1.6; }.composer-body aside { border-left:1px solid var(--line); padding:18px; display:grid; align-content:start; gap:13px; }.composer-body aside>strong { font-size:10px; }
 @media (max-width:900px) { .campaign-builder { grid-template-columns:1fr; }.context-evidence { grid-template-columns:1fr; }.context-evidence>div { border-right:0; border-bottom:1px solid #cbdadf; }.composer-body { grid-template-columns:1fr; }.composer-body aside { border-left:0; border-top:1px solid var(--line); }.campaign-steps i { width:18px; } }
+
+/* Funding & Tenders Portal pilot pipeline */
+.pipeline-screen { display:grid; gap:14px; }
+.pipeline-actions { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.pipeline-source-banner { display:flex; justify-content:space-between; gap:16px; background:white; border:1px solid var(--line); padding:16px 18px; }
+.pipeline-source-banner strong { display:block; margin-top:4px; font-size:18px; }
+.pipeline-source-banner p { margin:5px 0 0; color:var(--muted); font-size:10px; }
+.pipeline-source-state { text-align:right; }
+.pipeline-source-state span, .pipeline-source-state strong, .pipeline-source-state small { display:block; }
+.pipeline-source-state span { color:var(--blue); font-size:8px; font-weight:800; letter-spacing:.12em; }
+.pipeline-source-state strong { margin:4px 0 2px; font-size:15px; }
+.pipeline-source-state small { color:var(--muted); font-size:9px; }
+.pipeline-stats { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; }
+.pipeline-stats article, .pipeline-stage-strip > div { background:white; border:1px solid var(--line); padding:13px 14px; }
+.pipeline-stats strong { display:block; font-size:26px; color:var(--navy); line-height:1; }
+.pipeline-stats span { display:block; margin-top:5px; font-size:10px; font-weight:800; }
+.pipeline-stats small { display:block; margin-top:3px; color:var(--muted); font-size:9px; }
+.pipeline-stage-strip { display:grid; grid-template-columns:repeat(5,1fr); gap:8px; }
+.pipeline-stage-strip span { display:block; color:var(--blue); font-size:8px; font-weight:800; letter-spacing:.12em; }
+.pipeline-stage-strip strong { display:block; margin-top:4px; font-size:13px; }
+.pipeline-toolbar { display:grid; grid-template-columns:1fr auto; gap:10px; align-items:center; }
+.filter-row.compact { margin:0; }
+.pipeline-layout { display:grid; grid-template-columns:minmax(360px,.98fr) minmax(380px,1.02fr); gap:14px; }
+.pipeline-list, .pipeline-detail, .pipeline-publication { background:white; border:1px solid var(--line); }
+.pipeline-list { padding:17px; }
+.pipeline-list-body { display:grid; gap:10px; max-height:680px; overflow:auto; padding-right:2px; }
+.pipeline-item { border:1px solid var(--line); background:white; text-align:left; padding:13px 14px; display:grid; gap:8px; }
+.pipeline-item.selected { border-left:4px solid var(--blue); box-shadow:0 5px 16px rgba(26, 57, 72, .08); }
+.pipeline-item-main, .pipeline-item-footer { display:flex; justify-content:space-between; gap:12px; align-items:center; }
+.pipeline-item-title strong, .pipeline-item-title small, .pipeline-item-footer strong, .pipeline-item-footer span { display:block; }
+.pipeline-item-title strong { font-size:12px; line-height:1.35; }
+.pipeline-item-title small { margin-top:4px; color:var(--muted); font-size:9px; }
+.pipeline-item-meta { display:flex; gap:6px; align-items:center; flex-wrap:wrap; justify-content:flex-end; }
+.pipeline-item-footer span { color:var(--muted); font-size:9px; }
+.pipeline-item-footer strong { color:var(--navy); font-size:12px; }
+.confidence-meter { height:7px; background:#edf2f4; overflow:hidden; }
+.confidence-meter span { display:block; height:100%; background:linear-gradient(90deg, var(--blue), var(--green)); }
+.pipeline-detail { padding:17px; display:grid; gap:14px; }
+.pipeline-detail .panel-heading { margin-bottom:0; }
+.pipeline-detail-actions { display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end; }
+.pipeline-kpis, .pipeline-snapshot { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
+.pipeline-kpis div, .pipeline-snapshot div { border:1px solid var(--line); background:var(--soft); padding:10px 11px; }
+.pipeline-kpis small, .pipeline-snapshot small { display:block; color:var(--blue); font-size:8px; font-weight:800; letter-spacing:.1em; }
+.pipeline-kpis strong, .pipeline-snapshot strong { display:block; margin-top:4px; font-size:11px; line-height:1.45; }
+.pipeline-review { display:grid; grid-template-columns:190px 1fr; gap:12px; align-items:start; }
+.review-control { display:grid; gap:6px; }
+.review-control button { border:1px solid var(--line); background:white; padding:9px 10px; font-size:10px; text-align:left; }
+.review-control button.active { border-color:var(--blue); background:#eaf3f6; color:var(--navy); font-weight:700; }
+.note-editor { display:grid; gap:6px; }
+.note-editor span { color:var(--blue); font-size:8px; font-weight:800; letter-spacing:.1em; }
+.note-editor textarea { min-height:112px; resize:vertical; border:1px solid var(--line); padding:10px; background:white; font-size:10px; }
+.diff-viewer { background:#fbfcfc; border:1px solid var(--line); padding:15px; }
+.diff-list { display:grid; gap:8px; }
+.diff-row { display:grid; grid-template-columns:1.25fr .95fr .95fr auto; gap:10px; align-items:center; border-top:1px solid var(--line); padding-top:10px; }
+.diff-row strong { display:block; font-size:11px; }
+.diff-row small { display:block; color:var(--muted); font-size:9px; margin-top:3px; line-height:1.4; }
+.diff-row span { color:var(--blue); font-size:8px; font-weight:800; letter-spacing:.08em; }
+.diff-row p { margin:3px 0 0; font-size:10px; line-height:1.45; }
+.pipeline-validation { border:1px solid var(--line); background:var(--soft); padding:13px 14px; }
+.pipeline-validation h3 { margin:4px 0 0; font-size:13px; }
+.pipeline-validation ul { margin:10px 0 0; padding-left:16px; color:var(--muted); font-size:10px; line-height:1.5; }
+.pipeline-publication { padding:17px; }
+.publication-log { display:grid; gap:8px; }
+.publication-entry { border:1px solid var(--line); background:var(--soft); padding:11px 12px; display:grid; gap:3px; }
+.publication-entry strong { font-size:11px; }
+.publication-entry span, .publication-entry small { color:var(--muted); font-size:9px; }
+
+@media (max-width: 1180px) {
+  .pipeline-stats, .pipeline-stage-strip { grid-template-columns:repeat(2,1fr); }
+  .pipeline-layout { grid-template-columns:1fr; }
+  .pipeline-review { grid-template-columns:1fr; }
+  .pipeline-toolbar { grid-template-columns:1fr; }
+}
+
+@media (max-width: 780px) {
+  .pipeline-source-banner { flex-direction:column; }
+  .pipeline-source-state { text-align:left; }
+  .pipeline-kpis, .pipeline-snapshot { grid-template-columns:1fr; }
+  .diff-row { grid-template-columns:1fr; }
+}

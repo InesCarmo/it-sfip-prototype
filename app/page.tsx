@@ -2,9 +2,9 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { coreEngine, type Opportunity, type WorkspaceContext } from "@/lib/core-engine";
+import { FundingTendersPipelineScreen } from "@/components/funding-tenders-pipeline-screen";
 import { loadSfipState, saveSfipState } from "@/lib/sfip-state-store";
-
-type Mission = "home" | "opportunities" | "discover" | "decide" | "communicate" | "track" | "intelligence";
+import type { Mission } from "@/lib/sfip-types";
 
 const missions: { id: Mission; label: string; glyph: string }[] = [
   { id: "home", label: "Início", glyph: "⌒" },
@@ -15,6 +15,8 @@ const missions: { id: Mission; label: string; glyph: string }[] = [
   { id: "track", label: "Acompanhar", glyph: "☑" },
   { id: "intelligence", label: "Inteligência", glyph: "∴" },
 ];
+
+missions.push({ id: "pipeline", label: "Pipeline", glyph: "⟳" });
 
 const opportunities = coreEngine.getAllOpportunities(true);
 const defaultWorkspace: WorkspaceContext = { title: "Análise atual", description: "" };
@@ -129,6 +131,7 @@ export default function Home() {
           {mission === "communicate" && <CommunicateScreen drafted={drafted} setDrafted={setDrafted} sent={sent} setSent={setSent} navigate={navigate} />}
           {mission === "track" && <TrackScreen tasks={tasks} setTasks={setTasks} />}
           {mission === "intelligence" && <IntelligenceScreen navigate={navigate} />}
+          {mission === "pipeline" && <FundingTendersPipelineScreen navigate={navigate} />}
         </div>
       </section>
 
