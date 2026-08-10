@@ -34,6 +34,11 @@ export type StoredSfipState = {
   assistantOpen: boolean;
   assistantInput: string;
   assistantReply: string;
+  aiWorkspaceAssistant: {
+    sourceLabel: string;
+    input: string;
+    analysis: unknown | null;
+  } | null;
 };
 
 export type StorageAdapter = Pick<Storage, "getItem" | "setItem" | "removeItem">;

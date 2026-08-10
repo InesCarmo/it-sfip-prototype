@@ -6,9 +6,11 @@ export type WeeklyBriefing = {
   newOpportunities: Opportunity[];
   changedDeadlines: Array<{ opportunity: Opportunity; before: string; after: string }>;
   closedOpportunities: Opportunity[];
+  removedOpportunities: Opportunity[];
   webinars: Opportunity[];
   brokerageEvents: Opportunity[];
   radarHighlights: Opportunity[];
+  syncErrors: string[];
   groupHighlights: Array<{ group: string; count: number }>;
   summary: {
     newCount: number;
@@ -16,6 +18,8 @@ export type WeeklyBriefing = {
     webinarCount: number;
     brokerageCount: number;
     closedCount: number;
+    removedCount: number;
+    syncErrorCount: number;
   };
 };
 
@@ -109,6 +113,10 @@ export function buildWeeklyBriefing(previous?: AutonomousSnapshot | null): Weekl
   const previousIds = new Set(previous?.opportunityIds ?? []);
 
   const newOpportunities = opportunities.filter((item) => !previousIds.has(item.id));
+  const removedOpportunities = (previous?.opportunityIds ?? [])
+    .filter((id) => !opportunities.some((item) => item.id === id))
+    .map((id) => coreEngine.getOpportunity(id))
+    .filter((item): item is Opportunity => Boolean(item));
   const changedDeadlines = opportunities
     .filter((item) => previous?.deadlineById?.[item.id] && previous.deadlineById[item.id] !== item.deadline)
     .map((item) => ({
@@ -120,6 +128,11 @@ export function buildWeeklyBriefing(previous?: AutonomousSnapshot | null): Weekl
   const webinars = coreEngine.getEvents().filter((event) => event.type === "webinar").map(eventToOpportunity);
   const brokerageEvents = coreEngine.getEvents().filter((event) => event.type === "brokerage").map(eventToOpportunity);
   const radarHighlights = coreEngine.getAllOpportunities(true).filter((item) => item.source === "RADAR").slice(0, 5);
+  const syncErrors = [
+    ...opportunities.filter((item) => item.state === "Aberta" && (item.days ?? 9999) < 0).map((item) => `${item.id}: deadline vencida em estado aberto`),
+    ...opportunities.filter((item) => !item.deadline || item.deadline === "Por confirmar").map((item) => `${item.id}: deadline em falta`),
+    ...opportunities.filter((item) => !item.link).map((item) => `${item.id}: link oficial em falta`),
+  ];
   const groupHighlights = coreEngine.facets.groups
     .map((group) => ({ group, count: coreEngine.getByGroup(group).filter((item) => item.state === "Aberta").length }))
     .filter((item) => item.count > 0)
@@ -127,23 +140,27 @@ export function buildWeeklyBriefing(previous?: AutonomousSnapshot | null): Weekl
     .slice(0, 5);
 
   return {
-    generatedAt: current.savedAt,
-    since: previous?.savedAt ?? null,
-    newOpportunities,
-    changedDeadlines,
-    closedOpportunities,
-    webinars,
-    brokerageEvents,
-    radarHighlights,
-    groupHighlights,
-    summary: {
-      newCount: newOpportunities.length,
-      changedDeadlinesCount: changedDeadlines.length,
-      webinarCount: webinars.length,
-      brokerageCount: brokerageEvents.length,
-      closedCount: closedOpportunities.length,
-    },
-  };
+      generatedAt: current.savedAt,
+      since: previous?.savedAt ?? null,
+      newOpportunities,
+      changedDeadlines,
+      closedOpportunities,
+      removedOpportunities,
+      webinars,
+      brokerageEvents,
+      radarHighlights,
+      syncErrors,
+      groupHighlights,
+      summary: {
+        newCount: newOpportunities.length,
+        changedDeadlinesCount: changedDeadlines.length,
+        webinarCount: webinars.length,
+        brokerageCount: brokerageEvents.length,
+        closedCount: closedOpportunities.length,
+        removedCount: removedOpportunities.length,
+        syncErrorCount: syncErrors.length,
+      },
+    };
 }
 
 export function createAutonomousSnapshot() {

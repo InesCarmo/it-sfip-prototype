@@ -1,4 +1,5 @@
 import model from "@/data/sfip-canonical-model.json";
+import { computeDaysRemaining, computeTemporalCallState } from "@/lib/sfip-temporal-state.js";
 import type {
   CallIntelligence,
   CallOfficialData,
@@ -84,8 +85,6 @@ const terms = (value: unknown) => normalize(value).match(/[a-z0-9]+/g) ?? [];
 const values = (value: unknown) => asText(value).split(/[;,]/).map((item) => item.trim()).filter(Boolean);
 const unique = (items: string[]) => [...new Set(items.filter(Boolean))].sort((a, b) => a.localeCompare(b, "pt"));
 const excelLabel = (iso: string | null) => iso ? new Intl.DateTimeFormat("pt-PT", { day: "2-digit", month: "short", year: "numeric", timeZone: "UTC" }).format(new Date(`${iso}T00:00:00Z`)) : "Por confirmar";
-const daysUntil = (iso: string | null) => iso ? Math.ceil((new Date(`${iso}T23:59:59Z`).getTime() - Date.now()) / 86400000) : null;
-
 function readResearchersFromCall(callId: string) {
   const intelligence = callIntelligence.get(callId);
   if (intelligence?.researchersSuggested?.length) {
@@ -120,13 +119,9 @@ function searchIndex(term: string) {
 function opportunityFromCall(call: CallOfficialData): Opportunity {
   const intelligence = callIntelligence.get(call.id);
   const deadlineIso = call.dates.deadlineAt ?? null;
-  const days = intelligence?.daysRemaining ?? daysUntil(deadlineIso);
-  const computedState = deadlineIso && new Date(`${deadlineIso}T23:59:59Z`).getTime() < Date.now()
-    ? "closed"
-    : call.status === "planned"
-      ? "planned"
-      : "open";
-  const fit = intelligence?.potentialIt || (days !== null ? (days <= 30 ? "Muito Alto" : days <= 90 ? "Alto" : "Médio") : "Por confirmar");
+  const days = intelligence?.daysRemaining ?? computeDaysRemaining(deadlineIso);
+  const computedState = computeTemporalCallState({ openedAt: call.dates.openedAt ?? null, deadlineAt: deadlineIso });
+  const fit = intelligence?.potentialIt || (days !== null ? (days <= 30 ? "Muito Alto" : days <= 90 ? "Alto" : "MÃ©dio") : "Por confirmar");
   const area = intelligence?.areaStrategicIt || call.areaPrimary || "Transversal";
   return {
     id: call.id,
@@ -141,21 +136,21 @@ function opportunityFromCall(call: CallOfficialData): Opportunity {
     researcher: readResearchersFromCall(call.id).join("; "),
     type: call.type,
     level: call.level,
-    state: computedState === "open" ? "Aberta" : computedState === "planned" ? "Prevista" : "Encerrada",
+    state: computedState,
     fit,
     deadline: deadlineIso ? excelLabel(deadlineIso) : "Por confirmar",
     deadlineIso,
     days,
-    condition: call.eligibility.consortiumRequired ? "Sim" : "Não",
+    condition: call.eligibility.consortiumRequired ? "Sim" : "NÃ£o",
     why: intelligence?.explainWhy || call.notes || "",
     keywords: call.thematicKeywords.join("; "),
     observations: call.notes || "",
     link: call.links.official,
     action: intelligence?.communicationTags.includes("webinar") ? "Divulgar" : intelligence?.partnerNeeds.length ? "Contactar Investigador" : "Rever oportunidade",
-    priority: days !== null && days <= 30 ? "1 - Estratégica" : computedState === "planned" ? "2 - Relevante" : "3 - Oportunidade",
-    companyRequired: call.eligibility.companyRequired ? "Sim" : "Não",
-    partnerRequired: call.eligibility.consortiumRequired ? "Sim" : "Não",
-    tone: computedState === "open" ? "good" : computedState === "planned" ? "warn" : "neutral",
+    priority: days !== null && days <= 30 ? "1 - Estratégica" : computedState === "Prevista" ? "2 - Relevante" : "3 - Oportunidade",
+    companyRequired: call.eligibility.companyRequired ? "Sim" : "NÃ£o",
+    partnerRequired: call.eligibility.consortiumRequired ? "Sim" : "NÃ£o",
+    tone: computedState === "Aberta" ? "good" : computedState === "Prevista" ? "warn" : "neutral",
     raw: call,
   };
 }
@@ -176,17 +171,17 @@ function opportunityFromRadar(item: RadarItem): Opportunity {
     type: "Radar",
     level: "",
     state: "Radar",
-    fit: item.confidence >= 85 ? "Muito Alto" : item.confidence >= 70 ? "Alto" : "Médio",
+    fit: item.confidence >= 85 ? "Muito Alto" : item.confidence >= 70 ? "Alto" : "MÃ©dio",
     deadline: deadlineIso ? excelLabel(deadlineIso) : "Por confirmar",
     deadlineIso,
-    days: daysUntil(deadlineIso),
+    days: computeDaysRemaining(deadlineIso),
     condition: "Por confirmar",
     why: item.notes || "",
     keywords: item.theme,
     observations: item.notes || "",
     link: item.officialUrl || "",
     action: "Monitorizar",
-    priority: item.confidence >= 85 ? "1 - Estratégica" : "2 - Relevante",
+    priority: item.confidence >= 85 ? "1 - EstratÃ©gica" : "2 - Relevante",
     companyRequired: "Por confirmar",
     partnerRequired: "Por confirmar",
     tone: "warn",
@@ -294,10 +289,13 @@ export const coreEngine = {
   selectForCommunication: (filters: OpportunityFilters = {}) => filter(allOpportunities, filters).filter((item) => item.state === "Aberta" || item.state === "Prevista" || item.source === "RADAR"),
   getResearchersForCall: (callId: string) => readResearchersFromCall(callId),
   getResearchers: () => researchers,
+  getCompanies: () => data.companies,
+  getInstitutions: () => data.institutions,
+  getPrograms: () => data.programs,
   getEvents: () => data.events,
   getProgramName: (programId: string) => data.programs.find((program) => program.id === programId)?.officialName ?? "Por confirmar",
   getActions: () => callOpportunities
-    .filter((item) => item.action && !/n[aã]o aplic[aá]vel/i.test(item.action))
+    .filter((item) => item.action && !/n[aÃ£]o aplic[aÃ¡]vel/i.test(item.action))
     .map((item) => ({
       id: item.id,
       label: item.action,
@@ -317,12 +315,15 @@ export const coreEngine = {
   },
   answerAssistant(question: string, context: WorkspaceContext) {
     const recommendations = this.getContextualRecommendations(context, 3);
-    if (!recommendations.length) return "Não encontrei oportunidades com evidência suficiente para este Workspace. Reveja a área, grupo ou descrição.";
+    if (!recommendations.length) return "NÃ£o encontrei oportunidades com evidÃªncia suficiente para este Workspace. Reveja a Ã¡rea, grupo ou descriÃ§Ã£o.";
     const q = normalize(question);
-    if (q.includes("parceir") || q.includes("consorcio")) return recommendations.map(({ item }) => `${item.name}: ${item.partnerRequired || item.condition || "condição não especificada"}`).join("\n");
+    if (q.includes("parceir") || q.includes("consorcio")) return recommendations.map(({ item }) => `${item.name}: ${item.partnerRequired || item.condition || "condiÃ§Ã£o nÃ£o especificada"}`).join("\n");
     if (q.includes("investig")) return unique(recommendations.flatMap(({ item }) => readResearchersFromCall(item.id))).slice(0, 5).join("; ") || "Sem investigadores validados no matching.";
-    return `Melhor correspondência: ${recommendations[0].item.name} (${recommendations[0].score} pontos contextuais). ${recommendations[0].item.why}`;
+    return `Melhor correspondÃªncia: ${recommendations[0].item.name} (${recommendations[0].score} pontos contextuais). ${recommendations[0].item.why}`;
   },
 };
 
 export type CoreEngine = typeof coreEngine;
+
+
+

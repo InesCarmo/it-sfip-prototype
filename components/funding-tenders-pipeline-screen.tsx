@@ -3,6 +3,8 @@
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { buildFundingTendersPilotRun, getFundingTendersPilotCalls, type FundingTendersPilotCandidate, type PipelineMode } from "@/lib/funding-tenders-pipeline";
 import { loadFundingTendersPipelineState, saveFundingTendersPipelineState, type FundingTendersPipelineDecision } from "@/lib/funding-tenders-pipeline-store";
+import { buildWeeklyBriefing, loadAutonomousSnapshot, type WeeklyBriefing } from "@/lib/sfip-autonomy";
+import { buildPipelineDiagnostics } from "@/lib/pipeline-diagnostics";
 import type { Mission } from "@/lib/sfip-types";
 
 const decisionTone: Record<FundingTendersPipelineDecision, "good" | "warn" | "neutral"> = {
@@ -64,6 +66,7 @@ type Props = {
 
 export function FundingTendersPipelineScreen({ navigate }: Props) {
   const [mode, setMode] = useState<PipelineMode>("dry-run");
+  const [viewMode, setViewMode] = useState<"pipeline" | "diagnostic">("pipeline");
   const [query, setQuery] = useState("");
   const [stateFilter, setStateFilter] = useState<"Todos" | "Aberta" | "Prevista">("Todos");
   const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -71,6 +74,7 @@ export function FundingTendersPipelineScreen({ navigate }: Props) {
   const [notes, setNotes] = useState<Record<string, string>>({});
   const [published, setPublished] = useState<Array<{ itemId: string; name: string; confidence: number; publishedAt: string; mode: PipelineMode }>>([]);
   const [lastRunAt, setLastRunAt] = useState<string | null>(null);
+  const [briefing, setBriefing] = useState<WeeklyBriefing | null>(null);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
@@ -83,6 +87,7 @@ export function FundingTendersPipelineScreen({ navigate }: Props) {
       setPublished(saved.published);
       setLastRunAt(saved.lastRunAt);
     }
+    setBriefing(buildWeeklyBriefing(loadAutonomousSnapshot(window.localStorage)));
     setLoaded(true);
   }, []);
 
@@ -131,6 +136,7 @@ export function FundingTendersPipelineScreen({ navigate }: Props) {
   }, [query, report.candidates, stateFilter]);
 
   const selected = visibleCandidates.find((candidate) => candidate.item.id === selectedId) ?? visibleCandidates[0] ?? report.candidates.find((candidate) => candidate.item.id === selectedId) ?? report.candidates[0] ?? null;
+  const diagnostics = useMemo(() => buildPipelineDiagnostics(report, briefing, lastRunAt), [report, briefing, lastRunAt]);
 
   const approvedCount = report.candidates.filter((candidate) => decisions[candidate.item.id] === "approved").length;
   const reviewCount = report.candidates.filter((candidate) => decisions[candidate.item.id] === "review").length;
@@ -176,10 +182,55 @@ export function FundingTendersPipelineScreen({ navigate }: Props) {
             <button className={mode === "dry-run" ? "active" : ""} onClick={() => setMode("dry-run")}>Dry Run</button>
             <button className={mode === "apply" ? "active" : ""} onClick={() => setMode("apply")}>Apply</button>
           </div>
+          <div className="mode-switch">
+            <button className={viewMode === "pipeline" ? "active" : ""} onClick={() => setViewMode("pipeline")}>Pipeline</button>
+            <button className={viewMode === "diagnostic" ? "active" : ""} onClick={() => setViewMode("diagnostic")}>Diagnóstico</button>
+          </div>
           <button className="button secondary" onClick={() => navigate("opportunities")}>Abrir catálogo</button>
           <button className="button" onClick={runPipeline}>{mode === "apply" ? "Publicar aprovados" : "Executar Dry Run"}</button>
         </div>
       </div>
+
+      {viewMode === "diagnostic" && (
+        <section className="pipeline-diagnostic panel">
+          <div className="panel-heading">
+            <div>
+              <span className="section-label">DIAGNÓSTICO</span>
+              <h2>Frescura dos dados e integridade da sincronização</h2>
+            </div>
+            <Badge tone={diagnostics.pipelineExecuted ? "good" : "warn"}>{diagnostics.pipelineExecuted ? "Pipeline com execução registada" : "Ainda sem execução"}</Badge>
+          </div>
+          <div className="pipeline-stats diagnostic-stats">
+            <article><strong>{diagnostics.counts.newCalls}</strong><span>Novas calls</span><small>Encontradas desde o último snapshot</small></article>
+            <article><strong>{diagnostics.counts.updatedCalls}</strong><span>Calls atualizadas</span><small>Deadlines e metadados alterados</small></article>
+            <article><strong>{diagnostics.counts.closedCalls}</strong><span>Calls encerradas</span><small>Passaram a encerradas</small></article>
+            <article><strong>{diagnostics.counts.removedCalls}</strong><span>Calls removidas</span><small>Já não constam da sincronização</small></article>
+            <article><strong>{diagnostics.counts.newWebinars + diagnostics.counts.newBrokerageEvents}</strong><span>Eventos novos</span><small>{diagnostics.counts.newWebinars} webinars · {diagnostics.counts.newBrokerageEvents} brokerage</small></article>
+          </div>
+          <div className="diagnostic-grid">
+            <div className="diagnostic-card">
+              <small>Última execução</small>
+              <strong>{diagnostics.lastExecutionAt ? formatDate(diagnostics.lastExecutionAt) : "Ainda sem execução"}</strong>
+              <span>{diagnostics.freshnessLabel}</span>
+            </div>
+            <div className="diagnostic-card">
+              <small>Fontes verificadas</small>
+              <strong>{diagnostics.sourceChecks[0]}</strong>
+              <span>{diagnostics.sourceChecks.slice(1).join(" · ")}</span>
+            </div>
+            <div className="diagnostic-card">
+              <small>Estado temporal</small>
+              <strong>{diagnostics.stateConsistency.allPagesUseSameTemporalRule ? "Consistente" : "Inconsistências detetadas"}</strong>
+              <span>{diagnostics.stateConsistency.inconsistentCount} registos com conflito temporal</span>
+            </div>
+          </div>
+          <div className="diagnostic-columns">
+            <div><strong>Campos importados</strong><ul>{diagnostics.importedFields.map((field) => <li key={field}>{field}</li>)}</ul></div>
+            <div><strong>Campos calculados</strong><ul>{diagnostics.calculatedFields.map((field) => <li key={field}>{field}</li>)}</ul></div>
+            <div><strong>Problemas detetados</strong><ul>{diagnostics.actionsRequired.length ? diagnostics.actionsRequired.map((item) => <li key={item}>{item}</li>) : <li>Sem bloqueios críticos.</li>}</ul></div>
+          </div>
+        </section>
+      )}
 
       <div className="pipeline-source-banner">
         <div>

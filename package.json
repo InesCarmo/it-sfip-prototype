@@ -9,7 +9,7 @@
     "dev": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext dev",
     "build": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext build",
     "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
-    "test": "tsx ./tests/core-engine.test.ts && tsx ./tests/autonomy.test.ts && tsx ./tests/funding-tenders-pipeline.test.ts && tsx ./tests/persistence.test.ts && vinext build && C:\\Users\\Inês\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe --test tests/rendered-html.test.mjs",
+    "test": "tsx ./tests/core-engine.test.ts && tsx ./tests/autonomy.test.ts && tsx ./tests/ai-workspace-assistant.test.ts && tsx ./tests/funding-tenders-pipeline.test.ts && tsx ./tests/pipeline-diagnostics.test.ts && tsx ./tests/persistence.test.ts && vinext build && C:\\Users\\Inês\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe --test tests/rendered-html.test.mjs",
     "test:core": "tsx ./tests/core-engine.test.ts",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "sync:data": "node scripts/sync-core-data.mjs",

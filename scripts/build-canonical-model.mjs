@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { computeDaysRemaining, computeTemporalCallState } from "../lib/sfip-temporal-state.js";
 
 const root = path.resolve(process.cwd());
 const sourcePath = path.join(root, "data", "core-data.json");
@@ -62,9 +63,8 @@ const calls = (source.calls ?? []).map((row) => {
   const programId = ensureProgram(row.Programa);
   const deadline = toDate(row.Deadline);
   const opening = toDate(row["Data Abertura"]);
-  const state = asText(row.Estado);
-  const stateComputed = deadline && new Date(`${deadline}T23:59:59Z`) < new Date() ? "closed" : state === "Prevista" ? "planned" : "open";
-  const urgencyScore = stateComputed === "open" && deadline ? Math.max(0, 100 - Math.ceil((new Date(`${deadline}T23:59:59Z`).getTime() - Date.now()) / 86400000)) : stateComputed === "planned" ? 30 : 10;
+  const stateComputed = computeTemporalCallState({ openedAt: opening, deadlineAt: deadline });
+  const urgencyScore = stateComputed === "Aberta" && deadline ? Math.max(0, 100 - (computeDaysRemaining(deadline) ?? 0)) : stateComputed === "Prevista" ? 30 : 10;
   const searchable = [
     row.Call,
     row["Código Oficial"],
@@ -270,9 +270,9 @@ const canonical = {
   calls,
   callIntelligence: calls.map((call) => {
     const deadline = call.dates.deadlineAt;
-    const daysRemaining = deadline ? Math.ceil((new Date(`${deadline}T23:59:59Z`).getTime() - Date.now()) / 86400000) : null;
-    const stateComputed = call.status;
-    const urgencyScore = stateComputed === "open" && daysRemaining !== null ? Math.max(0, 100 - daysRemaining) : stateComputed === "planned" ? 30 : 10;
+    const daysRemaining = computeDaysRemaining(deadline);
+    const stateComputed = computeTemporalCallState({ openedAt: call.dates.openedAt ?? null, deadlineAt: deadline });
+    const urgencyScore = stateComputed === "Aberta" && daysRemaining !== null ? Math.max(0, 100 - daysRemaining) : stateComputed === "Prevista" ? 30 : 10;
     return {
       callId: call.id,
       stateComputed,
