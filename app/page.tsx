@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { coreEngine, type Opportunity, type WorkspaceContext } from "@/lib/core-engine";
+import { buildWeeklyBriefing, createAutonomousSnapshot, loadAutonomousSnapshot, saveAutonomousSnapshot, type WeeklyBriefing } from "@/lib/sfip-autonomy";
 import { FundingTendersPipelineScreen } from "@/components/funding-tenders-pipeline-screen";
 import { loadSfipState, saveSfipState } from "@/lib/sfip-state-store";
 import type { Mission } from "@/lib/sfip-types";
@@ -56,6 +57,7 @@ export default function Home() {
   const [globalSearchOpen, setGlobalSearchOpen] = useState(false);
   const [assistantReply, setAssistantReply] = useState("Descreva a ideia ou faça uma pergunta sobre o Workspace ativo.");
   const [stateLoaded, setStateLoaded] = useState(false);
+  const [weeklyBriefing, setWeeklyBriefing] = useState<WeeklyBriefing | null>(null);
   const activeWorkspace = workspace;
   const shortlistItems = useMemo(() => opportunities.filter((item) => shortlist.includes(item.id)), [shortlist]);
 
@@ -76,6 +78,14 @@ export default function Home() {
     }
     setStateLoaded(true);
   }, []);
+
+  useEffect(() => {
+    if (!stateLoaded) return;
+    const previous = loadAutonomousSnapshot(window.localStorage);
+    const briefing = buildWeeklyBriefing(previous);
+    setWeeklyBriefing(briefing);
+    saveAutonomousSnapshot(window.localStorage, createAutonomousSnapshot());
+  }, [stateLoaded]);
 
   useEffect(() => {
     if (!stateLoaded) return;
@@ -124,7 +134,7 @@ export default function Home() {
         </header>
 
         <div className="content">
-          {mission === "home" && <HomeScreen navigate={navigate} />}
+          {mission === "home" && <HomeScreen navigate={navigate} briefing={weeklyBriefing} />}
           {mission === "opportunities" && <OpportunitiesScreen setDetail={setDetail} navigate={navigate} setGlobalSearchOpen={setGlobalSearchOpen} />}
           {mission === "discover" && <DiscoverScreen workspace={workspace} setWorkspace={setWorkspace} shortlist={shortlist} setShortlist={setShortlist} setDetail={setDetail} navigate={navigate} />}
           {mission === "decide" && <DecideScreen items={shortlistItems} recommendation={recommendation} setRecommendation={setRecommendation} validated={decisionValidated} setValidated={setDecisionValidated} navigate={navigate} />}
@@ -162,7 +172,7 @@ function ScreenTitle({ eyebrow, title, subtitle, actions }: { eyebrow: string; t
   return <div className="screen-title"><div><span>{eyebrow}</span><h1>{title}</h1><p>{subtitle}</p></div>{actions && <div className="title-actions">{actions}</div>}</div>;
 }
 
-function HomeScreen({ navigate }: { navigate: (m: Mission) => void }) {
+function HomeScreen({ navigate, briefing }: { navigate: (m: Mission) => void; briefing: WeeklyBriefing | null }) {
   const calls = coreEngine.getAllOpportunities();
   const open = calls.filter(item => item.state === "Aberta");
   const expected = calls.filter(item => item.state === "Prevista");
@@ -182,6 +192,34 @@ function HomeScreen({ navigate }: { navigate: (m: Mission) => void }) {
       <section className="panel"><div className="panel-heading"><div><span className="section-label">REQUER ATENÇÃO</span><h2>Próximas decisões</h2></div><button onClick={() => navigate("track")}>Ver todas</button></div>
         <div className="attention-list">
           {urgent.slice(0, 3).map(item => <button key={item.id} onClick={() => navigate("opportunities")}><span className="attention-icon">{item.id.replace("CALL-", "")}</span><div><strong>{item.name}</strong><small>{item.program} · {item.action || "Rever oportunidade"}</small></div><Tag tone="warn">{item.days} dias</Tag></button>)}
+        </div>
+      </section>
+      <section className="panel"><div className="panel-heading"><div><span className="section-label">📬 FUNDING INTELLIGENCE</span><h2>Briefing semanal</h2></div><button onClick={() => navigate("track")}>Validar</button></div>
+        <div className="weekly-briefing">
+          <div className="weekly-metrics">
+            <article><strong>{briefing?.summary.newCount ?? 0}</strong><span>novas oportunidades</span></article>
+            <article><strong>{briefing?.summary.changedDeadlinesCount ?? 0}</strong><span>deadlines alteradas</span></article>
+            <article><strong>{briefing?.summary.webinarCount ?? 0}</strong><span>webinars</span></article>
+            <article><strong>{briefing?.summary.brokerageCount ?? 0}</strong><span>brokerage events</span></article>
+          </div>
+          <div className="weekly-highlights">
+            <strong>O que mudou desde a semana passada?</strong>
+            <ul>
+              <li>{briefing?.summary.newCount ?? 0} novas oportunidades sincronizadas.</li>
+              <li>{briefing?.summary.changedDeadlinesCount ?? 0} deadlines foram recalculadas automaticamente.</li>
+              <li>{briefing?.summary.closedCount ?? 0} oportunidades passaram a encerradas.</li>
+            </ul>
+            <div className="weekly-tags">
+              <Tag tone="good">Power Systems · {coreEngine.getByGroup("Power Electronics").filter((item) => item.state === "Aberta").length}</Tag>
+              <Tag tone="warn">PIA · {coreEngine.getByGroup("Pattern and Image Analysis").filter((item) => item.state === "Aberta").length}</Tag>
+              <Tag tone="warn">MSP · {coreEngine.getByGroup("Multimedia Signal Processing").filter((item) => item.state === "Aberta").length}</Tag>
+            </div>
+          </div>
+        </div>
+        <div className="briefing-queue">
+          {(briefing?.newOpportunities ?? []).slice(0, 3).map((item) => <button key={item.id} onClick={() => navigate("opportunities")}><span>{item.id.replace("CALL-", "")}</span><div><strong>{item.name}</strong><small>{item.program}</small></div></button>)}
+          {(briefing?.webinars ?? []).slice(0, 2).map((item) => <button key={item.id} onClick={() => navigate("communicate")}><span>web</span><div><strong>{item.name}</strong><small>Webinar</small></div></button>)}
+          {(briefing?.brokerageEvents ?? []).slice(0, 2).map((item) => <button key={item.id} onClick={() => navigate("communicate")}><span>brk</span><div><strong>{item.name}</strong><small>Brokerage event</small></div></button>)}
         </div>
       </section>
       <section className="panel"><div className="panel-heading"><div><span className="section-label">A MINHA ATIVIDADE</span><h2>Comunicações e sinais</h2></div><button onClick={() => navigate("communicate")}>Ver comunicações</button></div>

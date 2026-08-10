@@ -119,9 +119,13 @@ function searchIndex(term: string) {
 
 function opportunityFromCall(call: CallOfficialData): Opportunity {
   const intelligence = callIntelligence.get(call.id);
-  const state = intelligence?.stateComputed ?? call.status;
   const deadlineIso = call.dates.deadlineAt ?? null;
   const days = intelligence?.daysRemaining ?? daysUntil(deadlineIso);
+  const computedState = deadlineIso && new Date(`${deadlineIso}T23:59:59Z`).getTime() < Date.now()
+    ? "closed"
+    : call.status === "planned"
+      ? "planned"
+      : "open";
   const fit = intelligence?.potentialIt || (days !== null ? (days <= 30 ? "Muito Alto" : days <= 90 ? "Alto" : "Médio") : "Por confirmar");
   const area = intelligence?.areaStrategicIt || call.areaPrimary || "Transversal";
   return {
@@ -137,7 +141,7 @@ function opportunityFromCall(call: CallOfficialData): Opportunity {
     researcher: readResearchersFromCall(call.id).join("; "),
     type: call.type,
     level: call.level,
-    state: state === "open" ? "Aberta" : state === "planned" ? "Prevista" : "Encerrada",
+    state: computedState === "open" ? "Aberta" : computedState === "planned" ? "Prevista" : "Encerrada",
     fit,
     deadline: deadlineIso ? excelLabel(deadlineIso) : "Por confirmar",
     deadlineIso,
@@ -148,10 +152,10 @@ function opportunityFromCall(call: CallOfficialData): Opportunity {
     observations: call.notes || "",
     link: call.links.official,
     action: intelligence?.communicationTags.includes("webinar") ? "Divulgar" : intelligence?.partnerNeeds.length ? "Contactar Investigador" : "Rever oportunidade",
-    priority: days !== null && days <= 30 ? "1 - Estratégica" : state === "planned" ? "2 - Relevante" : "3 - Oportunidade",
+    priority: days !== null && days <= 30 ? "1 - Estratégica" : computedState === "planned" ? "2 - Relevante" : "3 - Oportunidade",
     companyRequired: call.eligibility.companyRequired ? "Sim" : "Não",
     partnerRequired: call.eligibility.consortiumRequired ? "Sim" : "Não",
-    tone: state === "Aberta" ? "good" : state === "Prevista" ? "warn" : "neutral",
+    tone: computedState === "open" ? "good" : computedState === "planned" ? "warn" : "neutral",
     raw: call,
   };
 }
@@ -290,6 +294,8 @@ export const coreEngine = {
   selectForCommunication: (filters: OpportunityFilters = {}) => filter(allOpportunities, filters).filter((item) => item.state === "Aberta" || item.state === "Prevista" || item.source === "RADAR"),
   getResearchersForCall: (callId: string) => readResearchersFromCall(callId),
   getResearchers: () => researchers,
+  getEvents: () => data.events,
+  getProgramName: (programId: string) => data.programs.find((program) => program.id === programId)?.officialName ?? "Por confirmar",
   getActions: () => callOpportunities
     .filter((item) => item.action && !/n[aã]o aplic[aá]vel/i.test(item.action))
     .map((item) => ({
