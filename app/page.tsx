@@ -3,8 +3,10 @@
 import { useEffect, useMemo, useState } from "react";
 import { coreEngine, type Opportunity, type WorkspaceContext } from "@/lib/core-engine";
 import { analyzeIdea, type IdeaAnalysis } from "@/lib/ai-workspace-assistant";
-import { buildWeeklyBriefing, createAutonomousSnapshot, loadAutonomousSnapshot, saveAutonomousSnapshot, type WeeklyBriefing } from "@/lib/sfip-autonomy";
+import { type WeeklyBriefing } from "@/lib/sfip-autonomy";
 import { FundingTendersPipelineScreen } from "@/components/funding-tenders-pipeline-screen";
+import { ensureScheduledPipeline } from "@/lib/sfip-scheduler";
+import { loadSchedulerState, type StoredSchedulerState } from "@/lib/sfip-scheduler-store";
 import { loadSfipState, saveSfipState } from "@/lib/sfip-state-store";
 import type { Mission } from "@/lib/sfip-types";
 
@@ -96,6 +98,7 @@ export default function Home() {
   const [assistantReply, setAssistantReply] = useState("Descreva a ideia ou faÃ§a uma pergunta sobre o Workspace ativo.");
   const [stateLoaded, setStateLoaded] = useState(false);
   const [weeklyBriefing, setWeeklyBriefing] = useState<WeeklyBriefing | null>(null);
+  const [schedulerState, setSchedulerState] = useState<StoredSchedulerState | null>(null);
   const [ideaInput, setIdeaInput] = useState("");
   const [ideaSourceLabel, setIdeaSourceLabel] = useState("Texto livre");
   const [ideaAnalysis, setIdeaAnalysis] = useState<IdeaAnalysis | null>(null);
@@ -127,10 +130,16 @@ export default function Home() {
 
   useEffect(() => {
     if (!stateLoaded) return;
-    const previous = loadAutonomousSnapshot(window.localStorage);
-    const briefing = buildWeeklyBriefing(previous);
-    setWeeklyBriefing(briefing);
-    saveAutonomousSnapshot(window.localStorage, createAutonomousSnapshot());
+    setSchedulerState(loadSchedulerState(window.localStorage));
+    const scheduler = ensureScheduledPipeline(window.localStorage);
+    setSchedulerState(scheduler.state);
+    setWeeklyBriefing(scheduler.briefing);
+    const interval = window.setInterval(() => {
+      const refreshed = ensureScheduledPipeline(window.localStorage);
+      setSchedulerState(refreshed.state);
+      setWeeklyBriefing(refreshed.briefing);
+    }, 15 * 60 * 1000);
+    return () => window.clearInterval(interval);
   }, [stateLoaded]);
 
   useEffect(() => {
@@ -188,7 +197,7 @@ export default function Home() {
           {mission === "communicate" && <CommunicateScreen drafted={drafted} setDrafted={setDrafted} sent={sent} setSent={setSent} navigate={navigate} />}
           {mission === "track" && <TrackScreen tasks={tasks} setTasks={setTasks} />}
           {mission === "intelligence" && <IntelligenceScreen navigate={navigate} />}
-          {mission === "pipeline" && <FundingTendersPipelineScreen navigate={navigate} />}
+          {mission === "pipeline" && <FundingTendersPipelineScreen navigate={navigate} schedulerState={schedulerState} />}
         </div>
 
         <footer className="app-footer">
@@ -298,7 +307,7 @@ function OpportunitiesScreen({ setDetail, navigate, setGlobalSearchOpen }: { set
     <ScreenTitle eyebrow="EXPLORAÃ‡ÃƒO LIVRE" title="Oportunidades" subtitle="Navegue em todas as calls, independentemente de um Workspace." actions={<><button className="button secondary" onClick={() => setGlobalSearchOpen(true)}>Filtros avanÃ§ados</button><button className="button" onClick={() => navigate("discover")}>Analisar um pedido</button></>} />
     <div className="library-toolbar"><div className="search-box"><span>âŒ•</span><input value={query} onChange={e => setQuery(e.target.value)} placeholder="Pesquisar por call, cÃ³digo, programa, Ã¡rea ou grupo..." /></div><select value={state} onChange={e => setState(e.target.value)}><option>Todos</option><option>Aberta</option><option>Prevista</option></select></div>
     <div className="saved-views"><span>Vistas rÃ¡pidas</span><button onClick={() => { setState("Aberta"); setPage(1); }}>Abertas</button><button onClick={() => { setState("Prevista"); setPage(1); }}>Previstas</button></div>
-    <section className="opportunity-table"><header><span>Oportunidade</span><span>Programa</span><span>Tipo</span><span>Estado</span><span>Deadline</span><span>Grupo IT</span></header>{visible.map(item => <button key={item.id} onClick={() => setDetail(item)}><span><strong>{item.name}</strong><small>{item.code} Â· {item.area}</small></span><span>{item.program}</span><span>{item.type}</span><span><Tag tone={item.state === "Aberta" ? "good" : "warn"}>{item.state}</Tag></span><span><strong>{item.deadline}</strong><small>{item.days < 900 ? `${item.days} dias` : "ContÃ­nua"}</small></span><span>{item.group}</span></button>)}</section>
+    <section className="opportunity-table"><header><span>Oportunidade</span><span>Programa</span><span>Tipo</span><span>Estado</span><span>Deadline</span><span>Grupo IT</span></header>{visible.map(item => <button key={item.id} onClick={() => setDetail(item)}><span><strong>{item.name}</strong><small>{item.code} Â· {item.area}</small></span><span>{item.program}</span><span>{item.type}</span><span><Tag tone={item.state === "Aberta" ? "good" : "warn"}>{item.state}</Tag></span><span><strong>{item.deadline}</strong><small>{item.days !== null && item.days < 900 ? `${item.days} dias` : "ContÃ­nua"}</small></span><span>{item.group}</span></button>)}</section>
     <div className="table-footer"><span>A mostrar {visible.length} de {filtered.length} oportunidades Â· pÃ¡gina {page}/{pageCount}</span><button disabled={page === 1} onClick={() => setPage(page - 1)}>â†</button><button disabled={page === pageCount} onClick={() => setPage(page + 1)}>â†’</button></div>
   </>;
 }

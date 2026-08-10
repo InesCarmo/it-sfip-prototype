@@ -26,6 +26,7 @@ const kailash = {
   assistantOpen: true,
   assistantInput: "",
   assistantReply: "Shortlist guardada para validação.",
+  aiWorkspaceAssistant: null,
 };
 
 saveSfipState(browserSession, kailash);

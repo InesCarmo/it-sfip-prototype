@@ -87,7 +87,7 @@ function eventToOpportunity(event: ReturnType<typeof coreEngine.getEvents>[numbe
     companyRequired: "Por confirmar",
     partnerRequired: "Por confirmar",
     tone: "neutral",
-    raw: event,
+    raw: event as unknown as Opportunity["raw"],
   };
 }
 

@@ -175,6 +175,13 @@ button { cursor: pointer; }
 .diagnostic-columns > div { border:1px solid var(--line); background:#fff; padding:12px 13px; }
 .diagnostic-columns strong { display:block; margin-bottom:8px; font-size:11px; }
 .diagnostic-columns ul { margin:0; padding-left:16px; color:var(--muted); font-size:10px; line-height:1.5; }
+.pipeline-scheduler { background:white; border:1px solid var(--line); padding:17px; display:grid; gap:14px; }
+.scheduler-stats { grid-template-columns:repeat(5,1fr); }
+.scheduler-history { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+.scheduler-history article { border:1px solid var(--line); background:var(--soft); padding:12px 13px; display:grid; gap:3px; }
+.scheduler-history strong { font-size:11px; }
+.scheduler-history span, .scheduler-history small { color:var(--muted); font-size:9px; }
+.scheduler-history span { color:var(--blue); font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
 .publication-log { display:grid; gap:8px; }
 .publication-entry { border:1px solid var(--line); background:var(--soft); padding:11px 12px; display:grid; gap:3px; }
 .publication-entry strong { font-size:11px; }
@@ -182,6 +189,8 @@ button { cursor: pointer; }
 
 @media (max-width: 1180px) {
   .pipeline-stats, .pipeline-stage-strip { grid-template-columns:repeat(2,1fr); }
+  .scheduler-stats { grid-template-columns:repeat(2,1fr); }
+  .scheduler-history { grid-template-columns:1fr; }
   .pipeline-layout { grid-template-columns:1fr; }
   .pipeline-review { grid-template-columns:1fr; }
   .pipeline-toolbar { grid-template-columns:1fr; }
@@ -192,6 +201,7 @@ button { cursor: pointer; }
   .pipeline-source-state { text-align:left; }
   .pipeline-kpis, .pipeline-snapshot { grid-template-columns:1fr; }
   .diff-row { grid-template-columns:1fr; }
+  .scheduler-stats { grid-template-columns:1fr; }
 }
 
 /* Autonomous weekly briefing */

@@ -5,6 +5,7 @@ import { buildFundingTendersPilotRun, getFundingTendersPilotCalls, type FundingT
 import { loadFundingTendersPipelineState, saveFundingTendersPipelineState, type FundingTendersPipelineDecision } from "@/lib/funding-tenders-pipeline-store";
 import { buildWeeklyBriefing, loadAutonomousSnapshot, type WeeklyBriefing } from "@/lib/sfip-autonomy";
 import { buildPipelineDiagnostics } from "@/lib/pipeline-diagnostics";
+import type { StoredSchedulerState } from "@/lib/sfip-scheduler-store";
 import type { Mission } from "@/lib/sfip-types";
 
 const decisionTone: Record<FundingTendersPipelineDecision, "good" | "warn" | "neutral"> = {
@@ -62,9 +63,10 @@ function candidateSearchText(candidate: FundingTendersPilotCandidate) {
 
 type Props = {
   navigate: (mission: Mission) => void;
+  schedulerState?: StoredSchedulerState | null;
 };
 
-export function FundingTendersPipelineScreen({ navigate }: Props) {
+export function FundingTendersPipelineScreen({ navigate, schedulerState }: Props) {
   const [mode, setMode] = useState<PipelineMode>("dry-run");
   const [viewMode, setViewMode] = useState<"pipeline" | "diagnostic">("pipeline");
   const [query, setQuery] = useState("");
@@ -228,6 +230,37 @@ export function FundingTendersPipelineScreen({ navigate }: Props) {
             <div><strong>Campos importados</strong><ul>{diagnostics.importedFields.map((field) => <li key={field}>{field}</li>)}</ul></div>
             <div><strong>Campos calculados</strong><ul>{diagnostics.calculatedFields.map((field) => <li key={field}>{field}</li>)}</ul></div>
             <div><strong>Problemas detetados</strong><ul>{diagnostics.actionsRequired.length ? diagnostics.actionsRequired.map((item) => <li key={item}>{item}</li>) : <li>Sem bloqueios críticos.</li>}</ul></div>
+          </div>
+        </section>
+      )}
+
+      {schedulerState && (
+        <section className="pipeline-scheduler panel">
+          <div className="panel-heading">
+            <div>
+              <span className="section-label">SCHEDULER AUTÓNOMO</span>
+              <h2>Estado agregado de todas as fontes</h2>
+            </div>
+            <Badge tone={schedulerState.dashboard.errorSources ? "warn" : "good"}>
+              {schedulerState.dashboard.errorSources ? `${schedulerState.dashboard.errorSources} fonte(s) com erros` : "Sem erros críticos"}
+            </Badge>
+          </div>
+          <div className="pipeline-stats scheduler-stats">
+            <article><strong>{schedulerState.dashboard.totalSources}</strong><span>Fontes</span><small>Catálogo monitorizado</small></article>
+            <article><strong>{schedulerState.dashboard.dueSources}</strong><span>Fontes em fila</span><small>Cadência vencida ou inicial</small></article>
+            <article><strong>{schedulerState.dashboard.activeSources}</strong><span>Fontes ativas</span><small>Com execução registada</small></article>
+            <article><strong>{schedulerState.dashboard.totalChanges}</strong><span>Alterações</span><small>Última ronda</small></article>
+            <article><strong>{schedulerState.history.length}</strong><span>Execuções</span><small>Histórico persistido</small></article>
+          </div>
+          <div className="scheduler-history">
+            {schedulerState.history.slice(-4).reverse().map((entry) => (
+              <article key={`${entry.sourceId}-${entry.finishedAt}`}>
+                <strong>{entry.sourceName}</strong>
+                <span>{entry.category} · {entry.frequency}</span>
+                <small>{entry.discoveryCount} descobertas · {entry.changeCount} alterações · {entry.errorCount} erros</small>
+                <small>Duração {entry.durationMs} ms · {entry.finishedAt}</small>
+              </article>
+            ))}
           </div>
         </section>
       )}
