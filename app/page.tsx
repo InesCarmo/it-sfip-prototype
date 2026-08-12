@@ -11,16 +11,16 @@ import { loadSfipState, saveSfipState } from "@/lib/sfip-state-store";
 import type { Mission } from "@/lib/sfip-types";
 
 const missions: { id: Mission; label: string; glyph: string }[] = [
-  { id: "home", label: "Início", glyph: "?" },
-  { id: "opportunities", label: "Oportunidades", glyph: "?" },
-  { id: "discover", label: "Descobrir", glyph: "?" },
-  { id: "decide", label: "Decidir", glyph: "?" },
-  { id: "communicate", label: "Comunicar", glyph: "?" },
-  { id: "track", label: "Acompanhar", glyph: "?" },
-  { id: "intelligence", label: "Inteligência", glyph: "?" },
+  { id: "home", label: "Início", glyph: "⌒" },
+  { id: "opportunities", label: "Oportunidades", glyph: "▦" },
+  { id: "discover", label: "Descobrir", glyph: "◎" },
+  { id: "decide", label: "Decidir", glyph: "◇" },
+  { id: "communicate", label: "Comunicar", glyph: "▷" },
+  { id: "track", label: "Acompanhar", glyph: "☑" },
+  { id: "intelligence", label: "Inteligência", glyph: "∴" },
 ];
 
-missions.push({ id: "pipeline", label: "Pipeline", glyph: "?" });
+missions.push({ id: "pipeline", label: "Pipeline", glyph: "⟳" });
 
 const opportunities = coreEngine.getAllOpportunities(true);
 const defaultWorkspace: WorkspaceContext = { title: "Análise atual", description: "" };
@@ -28,7 +28,6 @@ const initialTasks = coreEngine.getActions();
 const APP_VERSION = "v0.10.3";
 const APP_COMMIT = "532f810";
 const APP_BUILD = "2026-08-12";
-const TEST = "TESTE ÚNICO 123";
 
 function Tag({ children, tone = "neutral" }: { children: React.ReactNode; tone?: string }) {
   return <span className={`tag tag-${tone}`}>{children}</span>;
@@ -161,14 +160,6 @@ export default function Home() {
 
   return (
     <main className={`app-shell ${assistantOpen ? "assistant-visible" : ""}`}>
-      {/* TEMPORARY BUILD TEST */}
-      <div className="temporary-build-test">
-        <span>-------------------------------------------------</span>
-        <strong>TESTE DE PUBLICAÇÃO</strong>
-        <strong>BUILD 2026-08-12</strong>
-        <strong>COMMIT 532f810</strong>
-        <span>-------------------------------------------------</span>
-      </div>
       <aside className="sidebar">
         <div className="brand"><span className="brand-mark">IT</span><div><strong>SFIP</strong><small>Funding Intelligence</small></div></div>
         <nav aria-label="Missões">
@@ -181,8 +172,8 @@ export default function Home() {
         </nav>
         <div className="sidebar-spacer" />
         <div className="nav-label">UTILITÁRIOS</div>
-        <button className="utility" onClick={() => setGlobalSearchOpen(true)}><span>?</span>Pesquisa global</button>
-        <button className="utility"><span>?</span>Settings</button>
+        <button className="utility" onClick={() => setGlobalSearchOpen(true)}><span>⌕</span>Pesquisa global</button>
+        <button className="utility"><span>⚙</span>Settings</button>
         <div className="user"><span>IC</span><div><strong>Inês Carmo</strong><small>Pre-award manager</small></div></div>
       </aside>
 
@@ -195,7 +186,7 @@ export default function Home() {
             </button>
           </div>
           <div className="workspace-meta">{activeWorkspace.area || "Área por definir"} · Responsável: Inês Carmo</div>
-          <button className="assistant-toggle" onClick={() => setAssistantOpen(!assistantOpen)}>? Assistant</button>
+          <button className="assistant-toggle" onClick={() => setAssistantOpen(!assistantOpen)}>✦ Assistant</button>
         </header>
 
         <div className="content">
@@ -215,14 +206,13 @@ export default function Home() {
           <span>Build: {APP_BUILD}</span>
           <span>Snapshot: {formatCompactTimestamp(weeklyBriefing?.generatedAt)}</span>
           <span>Pipeline: {weeklyBriefing ? "OK" : "A validar"}</span>
-          <span>{TEST}</span>
         </footer>
 
       </section>
 
       {assistantOpen && (
         <aside className="assistant-panel">
-            <div className="assistant-header"><div><span className="spark">?</span><strong>Funding Intelligence</strong><small>Contexto: {activeWorkspace.title}</small></div><button onClick={() => setAssistantOpen(false)}>?</button></div>
+            <div className="assistant-header"><div><span className="spark">✦</span><strong>Funding Intelligence</strong><small>Contexto: {activeWorkspace.title}</small></div><button onClick={() => setAssistantOpen(false)}>×</button></div>
           <div className="assistant-body">
             <div className="assistant-status"><span className="pulse" />Contexto atualizado</div>
             <div className="assistant-message">{assistantReply}</div>
@@ -233,7 +223,7 @@ export default function Home() {
               <button onClick={() => navigate("communicate")}>Preparar uma resposta</button>
             </div>
           </div>
-          <div className="assistant-input"><textarea value={assistantInput} onChange={(event) => setAssistantInput(event.target.value)} onKeyDown={(event) => { if (event.key === "Enter" && !event.shiftKey) { event.preventDefault(); askAssistant(); } }} placeholder="Pergunte sobre este Workspace..." /><button onClick={askAssistant}>?</button></div>
+          <div className="assistant-input"><textarea value={assistantInput} onChange={(event) => setAssistantInput(event.target.value)} onKeyDown={(event) => { if (event.key === "Enter" && !event.shiftKey) { event.preventDefault(); askAssistant(); } }} placeholder="Pergunte sobre este Workspace..." /><button onClick={askAssistant}>↑</button></div>
         </aside>
       )}
 
@@ -256,9 +246,9 @@ function HomeScreen({ navigate, briefing }: { navigate: (m: Mission) => void; br
   const radar = coreEngine.getAllOpportunities(true).filter(item => item.source === "RADAR");
   return <>
     <ScreenTitle eyebrow="FONTE ATUALIZADA" title="Bom dia, Inês." subtitle={`${coreEngine.meta.counts.calls} calls sincronizadas a partir de ${coreEngine.meta.sourceWorkbook}.`} actions={<button className="button" onClick={() => navigate("discover")}>+ Novo pedido</button>} />
-    <div className="command-box"><span>?</span><input placeholder="Pesquise uma call ou descreva um pedido de investigador..." onKeyDown={(e) => { if (e.key === "Enter") navigate("discover"); }} /><button onClick={() => navigate("discover")}>?</button></div>
+    <div className="command-box"><span>✦</span><input placeholder="Pesquise uma call ou descreva um pedido de investigador..." onKeyDown={(e) => { if (e.key === "Enter") navigate("discover"); }} /><button onClick={() => navigate("discover")}>→</button></div>
     <div className="briefing-grid">
-      <button className="brief-card urgent" onClick={() => navigate("opportunities")}><strong>{urgent.length}</strong><span>Fecham =30 dias</span><small>Calls abertas</small></button>
+      <button className="brief-card urgent" onClick={() => navigate("opportunities")}><strong>{urgent.length}</strong><span>Fecham ≤30 dias</span><small>Calls abertas</small></button>
       <button className="brief-card" onClick={() => navigate("opportunities")}><strong>{open.length}</strong><span>Calls abertas</span><small>{expected.length} previstas</small></button>
       <button className="brief-card" onClick={() => navigate("discover")}><strong>{highPriority.length}</strong><span>Prioridade elevada</span><small>Baseado na relevância registada</small></button>
       <button className="brief-card" onClick={() => navigate("intelligence")}><strong>{radar.length}</strong><span>Radar</span><small>Oportunidades a monitorizar</small></button>
@@ -544,6 +534,7 @@ function GlobalSearch({ onClose, onOpen }: { onClose: () => void; onOpen: (item:
 function DetailDrawer({ item, onClose, onDecide }: { item: Opportunity; onClose: () => void; onDecide: () => void }) {
   return <div className="overlay" onMouseDown={onClose}><aside className="detail-drawer" onMouseDown={(e) => e.stopPropagation()}><header><span className="section-label">EVIDÊNCIA DA OPORTUNIDADE</span><button onClick={onClose}>×</button></header><Tag tone={item.tone}>{item.fit}</Tag><h2>{item.name}</h2><p className="lead">{item.observations || item.why}</p><dl className="detail-list"><div><dt>Deadline</dt><dd>{item.deadline}</dd></div><div><dt>Programa</dt><dd>{item.program}</dd></div><div><dt>Consórcio</dt><dd>{item.condition || "Por confirmar"}</dd></div><div><dt>Investigadores</dt><dd>{item.researcher || "Sem matching"}</dd></div></dl><div className="fit-box"><strong>Alinhamento registado</strong><p>{item.why || "Sem justificação registada."}</p></div><div className="source"><small>FONTE OFICIAL</small><strong>{item.link || "Por confirmar"}</strong><span>Origem: {item.source}</span></div><footer><button className="button secondary" onClick={onClose}>Fechar</button><button className="button" onClick={onDecide}>Adicionar e comparar</button></footer></aside></div>;
 }
+
 
 
 
