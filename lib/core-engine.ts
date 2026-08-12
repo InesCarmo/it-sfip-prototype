@@ -121,7 +121,7 @@ function opportunityFromCall(call: CallOfficialData): Opportunity {
   const deadlineIso = call.dates.deadlineAt ?? null;
   const days = intelligence?.daysRemaining ?? computeDaysRemaining(deadlineIso);
   const computedState = computeTemporalCallState({ openedAt: call.dates.openedAt ?? null, deadlineAt: deadlineIso });
-  const fit = intelligence?.potentialIt || (days !== null ? (days <= 30 ? "Muito Alto" : days <= 90 ? "Alto" : "MÃ©dio") : "Por confirmar");
+  const fit = intelligence?.potentialIt || (days !== null ? (days <= 30 ? "Muito Alto" : days <= 90 ? "Alto" : "Médio") : "Por confirmar");
   const area = intelligence?.areaStrategicIt || call.areaPrimary || "Transversal";
   return {
     id: call.id,
@@ -141,15 +141,15 @@ function opportunityFromCall(call: CallOfficialData): Opportunity {
     deadline: deadlineIso ? excelLabel(deadlineIso) : "Por confirmar",
     deadlineIso,
     days,
-    condition: call.eligibility.consortiumRequired ? "Sim" : "NÃ£o",
+    condition: call.eligibility.consortiumRequired ? "Sim" : "Não",
     why: intelligence?.explainWhy || call.notes || "",
     keywords: call.thematicKeywords.join("; "),
     observations: call.notes || "",
     link: call.links.official,
     action: intelligence?.communicationTags.includes("webinar") ? "Divulgar" : intelligence?.partnerNeeds.length ? "Contactar Investigador" : "Rever oportunidade",
     priority: days !== null && days <= 30 ? "1 - Estratégica" : computedState === "Prevista" ? "2 - Relevante" : "3 - Oportunidade",
-    companyRequired: call.eligibility.companyRequired ? "Sim" : "NÃ£o",
-    partnerRequired: call.eligibility.consortiumRequired ? "Sim" : "NÃ£o",
+    companyRequired: call.eligibility.companyRequired ? "Sim" : "Não",
+    partnerRequired: call.eligibility.consortiumRequired ? "Sim" : "Não",
     tone: computedState === "Aberta" ? "good" : computedState === "Prevista" ? "warn" : "neutral",
     raw: call,
   };
@@ -171,7 +171,7 @@ function opportunityFromRadar(item: RadarItem): Opportunity {
     type: "Radar",
     level: "",
     state: "Radar",
-    fit: item.confidence >= 85 ? "Muito Alto" : item.confidence >= 70 ? "Alto" : "MÃ©dio",
+    fit: item.confidence >= 85 ? "Muito Alto" : item.confidence >= 70 ? "Alto" : "Médio",
     deadline: deadlineIso ? excelLabel(deadlineIso) : "Por confirmar",
     deadlineIso,
     days: computeDaysRemaining(deadlineIso),
@@ -181,7 +181,7 @@ function opportunityFromRadar(item: RadarItem): Opportunity {
     observations: item.notes || "",
     link: item.officialUrl || "",
     action: "Monitorizar",
-    priority: item.confidence >= 85 ? "1 - EstratÃ©gica" : "2 - Relevante",
+    priority: item.confidence >= 85 ? "1 - Estratégica" : "2 - Relevante",
     companyRequired: "Por confirmar",
     partnerRequired: "Por confirmar",
     tone: "warn",
@@ -295,7 +295,7 @@ export const coreEngine = {
   getEvents: () => data.events,
   getProgramName: (programId: string) => data.programs.find((program) => program.id === programId)?.officialName ?? "Por confirmar",
   getActions: () => callOpportunities
-    .filter((item) => item.action && !/n[aÃ£]o aplic[aÃ¡]vel/i.test(item.action))
+    .filter((item) => item.action && !/não aplic[aá]vel/i.test(item.action))
     .map((item) => ({
       id: item.id,
       label: item.action,
@@ -315,11 +315,11 @@ export const coreEngine = {
   },
   answerAssistant(question: string, context: WorkspaceContext) {
     const recommendations = this.getContextualRecommendations(context, 3);
-    if (!recommendations.length) return "NÃ£o encontrei oportunidades com evidÃªncia suficiente para este Workspace. Reveja a Ã¡rea, grupo ou descriÃ§Ã£o.";
+    if (!recommendations.length) return "Não encontrei oportunidades com evidência suficiente para este Workspace. Reveja a área, grupo ou descrição.";
     const q = normalize(question);
-    if (q.includes("parceir") || q.includes("consorcio")) return recommendations.map(({ item }) => `${item.name}: ${item.partnerRequired || item.condition || "condiÃ§Ã£o nÃ£o especificada"}`).join("\n");
+    if (q.includes("parceir") || q.includes("consorcio")) return recommendations.map(({ item }) => `${item.name}: ${item.partnerRequired || item.condition || "condição não especificada"}`).join("\n");
     if (q.includes("investig")) return unique(recommendations.flatMap(({ item }) => readResearchersFromCall(item.id))).slice(0, 5).join("; ") || "Sem investigadores validados no matching.";
-    return `Melhor correspondÃªncia: ${recommendations[0].item.name} (${recommendations[0].score} pontos contextuais). ${recommendations[0].item.why}`;
+    return `Melhor correspondência: ${recommendations[0].item.name} (${recommendations[0].score} pontos contextuais). ${recommendations[0].item.why}`;
   },
 };
 

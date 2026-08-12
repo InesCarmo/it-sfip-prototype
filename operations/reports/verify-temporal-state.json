@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-08-11T16:44:25.083Z",
+  "totalCalls": 98,
+  "exceptions": [],
+  "exceptionCount": 0,
+  "stateMismatchCount": 0,
+  "openWithPastDeadline": [],
+  "plannedWithPastDeadline": [],
+  "status": "passed"
+}

@@ -1,0 +1,30 @@
+{
+  "generatedAt": "2026-08-11T16:44:21.694Z",
+  "valid": false,
+  "counts": {
+    "sources": 5,
+    "programs": 45,
+    "calls": 98,
+    "callIntelligence": 98,
+    "radar": 24,
+    "events": 4,
+    "companies": 1,
+    "institutions": 28,
+    "researchers": 20,
+    "workspaces": 0,
+    "campaigns": 0,
+    "history": 0,
+    "knowledgeIndex": 142
+  },
+  "uniqueCallPrograms": 34,
+  "issues": [
+    "Temporal inconsistency in call CALL-033: missing-deadline",
+    "Temporal inconsistency in call CALL-034: missing-deadline",
+    "Temporal inconsistency in call CALL-053: missing-deadline",
+    "Temporal inconsistency in call CALL-054: missing-deadline",
+    "Temporal inconsistency in call CALL-091: missing-deadline",
+    "Temporal inconsistency in call CALL-092: missing-deadline",
+    "Inactive or unnamed researcher: PERFIS COMPLEMENTARES (fora da tblInvestigadores): Hugo Pedro Martins Carriço Proença — Pattern and Image Analysis; Maria do Rosário Alves Calado — Power Electronics."
+  ],
+  "status": "failed"
+}

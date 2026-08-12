@@ -1,0 +1,104 @@
+{
+  "generatedAt": "2026-08-11T16:44:23.710Z",
+  "queries": [
+    {
+      "query": "ERC",
+      "count": 7,
+      "titles": [
+        "ERC Starting Grant 2027 (ERC-2027-STG)",
+        "ERC Consolidator Grant 2027 (ERC-2027-COG)",
+        "ERC Advanced Grant 2026 (ERC-2026-ADG)",
+        "ERC Proof of Concept 2026 (ERC-2026-PoC)",
+        "ERC Synergy Grant 2027 (ERC-2027-SYG)",
+        "ERC Advanced Grant 2027 (ERC-2027-ADG)",
+        "ERC Proof of Concept 2027 (ERC-2027-PoC)"
+      ],
+      "falsePositives": []
+    },
+    {
+      "query": "MSCA",
+      "count": 2,
+      "titles": [
+        "HORIZON-MSCA-2026-PF-01: MSCA Postdoctoral Fellowships 2026",
+        "HORIZON-MSCA-2026-DN-01: MSCA Doctoral Networks 2026"
+      ],
+      "falsePositives": []
+    },
+    {
+      "query": "Eurostars",
+      "count": 3,
+      "titles": [
+        "SIID – Internacionalização de I&D – Operações de I&D industrial à escala europeia (MPr-2026-04)",
+        "Eurostars Call 11",
+        "Eurostars Call 12"
+      ],
+      "falsePositives": []
+    },
+    {
+      "query": "STEP",
+      "count": 12,
+      "titles": [
+        "STEP – I&D&I Empresarial – Digital e Biotecnologia",
+        "STEP – I&D&I Empresarial – Energia",
+        "STEP – Inovação Produtiva – Digital e Biotecnologia",
+        "STEP – Inovação Produtiva – Energia",
+        "SICE - Inovação Produtiva - Territórios Baixa Densidade e Outros Territórios",
+        "STEP – I&D&I Empresarial – Digital e Biotecnologia (novo aviso previsto 2026)",
+        "STEP – I&D&I Empresarial – Energia (novo aviso previsto 2026)",
+        "STEP – Inovação Produtiva – Digital e Biotecnologia (novo aviso previsto 2026)"
+      ],
+      "falsePositives": []
+    },
+    {
+      "query": "Power",
+      "count": 44,
+      "titles": [
+        "Visiting Student Researchers",
+        "Cooperação Bilateral Portugal-França 2026",
+        "Concurso de Projetos de Computação Avançada (6ª edição)",
+        "STEP – I&D&I Empresarial – Energia",
+        "STEP – Inovação Produtiva – Energia",
+        "SIID – Internacionalização de I&D – Operações de I&D industrial à escala europeia (MPr-2026-04)",
+        "SICE - Inovação Produtiva - Territórios Baixa Densidade e Outros Territórios",
+        "SITCE – Descarbonização e Eficiência Energética (MPr-2026-01)"
+      ],
+      "falsePositives": []
+    },
+    {
+      "query": "Health",
+      "count": 3,
+      "titles": [
+        "Advanced Digital Skills for AI Uptake in Health (DIGITAL-2026-SKILLS-10-DIGITAL-HEALTH-STEP)",
+        "Building capacity to deploy EEHRxF and digital health services under EHDS (DIGITAL-2026-BESTUSE-10-EHDS)",
+        "Reinforcing Europe’s strength in health (HORIZON-Chips-JU-2026-FT3-IA)"
+      ],
+      "falsePositives": []
+    },
+    {
+      "query": "Digital Europe",
+      "count": 3,
+      "titles": [
+        "HORIZON-CL4-2026-SPACE-03-31: Digital enablers and building-blocks for Earth Observation and Satellite telecommunication for Space solutions",
+        "Advanced Digital Skills for AI Uptake in Health (DIGITAL-2026-SKILLS-10-DIGITAL-HEALTH-STEP)",
+        "Reinforcing Europe’s strength in health (HORIZON-Chips-JU-2026-FT3-IA)"
+      ],
+      "falsePositives": []
+    },
+    {
+      "query": "ESA",
+      "count": 8,
+      "titles": [
+        "NAVISP Element 2 Standard Call for Proposals",
+        "Standard Call for Proposal for GSTP Element 2: Make Activities",
+        "Non-Orthogonal Multiple Access (NOMA) for Beyond 5G (B5G)",
+        "D-Band Transceiver Module for 6G Satellite Systems",
+        "Physics Informed Machine Learning for Earth Observation",
+        "DTE-B-01 and 02 – LEAD and Early DTCS Development Actions – Fixed Call for Proposal",
+        "ARTES 4.0 Technologies & Products Open Call (CfP 4-40017)",
+        "ARTES 4.0 Business Applications Open Call"
+      ],
+      "falsePositives": []
+    }
+  ],
+  "status": "passed"
+}
