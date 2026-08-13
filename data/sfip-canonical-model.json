@@ -6201,7 +6201,7 @@
     {
       "callId": "CALL-001",
       "stateComputed": "Aberta",
-      "daysRemaining": 507,
+      "daysRemaining": 505,
       "urgencyScore": 0,
       "relevanceScore": 82,
       "potentialIt": "Baixo",
@@ -6235,8 +6235,8 @@
     {
       "callId": "CALL-002",
       "stateComputed": "Aberta",
-      "daysRemaining": 36,
-      "urgencyScore": 64,
+      "daysRemaining": 34,
+      "urgencyScore": 66,
       "relevanceScore": 80,
       "potentialIt": "Médio",
       "areaStrategicIt": "Transversal",
@@ -6269,8 +6269,8 @@
     {
       "callId": "CALL-003",
       "stateComputed": "Aberta",
-      "daysRemaining": 36,
-      "urgencyScore": 64,
+      "daysRemaining": 34,
+      "urgencyScore": 66,
       "relevanceScore": 92,
       "potentialIt": "Muito Alto",
       "areaStrategicIt": "HPC & Computação",
@@ -6303,8 +6303,8 @@
     {
       "callId": "CALL-004",
       "stateComputed": "Aberta",
-      "daysRemaining": 36,
-      "urgencyScore": 64,
+      "daysRemaining": 34,
+      "urgencyScore": 66,
       "relevanceScore": 76,
       "potentialIt": "Alto",
       "areaStrategicIt": "Redes & Comunicações",
@@ -6335,8 +6335,8 @@
     {
       "callId": "CALL-005",
       "stateComputed": "Aberta",
-      "daysRemaining": 51,
-      "urgencyScore": 49,
+      "daysRemaining": 49,
+      "urgencyScore": 51,
       "relevanceScore": 81,
       "potentialIt": "Médio",
       "areaStrategicIt": "Transversal",
@@ -6368,8 +6368,8 @@
     {
       "callId": "CALL-006",
       "stateComputed": "Aberta",
-      "daysRemaining": 51,
-      "urgencyScore": 49,
+      "daysRemaining": 49,
+      "urgencyScore": 51,
       "relevanceScore": 95,
       "potentialIt": "Médio",
       "areaStrategicIt": "Transversal",
@@ -6401,7 +6401,7 @@
     {
       "callId": "CALL-007",
       "stateComputed": "Encerrada",
-      "daysRemaining": -102,
+      "daysRemaining": -104,
       "urgencyScore": 10,
       "relevanceScore": 89,
       "potentialIt": "Muito Alto",
@@ -6434,7 +6434,7 @@
     {
       "callId": "CALL-008",
       "stateComputed": "Encerrada",
-      "daysRemaining": -102,
+      "daysRemaining": -104,
       "urgencyScore": 10,
       "relevanceScore": 86,
       "potentialIt": "Alto",
@@ -6464,7 +6464,7 @@
     {
       "callId": "CALL-009",
       "stateComputed": "Encerrada",
-      "daysRemaining": -102,
+      "daysRemaining": -104,
       "urgencyScore": 10,
       "relevanceScore": 89,
       "potentialIt": "Alto",
@@ -6495,7 +6495,7 @@
     {
       "callId": "CALL-010",
       "stateComputed": "Encerrada",
-      "daysRemaining": -102,
+      "daysRemaining": -104,
       "urgencyScore": 10,
       "relevanceScore": 77,
       "potentialIt": "Alto",
@@ -6520,8 +6520,8 @@
     {
       "callId": "CALL-011",
       "stateComputed": "Aberta",
-      "daysRemaining": 51,
-      "urgencyScore": 49,
+      "daysRemaining": 49,
+      "urgencyScore": 51,
       "relevanceScore": 80,
       "potentialIt": "Muito Alto",
       "areaStrategicIt": "Transversal",
@@ -6554,8 +6554,8 @@
     {
       "callId": "CALL-012",
       "stateComputed": "Aberta",
-      "daysRemaining": 51,
-      "urgencyScore": 49,
+      "daysRemaining": 49,
+      "urgencyScore": 51,
       "relevanceScore": 79,
       "potentialIt": "Alto",
       "areaStrategicIt": "Transversal",
@@ -6587,7 +6587,7 @@
     {
       "callId": "CALL-013",
       "stateComputed": "Aberta",
-      "daysRemaining": 142,
+      "daysRemaining": 140,
       "urgencyScore": 0,
       "relevanceScore": 73,
       "potentialIt": "Médio",
@@ -6612,7 +6612,7 @@
     {
       "callId": "CALL-014",
       "stateComputed": "Aberta",
-      "daysRemaining": 507,
+      "daysRemaining": 505,
       "urgencyScore": 0,
       "relevanceScore": 77,
       "potentialIt": "Médio",
@@ -6643,8 +6643,8 @@
     {
       "callId": "CALL-015",
       "stateComputed": "Aberta",
-      "daysRemaining": 24,
-      "urgencyScore": 76,
+      "daysRemaining": 22,
+      "urgencyScore": 78,
       "relevanceScore": 94,
       "potentialIt": "Muito Alto",
       "areaStrategicIt": "Espaço & GNSS",
@@ -6675,8 +6675,8 @@
     {
       "callId": "CALL-016",
       "stateComputed": "Aberta",
-      "daysRemaining": 24,
-      "urgencyScore": 76,
+      "daysRemaining": 22,
+      "urgencyScore": 78,
       "relevanceScore": 89,
       "potentialIt": "Alto",
       "areaStrategicIt": "Espaço & GNSS",
@@ -6706,8 +6706,8 @@
     {
       "callId": "CALL-017",
       "stateComputed": "Aberta",
-      "daysRemaining": 24,
-      "urgencyScore": 76,
+      "daysRemaining": 22,
+      "urgencyScore": 78,
       "relevanceScore": 101,
       "potentialIt": "Alto",
       "areaStrategicIt": "Espaço & GNSS",
@@ -6737,8 +6737,8 @@
     {
       "callId": "CALL-018",
       "stateComputed": "Aberta",
-      "daysRemaining": 24,
-      "urgencyScore": 76,
+      "daysRemaining": 22,
+      "urgencyScore": 78,
       "relevanceScore": 78,
       "potentialIt": "Médio",
       "areaStrategicIt": "Espaço & GNSS",
@@ -6766,8 +6766,8 @@
     {
       "callId": "CALL-019",
       "stateComputed": "Aberta",
-      "daysRemaining": 24,
-      "urgencyScore": 76,
+      "daysRemaining": 22,
+      "urgencyScore": 78,
       "relevanceScore": 84,
       "potentialIt": "Médio",
       "areaStrategicIt": "Espaço & GNSS",
@@ -6795,8 +6795,8 @@
     {
       "callId": "CALL-020",
       "stateComputed": "Aberta",
-      "daysRemaining": 24,
-      "urgencyScore": 76,
+      "daysRemaining": 22,
+      "urgencyScore": 78,
       "relevanceScore": 84,
       "potentialIt": "Baixo",
       "areaStrategicIt": "Espaço & GNSS",
@@ -6824,8 +6824,8 @@
     {
       "callId": "CALL-021",
       "stateComputed": "Aberta",
-      "daysRemaining": 36,
-      "urgencyScore": 64,
+      "daysRemaining": 34,
+      "urgencyScore": 66,
       "relevanceScore": 86,
       "potentialIt": "Médio",
       "areaStrategicIt": "Energia & Power Electronics",
@@ -6851,8 +6851,8 @@
     {
       "callId": "CALL-022",
       "stateComputed": "Aberta",
-      "daysRemaining": 36,
-      "urgencyScore": 64,
+      "daysRemaining": 34,
+      "urgencyScore": 66,
       "relevanceScore": 84,
       "potentialIt": "Médio",
       "areaStrategicIt": "IA & Computer Vision",
@@ -6878,8 +6878,8 @@
     {
       "callId": "CALL-023",
       "stateComputed": "Aberta",
-      "daysRemaining": 59,
-      "urgencyScore": 41,
+      "daysRemaining": 57,
+      "urgencyScore": 43,
       "relevanceScore": 89,
       "potentialIt": "Muito Alto",
       "areaStrategicIt": "IA & Computer Vision",
@@ -6907,8 +6907,8 @@
     {
       "callId": "CALL-024",
       "stateComputed": "Aberta",
-      "daysRemaining": 59,
-      "urgencyScore": 41,
+      "daysRemaining": 57,
+      "urgencyScore": 43,
       "relevanceScore": 82,
       "potentialIt": "Alto",
       "areaStrategicIt": "IA & Computer Vision",
@@ -6934,7 +6934,7 @@
     {
       "callId": "CALL-025",
       "stateComputed": "Aberta",
-      "daysRemaining": 113,
+      "daysRemaining": 111,
       "urgencyScore": 0,
       "relevanceScore": 72,
       "potentialIt": "Alto",
@@ -6961,7 +6961,7 @@
     {
       "callId": "CALL-026",
       "stateComputed": "Aberta",
-      "daysRemaining": 113,
+      "daysRemaining": 111,
       "urgencyScore": 0,
       "relevanceScore": 88,
       "potentialIt": "Muito Alto",
@@ -6991,8 +6991,8 @@
     {
       "callId": "CALL-027",
       "stateComputed": "Aberta",
-      "daysRemaining": 30,
-      "urgencyScore": 70,
+      "daysRemaining": 28,
+      "urgencyScore": 72,
       "relevanceScore": 78,
       "potentialIt": "Alto",
       "areaStrategicIt": "Transversal",
@@ -7025,7 +7025,7 @@
     {
       "callId": "CALL-028",
       "stateComputed": "Aberta",
-      "daysRemaining": 106,
+      "daysRemaining": 104,
       "urgencyScore": 0,
       "relevanceScore": 84,
       "potentialIt": "Alto",
@@ -7059,8 +7059,8 @@
     {
       "callId": "CALL-029",
       "stateComputed": "Aberta",
-      "daysRemaining": 37,
-      "urgencyScore": 63,
+      "daysRemaining": 35,
+      "urgencyScore": 65,
       "relevanceScore": 80,
       "potentialIt": "Alto",
       "areaStrategicIt": "Transversal",
@@ -7093,8 +7093,8 @@
     {
       "callId": "CALL-030",
       "stateComputed": "Aberta",
-      "daysRemaining": 79,
-      "urgencyScore": 21,
+      "daysRemaining": 77,
+      "urgencyScore": 23,
       "relevanceScore": 81,
       "potentialIt": "Alto",
       "areaStrategicIt": "Transversal",
@@ -7122,8 +7122,8 @@
     {
       "callId": "CALL-031",
       "stateComputed": "Aberta",
-      "daysRemaining": 23,
-      "urgencyScore": 77,
+      "daysRemaining": 21,
+      "urgencyScore": 79,
       "relevanceScore": 81,
       "potentialIt": "Médio",
       "areaStrategicIt": "Transversal",
@@ -7155,8 +7155,8 @@
     {
       "callId": "CALL-032",
       "stateComputed": "Aberta",
-      "daysRemaining": 23,
-      "urgencyScore": 77,
+      "daysRemaining": 21,
+      "urgencyScore": 79,
       "relevanceScore": 73,
       "potentialIt": "Médio",
       "areaStrategicIt": "Energia & Power Electronics",
@@ -7246,7 +7246,7 @@
     {
       "callId": "CALL-035",
       "stateComputed": "Encerrada",
-      "daysRemaining": -38,
+      "daysRemaining": -40,
       "urgencyScore": 10,
       "relevanceScore": 70,
       "potentialIt": "Muito Alto",
@@ -7275,8 +7275,8 @@
     {
       "callId": "CALL-036",
       "stateComputed": "Aberta",
-      "daysRemaining": 10,
-      "urgencyScore": 90,
+      "daysRemaining": 8,
+      "urgencyScore": 92,
       "relevanceScore": 73,
       "potentialIt": "Muito Alto",
       "areaStrategicIt": "Redes & Comunicações",
@@ -7306,8 +7306,8 @@
     {
       "callId": "CALL-037",
       "stateComputed": "Aberta",
-      "daysRemaining": 11,
-      "urgencyScore": 89,
+      "daysRemaining": 9,
+      "urgencyScore": 91,
       "relevanceScore": 76,
       "potentialIt": "Muito Alto",
       "areaStrategicIt": "Redes & Comunicações",
@@ -7335,7 +7335,7 @@
     {
       "callId": "CALL-038",
       "stateComputed": "Encerrada",
-      "daysRemaining": -42,
+      "daysRemaining": -44,
       "urgencyScore": 10,
       "relevanceScore": 85,
       "potentialIt": "Muito Alto",
@@ -7364,7 +7364,7 @@
     {
       "callId": "CALL-039",
       "stateComputed": "Encerrada",
-      "daysRemaining": -5,
+      "daysRemaining": -7,
       "urgencyScore": 10,
       "relevanceScore": 85,
       "potentialIt": "Alto",
@@ -7395,7 +7395,7 @@
     {
       "callId": "CALL-040",
       "stateComputed": "Encerrada",
-      "daysRemaining": -41,
+      "daysRemaining": -43,
       "urgencyScore": 10,
       "relevanceScore": 80,
       "potentialIt": "Médio",
@@ -7424,7 +7424,7 @@
     {
       "callId": "CALL-041",
       "stateComputed": "Encerrada",
-      "daysRemaining": -38,
+      "daysRemaining": -40,
       "urgencyScore": 10,
       "relevanceScore": 87,
       "potentialIt": "Médio",
@@ -7455,7 +7455,7 @@
     {
       "callId": "CALL-042",
       "stateComputed": "Encerrada",
-      "daysRemaining": -34,
+      "daysRemaining": -36,
       "urgencyScore": 10,
       "relevanceScore": 82,
       "potentialIt": "Médio",
@@ -7484,7 +7484,7 @@
     {
       "callId": "CALL-043",
       "stateComputed": "Encerrada",
-      "daysRemaining": -27,
+      "daysRemaining": -29,
       "urgencyScore": 10,
       "relevanceScore": 75,
       "potentialIt": "Médio",
@@ -7515,7 +7515,7 @@
     {
       "callId": "CALL-044",
       "stateComputed": "Prevista",
-      "daysRemaining": 58,
+      "daysRemaining": 56,
       "urgencyScore": 30,
       "relevanceScore": 90,
       "potentialIt": "Baixo",
@@ -7542,7 +7542,7 @@
     {
       "callId": "CALL-045",
       "stateComputed": "Prevista",
-      "daysRemaining": 58,
+      "daysRemaining": 56,
       "urgencyScore": 30,
       "relevanceScore": 84,
       "potentialIt": "Baixo",
@@ -7569,7 +7569,7 @@
     {
       "callId": "CALL-046",
       "stateComputed": "Prevista",
-      "daysRemaining": 217,
+      "daysRemaining": 215,
       "urgencyScore": 30,
       "relevanceScore": 82,
       "potentialIt": "Baixo",
@@ -7596,7 +7596,7 @@
     {
       "callId": "CALL-047",
       "stateComputed": "Aberta",
-      "daysRemaining": 124,
+      "daysRemaining": 122,
       "urgencyScore": 0,
       "relevanceScore": 77,
       "potentialIt": "Baixo",
@@ -7621,7 +7621,7 @@
     {
       "callId": "CALL-048",
       "stateComputed": "Prevista",
-      "daysRemaining": 112,
+      "daysRemaining": 110,
       "urgencyScore": 30,
       "relevanceScore": 99,
       "potentialIt": "Muito Alto",
@@ -7652,7 +7652,7 @@
     {
       "callId": "CALL-049",
       "stateComputed": "Prevista",
-      "daysRemaining": 112,
+      "daysRemaining": 110,
       "urgencyScore": 30,
       "relevanceScore": 89,
       "potentialIt": "Muito Alto",
@@ -7681,7 +7681,7 @@
     {
       "callId": "CALL-050",
       "stateComputed": "Prevista",
-      "daysRemaining": 112,
+      "daysRemaining": 110,
       "urgencyScore": 30,
       "relevanceScore": 81,
       "potentialIt": "Médio",
@@ -7710,7 +7710,7 @@
     {
       "callId": "CALL-051",
       "stateComputed": "Prevista",
-      "daysRemaining": 112,
+      "daysRemaining": 110,
       "urgencyScore": 30,
       "relevanceScore": 80,
       "potentialIt": "Alto",
@@ -7737,7 +7737,7 @@
     {
       "callId": "CALL-052",
       "stateComputed": "Aberta",
-      "daysRemaining": 130,
+      "daysRemaining": 128,
       "urgencyScore": 0,
       "relevanceScore": 84,
       "potentialIt": "Médio",
@@ -7827,8 +7827,8 @@
     {
       "callId": "CALL-055",
       "stateComputed": "Aberta",
-      "daysRemaining": 65,
-      "urgencyScore": 35,
+      "daysRemaining": 63,
+      "urgencyScore": 37,
       "relevanceScore": 88,
       "potentialIt": "Muito Alto",
       "areaStrategicIt": "Transversal",
@@ -7859,7 +7859,7 @@
     {
       "callId": "CALL-056",
       "stateComputed": "Prevista",
-      "daysRemaining": 155,
+      "daysRemaining": 153,
       "urgencyScore": 30,
       "relevanceScore": 88,
       "potentialIt": "Muito Alto",
@@ -7891,8 +7891,8 @@
     {
       "callId": "CALL-057",
       "stateComputed": "Aberta",
-      "daysRemaining": 17,
-      "urgencyScore": 83,
+      "daysRemaining": 15,
+      "urgencyScore": 85,
       "relevanceScore": 86,
       "potentialIt": "Muito Alto",
       "areaStrategicIt": "Transversal",
@@ -7923,8 +7923,8 @@
     {
       "callId": "CALL-058",
       "stateComputed": "Aberta",
-      "daysRemaining": 38,
-      "urgencyScore": 62,
+      "daysRemaining": 36,
+      "urgencyScore": 64,
       "relevanceScore": 82,
       "potentialIt": "Médio",
       "areaStrategicIt": "Transversal",
@@ -7955,7 +7955,7 @@
     {
       "callId": "CALL-059",
       "stateComputed": "Prevista",
-      "daysRemaining": 274,
+      "daysRemaining": 272,
       "urgencyScore": 30,
       "relevanceScore": 86,
       "potentialIt": "Alto",
@@ -7987,7 +7987,7 @@
     {
       "callId": "CALL-060",
       "stateComputed": "Prevista",
-      "daysRemaining": 381,
+      "daysRemaining": 379,
       "urgencyScore": 30,
       "relevanceScore": 86,
       "potentialIt": "Alto",
@@ -8019,7 +8019,7 @@
     {
       "callId": "CALL-061",
       "stateComputed": "Prevista",
-      "daysRemaining": 212,
+      "daysRemaining": 210,
       "urgencyScore": 30,
       "relevanceScore": 82,
       "potentialIt": "Médio",
@@ -8051,8 +8051,8 @@
     {
       "callId": "CALL-062",
       "stateComputed": "Aberta",
-      "daysRemaining": 31,
-      "urgencyScore": 69,
+      "daysRemaining": 29,
+      "urgencyScore": 71,
       "relevanceScore": 93,
       "potentialIt": "Alto",
       "areaStrategicIt": "Transversal",
@@ -8082,7 +8082,7 @@
     {
       "callId": "CALL-063",
       "stateComputed": "Prevista",
-      "daysRemaining": 206,
+      "daysRemaining": 204,
       "urgencyScore": 30,
       "relevanceScore": 85,
       "potentialIt": "Alto",
@@ -8113,8 +8113,8 @@
     {
       "callId": "CALL-064",
       "stateComputed": "Aberta",
-      "daysRemaining": 77,
-      "urgencyScore": 23,
+      "daysRemaining": 75,
+      "urgencyScore": 25,
       "relevanceScore": 95,
       "potentialIt": "Muito Alto",
       "areaStrategicIt": "Transversal",
@@ -8144,8 +8144,8 @@
     {
       "callId": "CALL-065",
       "stateComputed": "Aberta",
-      "daysRemaining": 80,
-      "urgencyScore": 20,
+      "daysRemaining": 78,
+      "urgencyScore": 22,
       "relevanceScore": 90,
       "potentialIt": "Alto",
       "areaStrategicIt": "Energia & Power Electronics",
@@ -8174,7 +8174,7 @@
     {
       "callId": "CALL-066",
       "stateComputed": "Prevista",
-      "daysRemaining": 84,
+      "daysRemaining": 82,
       "urgencyScore": 30,
       "relevanceScore": 89,
       "potentialIt": "Alto",
@@ -8205,7 +8205,7 @@
     {
       "callId": "CALL-067",
       "stateComputed": "Aberta",
-      "daysRemaining": 164,
+      "daysRemaining": 162,
       "urgencyScore": 0,
       "relevanceScore": 94,
       "potentialIt": "Alto",
@@ -8235,8 +8235,8 @@
     {
       "callId": "CALL-068",
       "stateComputed": "Aberta",
-      "daysRemaining": 52,
-      "urgencyScore": 48,
+      "daysRemaining": 50,
+      "urgencyScore": 50,
       "relevanceScore": 85,
       "potentialIt": "Alto",
       "areaStrategicIt": "IA & Computer Vision",
@@ -8264,8 +8264,8 @@
     {
       "callId": "CALL-069",
       "stateComputed": "Aberta",
-      "daysRemaining": 52,
-      "urgencyScore": 48,
+      "daysRemaining": 50,
+      "urgencyScore": 50,
       "relevanceScore": 85,
       "potentialIt": "Alto",
       "areaStrategicIt": "Transversal",
@@ -8293,8 +8293,8 @@
     {
       "callId": "CALL-070",
       "stateComputed": "Aberta",
-      "daysRemaining": 52,
-      "urgencyScore": 48,
+      "daysRemaining": 50,
+      "urgencyScore": 50,
       "relevanceScore": 79,
       "potentialIt": "Alto",
       "areaStrategicIt": "IA & Computer Vision",
@@ -8322,8 +8322,8 @@
     {
       "callId": "CALL-071",
       "stateComputed": "Aberta",
-      "daysRemaining": 52,
-      "urgencyScore": 48,
+      "daysRemaining": 50,
+      "urgencyScore": 50,
       "relevanceScore": 87,
       "potentialIt": "Alto",
       "areaStrategicIt": "Transversal",
@@ -8351,8 +8351,8 @@
     {
       "callId": "CALL-072",
       "stateComputed": "Aberta",
-      "daysRemaining": 52,
-      "urgencyScore": 48,
+      "daysRemaining": 50,
+      "urgencyScore": 50,
       "relevanceScore": 89,
       "potentialIt": "Médio",
       "areaStrategicIt": "Transversal",
@@ -8380,7 +8380,7 @@
     {
       "callId": "CALL-073",
       "stateComputed": "Aberta",
-      "daysRemaining": 171,
+      "daysRemaining": 169,
       "urgencyScore": 0,
       "relevanceScore": 87,
       "potentialIt": "Alto",
@@ -8409,8 +8409,8 @@
     {
       "callId": "CALL-074",
       "stateComputed": "Aberta",
-      "daysRemaining": 36,
-      "urgencyScore": 64,
+      "daysRemaining": 34,
+      "urgencyScore": 66,
       "relevanceScore": 84,
       "potentialIt": "Alto",
       "areaStrategicIt": "Transversal",
@@ -8441,8 +8441,8 @@
     {
       "callId": "CALL-075",
       "stateComputed": "Aberta",
-      "daysRemaining": 37,
-      "urgencyScore": 63,
+      "daysRemaining": 35,
+      "urgencyScore": 65,
       "relevanceScore": 82,
       "potentialIt": "Muito Alto",
       "areaStrategicIt": "Energia & Power Electronics",
@@ -8468,8 +8468,8 @@
     {
       "callId": "CALL-076",
       "stateComputed": "Aberta",
-      "daysRemaining": 37,
-      "urgencyScore": 63,
+      "daysRemaining": 35,
+      "urgencyScore": 65,
       "relevanceScore": 87,
       "potentialIt": "Muito Alto",
       "areaStrategicIt": "Redes & Comunicações",
@@ -8497,8 +8497,8 @@
     {
       "callId": "CALL-077",
       "stateComputed": "Aberta",
-      "daysRemaining": 37,
-      "urgencyScore": 63,
+      "daysRemaining": 35,
+      "urgencyScore": 65,
       "relevanceScore": 85,
       "potentialIt": "Alto",
       "areaStrategicIt": "IA & Computer Vision",
@@ -8526,7 +8526,7 @@
     {
       "callId": "CALL-078",
       "stateComputed": "Aberta",
-      "daysRemaining": 141,
+      "daysRemaining": 139,
       "urgencyScore": 0,
       "relevanceScore": 96,
       "potentialIt": "Muito Alto",
@@ -8558,8 +8558,8 @@
     {
       "callId": "CALL-079",
       "stateComputed": "Aberta",
-      "daysRemaining": 37,
-      "urgencyScore": 63,
+      "daysRemaining": 35,
+      "urgencyScore": 65,
       "relevanceScore": 81,
       "potentialIt": "Muito Alto",
       "areaStrategicIt": "IA & Computer Vision",
@@ -8587,8 +8587,8 @@
     {
       "callId": "CALL-080",
       "stateComputed": "Aberta",
-      "daysRemaining": 35,
-      "urgencyScore": 65,
+      "daysRemaining": 33,
+      "urgencyScore": 67,
       "relevanceScore": 78,
       "potentialIt": "Muito Alto",
       "areaStrategicIt": "IA & Computer Vision",
@@ -8614,8 +8614,8 @@
     {
       "callId": "CALL-081",
       "stateComputed": "Aberta",
-      "daysRemaining": 29,
-      "urgencyScore": 71,
+      "daysRemaining": 27,
+      "urgencyScore": 73,
       "relevanceScore": 87,
       "potentialIt": "Alto",
       "areaStrategicIt": "Redes & Comunicações",
@@ -8643,8 +8643,8 @@
     {
       "callId": "CALL-082",
       "stateComputed": "Aberta",
-      "daysRemaining": 24,
-      "urgencyScore": 76,
+      "daysRemaining": 22,
+      "urgencyScore": 78,
       "relevanceScore": 81,
       "potentialIt": "Alto",
       "areaStrategicIt": "Redes & Comunicações",
@@ -8672,8 +8672,8 @@
     {
       "callId": "CALL-083",
       "stateComputed": "Aberta",
-      "daysRemaining": 79,
-      "urgencyScore": 21,
+      "daysRemaining": 77,
+      "urgencyScore": 23,
       "relevanceScore": 92,
       "potentialIt": "Muito Alto",
       "areaStrategicIt": "Transversal",
@@ -8704,8 +8704,8 @@
     {
       "callId": "CALL-084",
       "stateComputed": "Aberta",
-      "daysRemaining": 87,
-      "urgencyScore": 13,
+      "daysRemaining": 85,
+      "urgencyScore": 15,
       "relevanceScore": 85,
       "potentialIt": "Muito Alto",
       "areaStrategicIt": "Redes & Comunicações",
@@ -8733,8 +8733,8 @@
     {
       "callId": "CALL-085",
       "stateComputed": "Aberta",
-      "daysRemaining": 87,
-      "urgencyScore": 13,
+      "daysRemaining": 85,
+      "urgencyScore": 15,
       "relevanceScore": 88,
       "potentialIt": "Alto",
       "areaStrategicIt": "Transversal",
@@ -8763,8 +8763,8 @@
     {
       "callId": "CALL-086",
       "stateComputed": "Aberta",
-      "daysRemaining": 87,
-      "urgencyScore": 13,
+      "daysRemaining": 85,
+      "urgencyScore": 15,
       "relevanceScore": 86,
       "potentialIt": "Alto",
       "areaStrategicIt": "Transversal",
@@ -8793,8 +8793,8 @@
     {
       "callId": "CALL-087",
       "stateComputed": "Aberta",
-      "daysRemaining": 87,
-      "urgencyScore": 13,
+      "daysRemaining": 85,
+      "urgencyScore": 15,
       "relevanceScore": 85,
       "potentialIt": "Alto",
       "areaStrategicIt": "Redes & Comunicações",
@@ -8822,8 +8822,8 @@
     {
       "callId": "CALL-088",
       "stateComputed": "Aberta",
-      "daysRemaining": 87,
-      "urgencyScore": 13,
+      "daysRemaining": 85,
+      "urgencyScore": 15,
       "relevanceScore": 90,
       "potentialIt": "Alto",
       "areaStrategicIt": "Redes & Comunicações",
@@ -8852,7 +8852,7 @@
     {
       "callId": "CALL-089",
       "stateComputed": "Prevista",
-      "daysRemaining": 246,
+      "daysRemaining": 244,
       "urgencyScore": 30,
       "relevanceScore": 81,
       "potentialIt": "Alto",
@@ -8881,7 +8881,7 @@
     {
       "callId": "CALL-090",
       "stateComputed": "Prevista",
-      "daysRemaining": 408,
+      "daysRemaining": 406,
       "urgencyScore": 30,
       "relevanceScore": 86,
       "potentialIt": "Muito Alto",
@@ -8974,7 +8974,7 @@
     {
       "callId": "CALL-093",
       "stateComputed": "Prevista",
-      "daysRemaining": 220,
+      "daysRemaining": 218,
       "urgencyScore": 30,
       "relevanceScore": 78,
       "potentialIt": "Muito Alto",
@@ -9001,7 +9001,7 @@
     {
       "callId": "CALL-094",
       "stateComputed": "Prevista",
-      "daysRemaining": 220,
+      "daysRemaining": 218,
       "urgencyScore": 30,
       "relevanceScore": 88,
       "potentialIt": "Muito Alto",
@@ -9031,7 +9031,7 @@
     {
       "callId": "CALL-095",
       "stateComputed": "Prevista",
-      "daysRemaining": 220,
+      "daysRemaining": 218,
       "urgencyScore": 30,
       "relevanceScore": 79,
       "potentialIt": "Alto",
@@ -9060,7 +9060,7 @@
     {
       "callId": "CALL-096",
       "stateComputed": "Prevista",
-      "daysRemaining": 220,
+      "daysRemaining": 218,
       "urgencyScore": 30,
       "relevanceScore": 79,
       "potentialIt": "Alto",
@@ -9089,7 +9089,7 @@
     {
       "callId": "CALL-097",
       "stateComputed": "Prevista",
-      "daysRemaining": 388,
+      "daysRemaining": 386,
       "urgencyScore": 30,
       "relevanceScore": 88,
       "potentialIt": "Muito Alto",
@@ -9119,7 +9119,7 @@
     {
       "callId": "CALL-098",
       "stateComputed": "Prevista",
-      "daysRemaining": 388,
+      "daysRemaining": 386,
       "urgencyScore": 30,
       "relevanceScore": 82,
       "potentialIt": "Alto",
@@ -10785,7 +10785,7 @@
       "programId": "program-1",
       "sourceId": "excel-import",
       "searchableText": "Visiting Student Researchers Portugal Berkeley FCT / FLAD / UC Berkeley Mobilidade Internacional Formação Avançada Doutoramento Transversal Applied Mathematics; Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis; Power Electronics Doctoral Training; Research Mobility Research Training & Mobility Apoia estudantes de doutoramento visitantes em UC Berkeley; submissões em permanência até 30/12/2027 ou até atingir o máximo anual. Até 8 candidatos por ano; estadias até 6 meses; candidato deve obter supervisor UC Berkeley. https://www.fct.pt/concursos/programa-portugal-berkeley-1",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-002",
@@ -10841,7 +10841,7 @@
       "programId": "program-2",
       "sourceId": "excel-import",
       "searchableText": "Cooperação Bilateral Portugal-França 2026 Programa Pessoa FCT Mobilidade Internacional Cooperação Científica Mobilidade Investigadores Transversal Applied Mathematics; Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis; Power Electronics Research Mobility; Research Cooperation; International Networks Research Training & Mobility; Research Cooperation & Networks Projeto conjunto Portugal-França. Jovem investigador obrigatório. https://www.fct.pt/concursos/cooperacao-bilateral-portugal-franca-2026-programa-pessoa-",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-003",
@@ -10923,7 +10923,7 @@
       "programId": "program-3",
       "sourceId": "excel-import",
       "searchableText": "Concurso de Projetos de Computação Avançada (6ª edição) CPCA FCT / FCCN Infraestrutura Nacional HPC IA / Cloud Computing HPC & Computação Applied Mathematics; Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis; Power Electronics Artificial Intelligence; Machine Learning; High-Performance Computing; Computational Infrastructure; Cloud Computing; Data Platforms Artificial Intelligence & Machine Learning; High-Performance Computing; Data Platforms & Cloud Computing Lote E A0/A1 aberto de 18/05/2026 a 15/09/2026. A0: 50.000 CPU core.horas e 500 GPU.horas, 3-6 meses; A1: 100.000 CPU core.horas e 5.000 GPU.horas, 3-12 meses. https://www.fct.pt/concursos/concurso-de-projetos-de-computacao-avancada-6-ed-a0-a1-lote-e-/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-004",
@@ -10989,7 +10989,7 @@
       "programId": "program-4",
       "sourceId": "excel-import",
       "searchableText": "Aviso #1 Fundo Bilateral EEA Grants EEA Grants Portugal Networking Internacional Defesa e Segurança Cibersegurança, Infraestruturas Críticas, Segurança Marítima Redes & Comunicações Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis Cybersecurity; Critical Infrastructure Protection Cybersecurity & Critical Infrastructure Obrigatório parceiro da Noruega ou Islândia. Taxa de financiamento até 90%. Temáticas: ameaças híbridas, infraestruturas críticas, cibersegurança, segurança marítima e defesa. https://eeagrants.org/pt/portugal/programmes/bilateral-fund",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-005",
@@ -11074,7 +11074,7 @@
       "programId": "program-5",
       "sourceId": "excel-import",
       "searchableText": "3.ª Convocatória – Projetos de Capitalização Interreg Sudoe Interreg Sudoe Capitalização / Transferência de Resultados Europeu Capitalização de projetos anteriores Transferência de conhecimento, impacto e escalabilidade Transversal Applied Mathematics; Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis Technology Transfer; Knowledge Valorisation Technology Transfer & Knowledge Valorisation 3.ª convocatória Sudoe para capitalização de resultados; fecho em 30/09/2026 às 14:00 CET. Máximo de 6 projetos; até dois projetos por temática. Deadline operacional: 30/09/2026, 12:00 UTC+2. Traduções até 07/10/2026, 12:00. Início previsto em 01/01/2027 e fim máximo em 31/10/2029. https://interreg-sudoe.eu/pt-pt/las-convocatorias-sudoe-ya-estan-abiertas/convocatoria/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-006",
@@ -11173,7 +11173,7 @@
       "programId": "program-5",
       "sourceId": "excel-import",
       "searchableText": "4.ª Convocatória – Projetos Estruturantes Interreg Sudoe Interreg Sudoe I&D / Cooperação Territorial Europeu Incêndios e Envelhecimento Inovação territorial, resiliência, cooperação transnacional Transversal Applied Mathematics; Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis Resilience; Climate Adaptation; Wildfire Management; Research Cooperation; International Networks; Territorial Cooperation; Regional Innovation Resilience & Climate Adaptation; Environmental Monitoring; Research Cooperation & Networks; Territorial Innovation & Sustainability 4.ª convocatória Sudoe para projetos estruturantes em incêndios e envelhecimento; fecho em 30/09/2026 às 14:00 CET. Apenas um projeto por objetivo específico. Deadline operacional: 30/09/2026, 12:00 UTC+2. Traduções até 07/10/2026, 12:00. Início previsto em 01/01/2027 e fim máximo em 31/10/2029. https://interreg-sudoe.eu/pt-pt/las-convocatorias-sudoe-ya-estan-abiertas/convocatoria/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-007",
@@ -11265,7 +11265,7 @@
       "programId": "program-6",
       "sourceId": "excel-import",
       "searchableText": "STEP – I&D&I Empresarial – Digital e Biotecnologia COMPETE 2030 / STEP COMPETE 2030 I&D Nacional Tecnologias Digitais e Deep Tech IA, Machine Learning, HPC, Redes, Computação Avançada, Biotecnologia Transversal Applied Mathematics; Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis Artificial Intelligence; Machine Learning; High-Performance Computing; Computational Infrastructure; Digital Technologies; Advanced Software; Deep Tech; Biotechnology Artificial Intelligence & Machine Learning; High-Performance Computing; Digital Technologies; Deep Tech & Emerging Technologies Aviso STEP I&D&I Empresarial Digital e Biotecnologia MPr-2026-2 encerrado em 30/04/2026 às 17:00. Republicação oficial em 20/07/2026. Beneficiários incluem empresas e ENESII em copromoção; TRL 4 a 9. https://www3.compete2030.gov.pt/avisos/step-idi-empresarial-digital-e-biotecnologia-operacoes_mpr-2026-2/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-008",
@@ -11343,7 +11343,7 @@
       "programId": "program-6",
       "sourceId": "excel-import",
       "searchableText": "STEP – I&D&I Empresarial – Energia COMPETE 2030 / STEP COMPETE 2030 I&D Nacional Tecnologias Limpas e Energia Eletrónica de Potência, Smart Grids, Eficiência Energética, Transição Energética Energia & Power Electronics Applied Mathematics; Network Applications and Services; Network Architectures and Protocols; Power Electronics Electronic Components; Power Electronics; Smart Grids; Energy Efficiency; Clean Energy; Energy Systems Electronic Systems & Components; Power Electronics; Smart Grids & Energy Systems; Energy Efficiency & Decarbonisation Aviso STEP I&D&I Empresarial Energia COMPETE2030-2026-1 encerrado em 30/04/2026 às 17:00. Republicação oficial em 20/07/2026; foco em tecnologias limpas, TRL 4 a 9 e copromoção com empresas/ENESII. https://www3.compete2030.gov.pt/avisos/step-idi-empresarial-energia_compete2030-2026-1/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-009",
@@ -11430,7 +11430,7 @@
       "programId": "program-6",
       "sourceId": "excel-import",
       "searchableText": "STEP – Inovação Produtiva – Digital e Biotecnologia COMPETE 2030 / STEP COMPETE 2030 Inovação Nacional Tecnologias Digitais e Deep Tech IA, Software Avançado, Computação, Tecnologias Digitais Críticas IA & Computer Vision Applied Mathematics; Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis Artificial Intelligence; Machine Learning; Digital Technologies; Advanced Software; Deep Tech; Biotechnology; Industrial Innovation; Scale-up Artificial Intelligence & Machine Learning; Digital Technologies; Deep Tech & Emerging Technologies; Biotechnology Aviso STEP Inovação Produtiva Digital e Biotecnologia MPr-2026-3 encerrado em 30/04/2026 às 17:00. Instrumento orientado a empresas; relevância para IT apenas via parceria/valorização tecnológica. https://www3.compete2030.gov.pt/avisos/step-inovacao-produtiva-digital-e-biotecnologia_mpr-2026-3/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-010",
@@ -11497,7 +11497,7 @@
       "programId": "program-6",
       "sourceId": "excel-import",
       "searchableText": "STEP – Inovação Produtiva – Energia COMPETE 2030 / STEP COMPETE 2030 Inovação Nacional Tecnologias Limpas e Energia Eletrónica de Potência, Energia, Eficiência Energética, Tecnologias Limpas Energia & Power Electronics Power Electronics Electronic Components; Power Electronics; Energy Efficiency; Clean Energy; Energy Systems; Industrial Innovation; Scale-up Electronic Systems & Components; Power Electronics; Energy Efficiency & Decarbonisation; Clean Energy & Energy Systems Aviso STEP Inovação Produtiva Energia COMPETE2030-2026-2 encerrado em 30/04/2026 às 17:00. Instrumento orientado a empresas; relevância para IT via parceiro científico/tecnológico. https://www3.compete2030.gov.pt/avisos/step-inovacao-produtiva-energia_compete2030-2026-2/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-011",
@@ -11596,7 +11596,7 @@
       "programId": "program-7",
       "sourceId": "excel-import",
       "searchableText": "SIID – Internacionalização de I&D – Operações de I&D industrial à escala europeia (MPr-2026-04) MPr-2026-04 COMPETE 2030 COMPETE 2030 I&D Europeu I&D Empresarial Internacionalização; Tecnologias Estratégicas Transversal Applied Mathematics; Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis; Power Electronics Research and Innovation Transversal Research & Innovation Operações individuais ou em copromoção para cofinanciamento nacional de entidades portuguesas em projetos europeus de I&D, incluindo EUREKA/Eurostars. Fase 2: 30/09/2026; Fase 3: 29/12/2026. ENESII elegíveis como copromotoras. Classificação operacional: Mecanismo Nacional de Cofinanciamento associado à participação portuguesa em instrumentos internacionais Eureka/Eurostars/Clusters; não substituir nem duplicar as calls internacionais já inseridas. https://compete2030.gov.pt/avisos/siid-internacionalizacao-de-id-operacoes-de-id-industrial-a-escala-europeia_mpr-2026-4/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-012",
@@ -11684,7 +11684,7 @@
       "programId": "program-7",
       "sourceId": "excel-import",
       "searchableText": "SICE - Inovação Produtiva - Territórios Baixa Densidade e Outros Territórios COMPETE 2030 COMPETE 2030 Inovação Nacional Inovação Produtiva Digitalização; Transferência de Tecnologia Transversal Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis; Power Electronics Technology Transfer; Knowledge Valorisation; Industrial Innovation; Scale-up Technology Transfer & Knowledge Valorisation; Industrial Innovation & Scale-up Operações individuais de investimento produtivo inovador promovidas por PME nos territórios de baixa densidade e outros territórios. Candidaturas STEP podem vir a ser enquadradas em aviso específico. Instrumento multirregional com participação do Centro 2030. Não criar registo regional separado. https://compete2030.gov.pt/avisos/sice-inovacao-produtiva-baixa-densidade_mpr-2026-6/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-013",
@@ -11749,7 +11749,7 @@
       "programId": "program-7",
       "sourceId": "excel-import",
       "searchableText": "SITCE – Descarbonização e Eficiência Energética (MPr-2026-01) MPr-2026-01 COMPETE 2030 COMPETE 2030 Inovação Nacional Transição Energética Eficiência Energética; Descarbonização Industrial Energia & Power Electronics Power Electronics Energy Efficiency; Decarbonisation; Carbon Assessment; Clean Energy; Energy Systems Energy Efficiency & Decarbonisation; Clean Energy & Energy Systems SITCE - Descarbonização e Eficiência Energética. Fase 3 até 30/12/2026 às 18:00, exclusivamente para RCI. Dotação FEDER indicativa: 165.000.000 €; Regime Geral com taxa máxima de 85%. https://www3.compete2030.gov.pt/avisos/sitce-descarbonizacao-e-eficiencia-energetica-mpr-2026-01/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-014",
@@ -11837,7 +11837,7 @@
       "programId": "program-7",
       "sourceId": "excel-import",
       "searchableText": "Aviso à Manifestação de Interesse de Empresas para integrar a Rede de Fornecedores Inovadores COMPETE 2030 COMPETE 2030 Networking Nacional Inovação Empresarial Transferência de Tecnologia Redes & Comunicações Network Applications and Services; Pattern and Image Analysis; Power Electronics Technology Transfer; Knowledge Valorisation; Industrial Innovation; Scale-up Technology Transfer & Knowledge Valorisation; Industrial Innovation & Scale-up Manifestação de interesse para integração na Rede de Fornecedores Inovadores. Processo de auscultação para empresas nucleares; a iniciativa prevê participação futura de PME, Small Mid Caps e Centros de I&D em consórcios de inovação. Este registo corresponde à Manifestação de Interesse e não ao futuro aviso SICE – Rede de Fornecedores Inovadores previsto no Plano Anual de Avisos. https://compete2030.gov.pt/avisos/aviso-a-manifestacao-de-interesse-de-empresas-para-integrar-a-rede-de-fornecedores-inovadores_mpr-2026-5/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-015",
@@ -11938,7 +11938,7 @@
       "programId": "program-8",
       "sourceId": "excel-import",
       "searchableText": "HORIZON-CL4-2026-SPACE-03-31: Digital enablers and building-blocks for Earth Observation and Satellite telecommunication for Space solutions HORIZON-CL4-2026-SPACE-03-31 Horizon Europe Comissão Europeia I&D Europeu Espaço e GNSS Satcom; Observação da Terra Espaço & GNSS Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis Earth Observation; Geospatial Data; Space Technologies; GNSS; Positioning, Navigation and Timing; Satellite Communications; Digital Technologies; Advanced Software Earth Observation & Geospatial Data; Space Technologies; Positioning, Navigation & Timing; Satellite Communications Space Partnership; contribuição esperada por projeto entre 3 M€ e 6 M€. (European Commission) Tipo de ação RIA; modalidade lump sum; TRL final 4–5. O valor de 3–6 M€ é contribuição esperada por projeto, não teto máximo. https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2026-space-03-31",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-016",
@@ -12032,7 +12032,7 @@
       "programId": "program-8",
       "sourceId": "excel-import",
       "searchableText": "HORIZON-CL4-2026-SPACE-03-32: Preparing demonstration missions for Earth Observation and Satellite telecommunication for Space solutions HORIZON-CL4-2026-SPACE-03-32 Horizon Europe Comissão Europeia Inovação Europeu Espaço e GNSS Demonstração tecnológica; Satcom Espaço & GNSS Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis Earth Observation; Geospatial Data; Space Technologies; GNSS; Positioning, Navigation and Timing; Satellite Communications; Technology Demonstration Earth Observation & Geospatial Data; Space Technologies; Positioning, Navigation & Timing; Satellite Communications Space Partnership; contribuição esperada por projeto entre 5 M€ e 10 M€. (European Commission) Tipo de ação IA; modalidade lump sum; TRL final 7–8. O valor de 5–10 M€ é contribuição esperada por projeto, não teto máximo. https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2026-space-03-32",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-017",
@@ -12126,7 +12126,7 @@
       "programId": "program-8",
       "sourceId": "excel-import",
       "searchableText": "HORIZON-CL4-2026-SPACE-03-61: Scientific analysis and exploitation of space data HORIZON-CL4-2026-SPACE-03-61 Horizon Europe Comissão Europeia I&D Europeu Espaço e GNSS Dados espaciais; IA Espaço & GNSS Applied Mathematics; Multimedia Signal Processing; Pattern and Image Analysis Artificial Intelligence; Machine Learning; Earth Observation; Geospatial Data; Space Technologies; GNSS; Positioning, Navigation and Timing; Data Analysis Artificial Intelligence & Machine Learning; Earth Observation & Geospatial Data; Space Technologies; Positioning, Navigation & Timing Exploração científica de dados espaciais; contribuição esperada por projeto entre 1,5 M€ e 2,5 M€. (European Commission) Tipo de ação RIA; modalidade lump sum; TRL final 4. O valor de 1,5–2,5 M€ é contribuição esperada por projeto, não teto máximo. https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2026-space-03-61",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-018",
@@ -12221,7 +12221,7 @@
       "programId": "program-8",
       "sourceId": "excel-import",
       "searchableText": "HORIZON-CL4-2026-SPACE-03-81: Space critical EEE components for EU non-dependence – Radiation Hard FPGA on 7nm HORIZON-CL4-2026-SPACE-03-81 Horizon Europe Comissão Europeia I&D Europeu Espaço e GNSS Eletrónica; componentes críticos Espaço & GNSS Network Architectures and Protocols; Power Electronics Space Technologies; GNSS; Positioning, Navigation and Timing; Electronic Components; Radiation-Hardened Electronics; FPGA Space Technologies; Positioning, Navigation & Timing; Electronic Systems & Components Foco em não dependência tecnológica da UE; contribuição esperada por projeto entre 12 M€ e 13 M€. (European Commission) Oportunidade condicionada: exige parceiro especializado em microeletrónica espacial e capacidade industrial em FPGA radiation-hard de 7 nm. https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2026-space-03-81",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-019",
@@ -12319,7 +12319,7 @@
       "programId": "program-8",
       "sourceId": "excel-import",
       "searchableText": "HORIZON-CL4-2026-SPACE-03-82: Space critical EEE components for EU non-dependence – GaN MMICs mm-Wave Foundations HORIZON-CL4-2026-SPACE-03-82 Horizon Europe Comissão Europeia I&D Europeu Espaço e GNSS Eletrónica RF; mmWave Espaço & GNSS Network Architectures and Protocols; Power Electronics Space Technologies; GNSS; Positioning, Navigation and Timing; RF Systems; Millimetre-Wave Communications; Electronic Components Space Technologies; Positioning, Navigation & Timing; RF, Microwave & Millimetre-Wave Systems; Electronic Systems & Components Relevante para comunicações espaciais e RF; contribuição esperada por projeto entre 6 M€ e 7 M€. (European Commission) Oportunidade condicionada: o IT-CV não demonstra competência industrial central em GaN/MMIC; exige parceiro especializado em semicondutores RF/mmWave. https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2026-space-03-82",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-020",
@@ -12419,7 +12419,7 @@
       "programId": "program-8",
       "sourceId": "excel-import",
       "searchableText": "HORIZON-CL4-2026-SPACE-03-86: Space critical Equipment for EU non-dependence – Space Refuelling Interface HORIZON-CL4-2026-SPACE-03-86 Horizon Europe Comissão Europeia I&D Europeu Espaço e GNSS Equipamento espacial crítico Espaço & GNSS Network Applications and Services; Power Electronics Space Technologies; GNSS; Positioning, Navigation and Timing; RF Systems; Millimetre-Wave Communications; In-Space Refuelling; Critical Space Equipment Space Technologies; Positioning, Navigation & Timing; RF, Microwave & Millimetre-Wave Systems Foco em não dependência tecnológica da UE; contribuição esperada por projeto entre 2 M€ e 3 M€. (European Commission) Alinhamento operacional fraco para o IT-CV; participação apenas justificável com parceiro industrial de equipamento espacial e tarefa científica concreta. https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2026-space-03-86",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-021",
@@ -12491,7 +12491,7 @@
       "programId": "program-8",
       "sourceId": "excel-import",
       "searchableText": "HORIZON-CL5-2026-09-D4-01: Researching the technical, social & economic factors impacting the energy performance of Smart Buildings HORIZON-CL5-2026-09-D4-01 Horizon Europe Comissão Europeia I&D Europeu Eletrónica de Potência Smart Buildings; eficiência energética Energia & Power Electronics Network Applications and Services; Power Electronics RF Systems; Millimetre-Wave Communications; Electronic Components; Power Electronics; Energy Efficiency; Clean Energy; Energy Systems; Smart Buildings RF, Microwave & Millimetre-Wave Systems; Electronic Systems & Components; Power Electronics; Energy Efficiency & Decarbonisation Built4People Partnership; contribuição esperada por projeto de cerca de 5,25 M€. (Research and innovation) Oficial",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-022",
@@ -12564,7 +12564,7 @@
       "programId": "program-8",
       "sourceId": "excel-import",
       "searchableText": "HORIZON-CL5-2026-09-D4-03: Advanced data platforms to integrate whole life carbon in building information tools, assessments, and certification HORIZON-CL5-2026-09-D4-03 Horizon Europe Comissão Europeia Inovação Europeu IA e Computer Vision Plataformas de dados; eficiência energética IA & Computer Vision Network Applications and Services; Pattern and Image Analysis Artificial Intelligence; Machine Learning; Computer Vision; Perception Systems; Cloud Computing; Data Platforms; Energy Efficiency; Decarbonisation Artificial Intelligence & Machine Learning; Computer Vision & Perception; Data Platforms & Cloud Computing; Energy Efficiency & Decarbonisation Built4People Partnership; oportunidade relevante para plataformas digitais e dados. (Research and innovation) Oficial",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-023",
@@ -12638,7 +12638,7 @@
       "programId": "program-8",
       "sourceId": "excel-import",
       "searchableText": "HORIZON-CL5-2026-10-D6-03: Generative AI for smarter CCAM: enhancing perception, decision-making, and validation HORIZON-CL5-2026-10-D6-03 Horizon Europe Comissão Europeia I&D Europeu IA e Computer Vision Mobilidade conectada; validação IA & Computer Vision Multimedia Signal Processing; Network Applications and Services; Pattern and Image Analysis Artificial Intelligence; Machine Learning; Computer Vision; Perception Systems; Connected and Automated Mobility; Decision Support Systems; Smart Mobility; Multimodal Transport Artificial Intelligence & Machine Learning; Computer Vision & Perception; Connected & Automated Mobility; Smart Mobility & Transport CCAM Partnership; aplicação direta de IA generativa a perceção, decisão e validação. (Research and innovation) Oficial",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-024",
@@ -12706,7 +12706,7 @@
       "programId": "program-8",
       "sourceId": "excel-import",
       "searchableText": "HORIZON-CL5-2026-10-D6-10: Enhanced resilience in multimodal passenger transport through digital technologies and generative and discriminative AI HORIZON-CL5-2026-10-D6-10 Horizon Europe Comissão Europeia Inovação Europeu IA e Computer Vision Mobilidade; tecnologias digitais IA & Computer Vision Network Applications and Services; Pattern and Image Analysis Artificial Intelligence; Machine Learning; Computer Vision; Perception Systems; Smart Mobility; Multimodal Transport; Resilience; Climate Adaptation Artificial Intelligence & Machine Learning; Computer Vision & Perception; Smart Mobility & Transport; Resilience & Climate Adaptation Foco em IA generativa e discriminativa aplicada a transporte multimodal. (Research and innovation) Oficial",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-025",
@@ -12765,7 +12765,7 @@
       "programId": "program-8",
       "sourceId": "excel-import",
       "searchableText": "HORIZON-CL5-2026-11-D3-14: Improved system design for innovative PV applications HORIZON-CL5-2026-11-D3-14 Horizon Europe Comissão Europeia Inovação Europeu Eletrónica de Potência Fotovoltaico; sistemas energéticos Energia & Power Electronics Applied Mathematics; Power Electronics Electronic Components; Power Electronics; Photovoltaics; Solar Energy Electronic Systems & Components; Power Electronics; Solar Photovoltaics EUPI-PV Partnership; relevante para desenho de sistemas e aplicações PV inovadoras. (Research and innovation) Oficial",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-026",
@@ -12846,7 +12846,7 @@
       "programId": "program-8",
       "sourceId": "excel-import",
       "searchableText": "HORIZON-CL5-2026-11-D3-23: Data sharing to support the training and development of AI foundation models in the energy sector HORIZON-CL5-2026-11-D3-23 Horizon Europe Comissão Europeia Inovação Europeu IA e Computer Vision Energia; dados; modelos fundacionais IA & Computer Vision Applied Mathematics; Network Applications and Services; Pattern and Image Analysis; Power Electronics Artificial Intelligence; Machine Learning; Computer Vision; Perception Systems; Clean Energy; Energy Systems; Foundation Models; Data Sharing Artificial Intelligence & Machine Learning; Computer Vision & Perception; Clean Energy & Energy Systems Oportunidade estratégica para IA aplicada ao setor energético; contribuição esperada por projeto de cerca de 10 M€. (Research and innovation) Oficial",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-027",
@@ -12924,7 +12924,7 @@
       "programId": "program-9",
       "sourceId": "excel-import",
       "searchableText": "HORIZON-MSCA-2026-PF-01: MSCA Postdoctoral Fellowships 2026 HORIZON-MSCA-2026-PF-01 Horizon Europe / MSCA Comissão Europeia / REA Fellowship Internacional Formação avançada Mobilidade internacional; todos os domínios científicos Transversal Applied Mathematics; Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis; Power Electronics Research Mobility Research Training & Mobility MSCA Postdoctoral Fellowships 2026: status open; prazo 09/09/2026 17:00 CEST. Candidatura conjunta investigador-entidade; adequado para atração de pós-doutorados. https://marie-sklodowska-curie-actions.ec.europa.eu/funding",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-028",
@@ -13003,7 +13003,7 @@
       "programId": "program-9",
       "sourceId": "excel-import",
       "searchableText": "HORIZON-MSCA-2026-DN-01: MSCA Doctoral Networks 2026 HORIZON-MSCA-2026-DN-01 Horizon Europe / MSCA Comissão Europeia / REA Formação Internacional Formação doutoral Redes internacionais; colaboração academia-indústria Redes & Comunicações Applied Mathematics; Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis; Power Electronics Doctoral Training; Research Cooperation; International Networks Research Training & Mobility; Research Cooperation & Networks MSCA Doctoral Networks 2026: aberto desde 28/05/2026; prazo 24/11/2026 17:00 CET; primeira execução prevista em setembro de 2027. https://marie-sklodowska-curie-actions.ec.europa.eu/funding",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-029",
@@ -13068,7 +13068,7 @@
       "programId": "program-10",
       "sourceId": "excel-import",
       "searchableText": "HORIZON-EIC-2026-TRANSITIONOPEN: EIC Transition Open HORIZON-EIC-2026-TRANSITIONOPEN Horizon Europe / EIC Comissão Europeia / EIC Inovação Europeu Deep Tech Valorização de resultados de investigação Transversal Applied Mathematics; Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis; Power Electronics Deep Tech; Technology Transfer; Knowledge Valorisation Deep Tech & Emerging Technologies; Technology Transfer & Knowledge Valorisation Adequado para maturação e validação de resultados de projetos anteriores com potencial de mercado. (European Commission) Oficial",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-030",
@@ -13133,7 +13133,7 @@
       "programId": "program-10",
       "sourceId": "excel-import",
       "searchableText": "EIC Pathfinder Challenges 2026 Horizon Europe / EIC Comissão Europeia / EIC I&D Europeu Deep Tech IA cognitiva; energia; materiais avançados Transversal Applied Mathematics; Pattern and Image Analysis; Power Electronics Artificial Intelligence; Machine Learning; Clean Energy; Energy Systems; Deep Tech; Advanced Materials Artificial Intelligence & Machine Learning; Clean Energy & Energy Systems; Deep Tech & Emerging Technologies; Advanced Materials Inclui desafios em DeepRAP – Reasoning, Abstraction and Planning in Cognitive AI e energia. (European Innovation Council) Oficial",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-031",
@@ -13212,7 +13212,7 @@
       "programId": "program-10",
       "sourceId": "excel-import",
       "searchableText": "EIC Accelerator Open 2026 Horizon Europe / EIC Comissão Europeia / EIC Inovação Europeu Deep Tech Comercialização; scale-up Transversal Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis; Power Electronics Deep Tech; Industrial Innovation; Scale-up Deep Tech & Emerging Technologies; Industrial Innovation & Scale-up EIC Accelerator 2026 aberto; próximas datas de corte após 22/07/2026: 02/09/2026 e 04/11/2026. Apenas startups/PME/small mid-caps; IT apenas via spin-off ou empresa parceira. https://eic.ec.europa.eu/eic-funding-opportunities_en",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-032",
@@ -13280,7 +13280,7 @@
       "programId": "program-10",
       "sourceId": "excel-import",
       "searchableText": "EIC Accelerator Challenges 2026 Horizon Europe / EIC Comissão Europeia / EIC Inovação Europeu Deep Tech Energia; materiais; tecnologias críticas Energia & Power Electronics Network Applications and Services; Pattern and Image Analysis; Power Electronics Clean Energy; Energy Systems; Deep Tech Clean Energy & Energy Systems; Deep Tech & Emerging Technologies EIC Accelerator Challenges 2026 aberto; próximas datas de corte após 22/07/2026: 02/09/2026 e 04/11/2026. Requer empresa elegível como beneficiário principal. https://eic.ec.europa.eu/eic-funding-opportunities_en",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-033",
@@ -13369,7 +13369,7 @@
       "programId": "program-11",
       "sourceId": "excel-import",
       "searchableText": "NAVISP Element 2 Standard Call for Proposals ESA NAVISP ESA I&D Internacional Espaço e GNSS PNT; Competitividade industrial Espaço & GNSS Applied Mathematics; Network Applications and Services; Network Architectures and Protocols Space Technologies; GNSS; Positioning, Navigation and Timing; Industrial Competitiveness Space Technologies; Positioning, Navigation & Timing NAVISP Element 2 é uma call permanentemente aberta para produtos inovadores em PNT/GNSS; propostas de empresas e instituições de investigação de Estados participantes, com apoio ESA sujeito a avaliação e carta de suporte nacional. Atividade cofinanciada através de contrato ESA; exige apoio/concordância da delegação nacional. O intervalo anteriormente registado não constitui teto universal aplicável ao IT. https://commercialisation.esa.int/opportunities/navisp-open-call-for-proposals/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-034",
@@ -13452,7 +13452,7 @@
       "programId": "program-12",
       "sourceId": "excel-import",
       "searchableText": "Standard Call for Proposal for GSTP Element 2: Make Activities ESA GSTP ESA I&D Internacional Tecnologias Espaciais Navegação; tecnologias genéricas Espaço & GNSS Applied Mathematics; Network Architectures and Protocols; Power Electronics GNSS; Positioning, Navigation and Timing Positioning, Navigation & Timing GSTP Element 2 Make apoia atividades cofinanciadas, orientadas pela indústria, para desenvolvimento de tecnologias/produtos espaciais. Submissão por OSIP; documentação completa em EMITS/ESA-STAR. Instrumento industry-driven, executado através de contrato ESA e dependente da concordância da delegação nacional. https://www.esa.int/Enabling_Support/Space_Engineering_Technology/Shaping_the_Future/GSTP_Element_2_Make",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-035",
@@ -13515,7 +13515,7 @@
       "programId": "program-13",
       "sourceId": "excel-import",
       "searchableText": "Beyond 5G Hub Over-the-Air Vertical Segment Validations ESA ARTES 4.0 ESA I&D Empresarial Internacional Redes e Comunicações B5G; comunicações por satélite Redes & Comunicações Network Applications and Services; Network Architectures and Protocols Satellite Communications; Beyond 5G; Over-the-Air Testing; Network Validation; Validation Satellite Communications; Wireless Networks & Communications Relevante para integração de satélite em cenários B5G. Registo preservado como histórico e excluído da monitorização operacional ativa. Oficial",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-036",
@@ -13590,7 +13590,7 @@
       "programId": "program-13",
       "sourceId": "excel-import",
       "searchableText": "Non-Orthogonal Multiple Access (NOMA) for Beyond 5G (B5G) ESA ARTES 4.0 ESA I&D Internacional Redes e Comunicações B5G; sistemas satélite Redes & Comunicações Applied Mathematics; Network Applications and Services; Network Architectures and Protocols Satellite Communications; Beyond 5G; Non-Orthogonal Multiple Access Satellite Communications; Wireless Networks & Communications Atividade diretamente alinhada com comunicações avançadas e acesso rádio. Procurement ESA, não grant. Potencial elevado condicionado a um papel técnico concreto em waveform/NOMA, integração NTN ou validação B5G. https://resilience.esa.int/open-call-proposals",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-037",
@@ -13660,7 +13660,7 @@
       "programId": "program-13",
       "sourceId": "excel-import",
       "searchableText": "D-Band Transceiver Module for 6G Satellite Systems ESA ARTES 4.0 ESA I&D Internacional Redes e Comunicações 6G; satcom; RF/mmWave Redes & Comunicações Network Architectures and Protocols; Power Electronics Satellite Communications; 6G; RF Systems; Millimetre-Wave Communications; Electronic Components Satellite Communications; Wireless Networks & Communications; RF, Microwave & Millimetre-Wave Systems; Electronic Systems & Components Forte alinhamento com comunicações 6G por satélite e eletrónica RF. Procurement ESA. Participação do IT-CV requer previsivelmente parceiro industrial com capacidade de hardware RF/D-band. https://resilience.esa.int/open-call-proposals",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-038",
@@ -13728,7 +13728,7 @@
       "programId": "program-14",
       "sourceId": "excel-import",
       "searchableText": "Physics Informed Machine Learning for Earth Observation ESA FutureEO ESA I&D Internacional IA e Computer Vision Observação da Terra; modelos físicos IA & Computer Vision Applied Mathematics; Multimedia Signal Processing; Pattern and Image Analysis Artificial Intelligence; Machine Learning; Computer Vision; Perception Systems; Earth Observation; Geospatial Data; Physics-Informed Machine Learning; Physical Modelling Artificial Intelligence & Machine Learning; Computer Vision & Perception; Earth Observation & Geospatial Data ESA prevê adjudicar 2 contratos; inclui aplicações de IA a dados de Observação da Terra. Registo preservado como histórico e excluído da monitorização operacional ativa. Oficial",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-039",
@@ -13816,7 +13816,7 @@
       "programId": "program-14",
       "sourceId": "excel-import",
       "searchableText": "DTE-B-01 and 02 – LEAD and Early DTCS Development Actions – Fixed Call for Proposal ESA FutureEO ESA I&D Internacional HPC e Computação Avançada Digital Twin Earth; dados EO HPC & Computação Applied Mathematics; Network Applications and Services; Pattern and Image Analysis High-Performance Computing; Computational Infrastructure; Digital Twins; Simulation; Earth Observation; Geospatial Data; Smart Cities; Urban Development High-Performance Computing; Digital Twins & Simulation; Earth Observation & Geospatial Data; Smart Cities & Urban Systems Relevante para Digital Twin Earth, dados e desenvolvimento de capacidades digitais. Contrato ESA com prioridade elevada devido à deadline. Não alimentar o KPI de grants. https://eo4society.esa.int/category/opportunities/invitations-to-tender/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-040",
@@ -13881,7 +13881,7 @@
       "programId": "program-14",
       "sourceId": "excel-import",
       "searchableText": "ERS-EO Space Resilience Nodes User Needs Studies EXPRO+ ESA FutureEO ESA I&D Internacional Espaço e GNSS Observação da Terra; resiliência Espaço & GNSS Applied Mathematics; Network Applications and Services Earth Observation; Geospatial Data; Space Technologies; GNSS; Positioning, Navigation and Timing; Resilience; Climate Adaptation Earth Observation & Geospatial Data; Space Technologies; Positioning, Navigation & Timing; Resilience & Climate Adaptation Estudo de necessidades de utilizadores para nós de resiliência espacial EO. Registo preservado como histórico e excluído da monitorização operacional ativa. Oficial",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-041",
@@ -13949,7 +13949,7 @@
       "programId": "program-14",
       "sourceId": "excel-import",
       "searchableText": "Urban Development, Liveability and Adaptation – EXPRO+ ESA FutureEO ESA I&D Internacional Espaço e GNSS Observação da Terra; cidades; adaptação climática Espaço & GNSS Applied Mathematics; Network Applications and Services; Pattern and Image Analysis Earth Observation; Geospatial Data; Space Technologies; GNSS; Positioning, Navigation and Timing; Resilience; Climate Adaptation; Smart Cities Earth Observation & Geospatial Data; Space Technologies; Positioning, Navigation & Timing; Resilience & Climate Adaptation Aplicações EO para desenvolvimento urbano, habitabilidade e adaptação. Registo preservado como histórico e excluído da monitorização operacional ativa. Oficial",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-042",
@@ -14023,7 +14023,7 @@
       "programId": "program-14",
       "sourceId": "excel-import",
       "searchableText": "Adaptive Forest Management: Resilience and Regrowth EXPRO+ ESA FutureEO ESA I&D Internacional Espaço e GNSS Observação da Terra; ambiente Espaço & GNSS Applied Mathematics; Pattern and Image Analysis Earth Observation; Geospatial Data; Space Technologies; GNSS; Positioning, Navigation and Timing; Resilience; Climate Adaptation; Environmental Monitoring Earth Observation & Geospatial Data; Space Technologies; Positioning, Navigation & Timing; Resilience & Climate Adaptation Aplicação de EO à gestão florestal adaptativa e resiliência. Registo preservado como histórico e excluído da monitorização operacional ativa. https://eo4society.esa.int/2026/05/26/invitation-to-tender-adaptive-forest-management-resilience-and-regrowth/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-043",
@@ -14099,7 +14099,7 @@
       "programId": "program-15",
       "sourceId": "excel-import",
       "searchableText": "E4EX-006 Mars Advanced Entry, Descent and Landing Capability (MEDAL) – Phase A ESA Exploration ESA I&D Internacional Espaço e GNSS Exploração espacial; navegação Espaço & GNSS Applied Mathematics; Network Architectures and Protocols; Power Electronics Space Technologies; GNSS; Positioning, Navigation and Timing Space Technologies; Positioning, Navigation & Timing Atividade de fase A para capacidade avançada de entrada, descida e aterragem em Marte. Registo preservado como histórico e excluído da monitorização operacional ativa. Ligação ao IT-CV sobretudo complementar; não manter em monitorização operacional ativa. Oficial",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-044",
@@ -14172,7 +14172,7 @@
       "programId": "program-16",
       "sourceId": "excel-import",
       "searchableText": "Interreg Aurora – Call 7 SSP Interreg Interreg Aurora Inovação Europeu Sustentabilidade territorial Clima; mobilidade sustentável; biodiversidade Transversal Applied Mathematics; Network Applications and Services Smart Mobility; Multimodal Transport; Environmental Monitoring; Biodiversity; Territorial Cooperation; Regional Innovation; Sustainability; Green Transition Smart Mobility & Transport; Environmental Monitoring; Territorial Innovation & Sustainability; Sustainability & Green Transition Prioridade 1 encerrada; foco em transição verde, educação, cultura, turismo e cooperação transfronteiriça. IT-CV/Portugal sem elegibilidade territorial direta. Manter apenas para histórico; não divulgar como oportunidade operacional. (Interreg Aurora)",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-045",
@@ -14241,7 +14241,7 @@
       "programId": "program-16",
       "sourceId": "excel-import",
       "searchableText": "Interreg Aurora – Call 9 REG Interreg Interreg Aurora Inovação Europeu Sustentabilidade territorial Clima; mobilidade sustentável; biodiversidade Transversal Applied Mathematics; Network Applications and Services Smart Mobility; Multimodal Transport; Environmental Monitoring; Biodiversity; Territorial Cooperation; Regional Innovation; Sustainability; Green Transition Smart Mobility & Transport; Environmental Monitoring; Territorial Innovation & Sustainability; Sustainability & Green Transition Prioridade 1 encerrada; candidaturas regulares em subáreas Aurora e Sápmi. IT-CV/Portugal sem elegibilidade territorial direta. Manter apenas para histórico; não divulgar como oportunidade operacional. (Interreg Aurora)",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-046",
@@ -14325,7 +14325,7 @@
       "programId": "program-16",
       "sourceId": "excel-import",
       "searchableText": "Interreg North Sea – Call 6 Interreg Interreg North Sea Inovação Europeu Cooperação territorial Transição verde; inovação regional Transversal Applied Mathematics; Network Applications and Services Research Cooperation; International Networks; Territorial Cooperation; Regional Innovation; Sustainability; Green Transition Research Cooperation & Networks; Territorial Innovation & Sustainability; Sustainability & Green Transition Call 6 é uma chamada de capitalização para outputs de projetos Interreg North Sea 2021-2027. Abre em 01/12/2026; deadline 15/03/2027 12:00 CET; parcerias de 3 a 9 parceiros. IT-CV/Portugal sem elegibilidade territorial direta. Manter apenas para histórico; não divulgar como oportunidade operacional. https://www.interregnorthsea.eu/apply-in-call-6",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-047",
@@ -14414,7 +14414,7 @@
       "programId": "program-16",
       "sourceId": "excel-import",
       "searchableText": "Grande Région – Functional Area Upper Moselle Valley (EOM) Interreg Interreg France-Belgium-Germany-Luxembourg Networking Europeu Cooperação territorial Governação; sustentabilidade; inclusão Redes & Comunicações Applied Mathematics Territorial Cooperation; Regional Innovation; Sustainability; Green Transition; Governance; Social Inclusion Territorial Innovation & Sustainability; Sustainability & Green Transition; Digital Society & Governance Chamada contínua no JEMS para projetos transfronteiriços no espaço funcional Oberes Moseltal/EOM, com elegibilidade territorial restrita à área Trier/Grevenmacher e Schengen/Perl/Apach. IT-CV/Portugal sem elegibilidade territorial direta. Manter apenas para histórico; não divulgar como oportunidade operacional. https://interreg-gr.eu/de/project/funktionaler-raum-entwicklungskonzept-oberes-moseltal-eom/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-048",
@@ -14520,7 +14520,7 @@
       "programId": "program-17",
       "sourceId": "excel-import",
       "searchableText": "STEP – I&D&I Empresarial – Digital e Biotecnologia (novo aviso previsto 2026) Portugal 2030 / COMPETE 2030 / STEP Portugal 2030 / COMPETE 2030 / Algarve 2030 I&D Nacional Tecnologias digitais e inovação de tecnologia profunda Biotecnologia; desenvolvimento ou fabrico de tecnologias críticas IA & Computer Vision Pattern and Image Analysis; Network Applications and Services; Network Architectures and Protocols; Multimedia Signal Processing; Applied Mathematics Por confirmar após publicação do aviso formal STEP; tecnologias digitais; deep tech; inteligência artificial; dados; semicondutores; cibersegurança; biotecnologia; TRL; copromoção Tecnologias digitais críticas; IA; deep tech; biotecnologia Ficha oficial de previsão do Plano Anual de Avisos. Aviso formal ainda por publicar; previsto para copromoção, com promotores públicos/privados e foco em STEP RSO1.6. Plano Anual de Avisos Portugal 2030: período previsto 31/08/2026-30/11/2026; dotação 76.000.000 €. Aviso formal/AAC ainda não publicado; manter como Prevista. https://algarve.portugal2030.pt/aviso-2024/step-idi-empresarial-digital-e-biotecnologia/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-049",
@@ -14601,7 +14601,7 @@
       "programId": "program-17",
       "sourceId": "excel-import",
       "searchableText": "STEP – I&D&I Empresarial – Energia (novo aviso previsto 2026) Portugal 2030 / COMPETE 2030 / STEP Portugal 2030 / COMPETE 2030 I&D Nacional Tecnologias limpas Energia; eletrónica de potência; sistemas energéticos inteligentes Energia & Power Electronics Power Electronics; Applied Mathematics; Network Applications and Services Por confirmar após publicação do aviso formal STEP; tecnologias limpas; energia; eletrónica de potência; armazenamento; sistemas energéticos; TRL; copromoção Energia; tecnologias limpas; power electronics Ficha oficial de previsão do Plano Anual de Avisos. Aviso formal ainda por publicar; previsto para copromoção em STEP RSO2.9, tecnologias limpas. Plano Anual de Avisos Portugal 2030: período previsto 31/08/2026-30/11/2026; dotação 75.000.000 €. Aviso formal/AAC ainda não publicado; manter como Prevista. https://portugal2030.pt/aviso-2024/step-idi-empresarial-energia/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-050",
@@ -14687,7 +14687,7 @@
       "programId": "program-17",
       "sourceId": "excel-import",
       "searchableText": "STEP – Inovação Produtiva – Digital e Biotecnologia (novo aviso previsto 2026) Portugal 2030 / COMPETE 2030 / STEP Portugal 2030 / COMPETE 2030 / Algarve 2030 Inovação Nacional Tecnologias digitais e inovação de tecnologia profunda Investimento produtivo; biotecnologia; tecnologias críticas Transversal Pattern and Image Analysis; Network Applications and Services; Multimedia Signal Processing STEP; inovação produtiva; tecnologias digitais; deep tech; biotecnologia; transferência de tecnologia Tecnologias digitais críticas; inovação produtiva Aviso previsto no Plano Anual de Avisos para promotores privados. Relevância para IT sobretudo como parceiro científico/tecnológico de empresa líder; aviso formal por publicar. Plano Anual de Avisos Portugal 2030: período previsto 31/08/2026-30/11/2026; dotação 107.950.000 €. Aviso formal/AAC ainda não publicado; manter como Prevista. https://portugal2030.pt/plano-anual-de-avisos/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-051",
@@ -14763,7 +14763,7 @@
       "programId": "program-17",
       "sourceId": "excel-import",
       "searchableText": "STEP – Inovação Produtiva – Energia (novo aviso previsto 2026) Portugal 2030 / COMPETE 2030 / STEP Portugal 2030 / COMPETE 2030 Inovação Nacional Tecnologias limpas Investimento produtivo; energia; tecnologias críticas Energia & Power Electronics Power Electronics; Applied Mathematics STEP; inovação produtiva; tecnologias limpas; energia; eletrónica de potência; cadeias de valor Energia; tecnologias limpas; power electronics Aviso previsto no Plano Anual de Avisos para promotores privados em tecnologias limpas. Relevância para IT via empresa líder e apoio científico/tecnológico; aviso formal por publicar. Plano Anual de Avisos Portugal 2030: período previsto 31/08/2026-30/11/2026; dotação 100.000.000 €. Aviso formal/AAC ainda não publicado; manter como Prevista. https://portugal2030.pt/plano-anual-de-avisos/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-052",
@@ -14846,7 +14846,7 @@
       "programId": "program-18",
       "sourceId": "excel-import",
       "searchableText": "Infraestruturas e equipamentos tecnológicos – STEP Algarve 2030 / STEP Portugal 2030 / Algarve 2030 Infraestrutura Nacional Infraestruturas tecnológicas STEP Digital; biotecnologias; tecnologias limpas Transversal Network Applications and Services; Pattern and Image Analysis; Power Electronics; Multimedia Signal Processing STEP; infraestruturas tecnológicas; centros tecnológicos; parques de ciência; incubadoras; transferência de conhecimento Infraestruturas tecnológicas; valorização de conhecimento Aviso aberto para infraestruturas tecnológicas alinhadas com STEP; candidaturas até 18/12/2026 às 16:00. Operações localizadas na NUT III Algarve; relevância direta para IT Covilhã limitada pela localização. https://portugal2030.pt/2026/07/02/algarve-2030-abre-apoio-para-infraestruturas-e-equipamentos-tecnologicos-no-ambito-da-step/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-053",
@@ -14932,7 +14932,7 @@
       "programId": "program-19",
       "sourceId": "excel-import",
       "searchableText": "Sistema de Incentivos à I&D&I Empresarial – Defesa (aviso previsto) Portugal 2030 / STEP / Defesa Portugal 2030 / Programas Regionais I&D Nacional Capacidades industriais de defesa Tecnologias de dupla utilização; sistemas digitais; comunicações; sensores Redes & Comunicações Network Architectures and Protocols; Network Applications and Services; Pattern and Image Analysis; Power Electronics Por confirmar após publicação do aviso formal defesa; dupla utilização; comunicações seguras; sensores; IA; cibersegurança; STEP Defesa dual-use; comunicações; IA; sensores O Portugal 2030 anunciou apoios ao setor da defesa e enquadramento com STEP/tecnologias de defesa; o Plano Anual de Avisos identifica aviso previsto para Algarve. Condições formais por confirmar. https://portugal2030.pt/2026/03/27/apoios-do-pt-2030-para-a-defesa-acompanhados-por-grupo-interministerial/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-054",
@@ -15011,7 +15011,7 @@
       "programId": "program-19",
       "sourceId": "excel-import",
       "searchableText": "Sistema de Incentivos à I&D Empresarial – Defesa (aviso previsto) Portugal 2030 / STEP / Defesa Portugal 2030 / Programas Regionais I&D Nacional Capacidades industriais de defesa Tecnologias de dupla utilização; sistemas digitais; comunicações; sensores Redes & Comunicações Network Architectures and Protocols; Network Applications and Services; Pattern and Image Analysis; Applied Mathematics Por confirmar após publicação do aviso formal defesa; I&D empresarial; dupla utilização; redes; IA; sensores; cibersegurança Defesa dual-use; comunicações; IA; sensores Aviso previsto no Plano Anual de Avisos para I&D Empresarial em defesa, a monitorizar pela ligação a tecnologias de dupla utilização. Aviso formal por publicar. https://portugal2030.pt/2026/03/27/apoios-do-pt-2030-para-a-defesa-acompanhados-por-grupo-interministerial/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-055",
@@ -15115,7 +15115,7 @@
       "programId": "program-8",
       "sourceId": "excel-import",
       "searchableText": "ERC Starting Grant 2027 (ERC-2027-STG) ERC-2027-STG Horizon Europe Comissão Europeia I&D Europeu Transversal Investigação de fronteira bottom-up; todos os domínios científicos Transversal Applied Mathematics; Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis; Power Electronics A validar com o coordenador do grupo frontier research; principal investigator; early-career researcher; bottom-up research; ERC Investigação de fronteira bottom-up Grant ERC bottom-up para PI em fase inicial de independência científica. Elegibilidade: PhD defendido >0 e <=10 anos antes de 01/01/2027. Financiamento adicional até 1.000.000 €; até 2.000.000 € para PI vindo de país terceiro não associado. Matching futuro deve considerar perfil de carreira, elegibilidade temporal, independência científica e track record. https://erc.europa.eu/apply-grant/starting-grant",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-056",
@@ -15215,7 +15215,7 @@
       "programId": "program-8",
       "sourceId": "excel-import",
       "searchableText": "ERC Consolidator Grant 2027 (ERC-2027-COG) ERC-2027-COG Horizon Europe Comissão Europeia I&D Europeu Transversal Investigação de fronteira bottom-up; consolidação de equipa independente Transversal Applied Mathematics; Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis; Power Electronics A validar com o coordenador do grupo frontier research; principal investigator; consolidator; bottom-up research; ERC Investigação de fronteira bottom-up Grant ERC bottom-up para consolidação de equipa/programa científico independente. Elegibilidade WP 2027: PhD defendido >5 e <=15 anos antes de 01/01/2027. Financiamento adicional até 1.000.000 €; até 2.000.000 € para PI vindo de país terceiro não associado. Matching futuro deve considerar perfil de carreira, elegibilidade temporal, independência científica e track record. https://erc.europa.eu/apply-grant/consolidator-grant",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-057",
@@ -15309,7 +15309,7 @@
       "programId": "program-8",
       "sourceId": "excel-import",
       "searchableText": "ERC Advanced Grant 2026 (ERC-2026-ADG) ERC-2026-ADG Horizon Europe Comissão Europeia I&D Europeu Transversal Investigação de fronteira bottom-up; investigadores estabelecidos Transversal Applied Mathematics; Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis; Power Electronics A validar com o coordenador do grupo frontier research; principal investigator; advanced grant; bottom-up research; ERC Investigação de fronteira bottom-up Grant ERC bottom-up para PI estabelecido com track record científico significativo. Implementado como lump sum. Financiamento adicional até 1.000.000 €; até 2.000.000 € para PI vindo de país terceiro não associado. Matching futuro deve considerar perfil de carreira, independência científica e track record. https://erc.europa.eu/apply-grant/advanced-grant",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-058",
@@ -15396,7 +15396,7 @@
       "programId": "program-8",
       "sourceId": "excel-import",
       "searchableText": "ERC Proof of Concept 2026 (ERC-2026-PoC) ERC-2026-PoC Horizon Europe Comissão Europeia Inovação Europeu Transversal Valorização de resultados de investigação ERC; prova de conceito Transversal Applied Mathematics; Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis; Power Electronics A validar com base na existência de ERC grant elegível proof of concept; innovation potential; ERC grant holder; valorisation; technology transfer Valorização e prova de conceito Elegibilidade restrita a PIs com ERC main grant elegível. Validar existência de PI elegível no IT antes de divulgação/matching. Para 2026: PI com ERC main grant em curso ou terminado após 01/01/2025. Matching deve começar pela existência de ERC grant elegível. https://erc.europa.eu/apply-grant/proof-concept",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-059",
@@ -15491,7 +15491,7 @@
       "programId": "program-8",
       "sourceId": "excel-import",
       "searchableText": "ERC Synergy Grant 2027 (ERC-2027-SYG) ERC-2027-SYG Horizon Europe Comissão Europeia I&D Europeu Transversal Investigação de fronteira bottom-up; complementaridade entre 2-4 PIs Transversal Applied Mathematics; Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis; Power Electronics A validar com o coordenador do grupo frontier research; synergy; principal investigators; bottom-up research; ERC Investigação de fronteira bottom-up Não classificar como consórcio empresarial. A call envolve 2-4 Principal Investigators, podendo estar na mesma ou em diferentes Host Institutions; um PI é corresponding PI. Financiamento adicional até 4.000.000 €. Matching futuro deve considerar complementaridade científica entre 2-4 PIs. https://erc.europa.eu/apply-grant/synergy-grant",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-060",
@@ -15588,7 +15588,7 @@
       "programId": "program-8",
       "sourceId": "excel-import",
       "searchableText": "ERC Advanced Grant 2027 (ERC-2027-ADG) ERC-2027-ADG Horizon Europe Comissão Europeia I&D Europeu Transversal Investigação de fronteira bottom-up; investigadores estabelecidos Transversal Applied Mathematics; Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis; Power Electronics A validar com o coordenador do grupo frontier research; principal investigator; advanced grant; bottom-up research; ERC Investigação de fronteira bottom-up Grant ERC bottom-up para PI estabelecido. Datas e condições extraídas do ERC Work Programme 2027. Implementado como lump sum. Financiamento adicional até 1.000.000 €; até 2.000.000 € para PI vindo de país terceiro não associado. Matching futuro deve considerar perfil de carreira, independência científica e track record. https://erc.europa.eu/apply-grant/advanced-grant",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-061",
@@ -15688,7 +15688,7 @@
       "programId": "program-8",
       "sourceId": "excel-import",
       "searchableText": "ERC Proof of Concept 2027 (ERC-2027-PoC) ERC-2027-PoC Horizon Europe Comissão Europeia Inovação Europeu Transversal Valorização de resultados de investigação ERC; prova de conceito Transversal Applied Mathematics; Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis; Power Electronics A validar com base na existência de ERC grant elegível proof of concept; innovation potential; ERC grant holder; valorisation; technology transfer Valorização e prova de conceito Elegibilidade restrita a PIs com ERC main grant elegível. Validar existência de PI elegível no IT antes de divulgação/matching. Para 2027: PI com ERC main grant em curso ou terminado em/após 01/01/2026. Call com duas deadlines: 10/03/2027 e 16/09/2027. A coluna Deadline usa a primeira cut-off para ordenação automática no dashboard. https://erc.europa.eu/apply-grant/proof-concept",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-062",
@@ -15818,7 +15818,7 @@
       "programId": "program-20",
       "sourceId": "excel-import",
       "searchableText": "Eurostars Call 11 Eurostars Eureka Network / ANI I&D Internacional I&D Empresarial Projetos internacionais de I&D liderados por PME inovadora Transversal Applied Mathematics; Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis Eurostars; SME-led R&D; international cooperation; innovation; applied research I&D empresarial internacional Financiamento máximo central por projeto não definido; financiamento depende das regras nacionais aplicáveis. Liderança obrigatória por PME inovadora; mínimo 2 entidades independentes de 2 países Eurostars, com pelo menos um país UE ou associado ao Horizon Europe. IT pode participar como parceiro de I&D. Para financiamento de universidades/research organisations portuguesas é necessária PME ou small mid-cap portuguesa no consórcio, com maior parcela do investimento nacional nas empresas portuguesas. Taxa máxima indicada para universidades/research organisations: até 85%, sujeita às regras nacionais aplicáveis; Lisboa NUTS II até 40%. Financiamento nacional via ANI/Portugal 2030; MPr-2026-04 cobre EUROSTARS. https://www.eurekanetwork.org/programmes-and-calls/eurostars/eurostars-call-for-projects-september-2026/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-063",
@@ -15920,7 +15920,7 @@
       "programId": "program-20",
       "sourceId": "excel-import",
       "searchableText": "Eurostars Call 12 Eurostars Eureka Network / ANI I&D Internacional I&D Empresarial Projetos internacionais de I&D liderados por PME inovadora Transversal Applied Mathematics; Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis Eurostars; SME-led R&D; international cooperation; innovation; applied research I&D empresarial internacional Financiamento máximo central por projeto não definido; financiamento depende das regras nacionais aplicáveis. Dependência empresarial: liderança obrigatória por PME inovadora. IT elegível em princípio como parceiro de I&D; regras internacionais Eurostars confirmadas. Mecanismo nacional português aplicável em 2027 ainda por confirmar; não apresentar MPr-2026-04 como mecanismo definitivamente aplicável à Call 12. Validar novas regras ANI/Portugal 2030 antes da abertura/submissão. https://www.eurekanetwork.org/programmes-and-calls/eurostars/eurostars-call-12-for-projects-deadline-march-2027/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-064",
@@ -16038,7 +16038,7 @@
       "programId": "program-21",
       "sourceId": "excel-import",
       "searchableText": "CELTIC-NEXT Autumn Call 2026 CELTIC-NEXT / Eureka Eureka Network / ANI I&D Internacional Redes e Comunicações ICT bottom-up; telecomunicações; redes; serviços digitais Transversal Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis; Applied Mathematics ICT; telecommunications; networks; software; Eureka cluster; collaborative R&D Telecomunicações e ICT Financiamento máximo central por projeto não definido; financiamento depende das regras nacionais aplicáveis. Call bottom-up ICT; mínimo 2 parceiros de 2 países Eureka. Empresas, universidades e research organisations elegíveis. Para financiamento PT deve existir pelo menos uma empresa; universidades/research organisations até 85%, sujeitas às regras nacionais. Brokerage Day: 25/09/2026; label previsto para janeiro de 2027. Mecanismo nacional efetivo pós-label deve ser novamente validado, dado que MPr-2026-04 fecha em 29/12/2026. https://www.eurekanetwork.org/programmes-and-calls/eureka-clusters/celtic-next-call-for-projects-autumn-2026/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-065",
@@ -16156,7 +16156,7 @@
       "programId": "program-22",
       "sourceId": "excel-import",
       "searchableText": "EUROGIA2030 Call 31 EUROGIA2030 / Eureka Eureka Network / ANI I&D Internacional Tecnologias Limpas e Energia Low-carbon technologies; energia; tecnologias limpas Energia & Power Electronics Applied Mathematics; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis low-carbon technologies; energy; clean technologies; Eureka cluster; collaborative R&D Tecnologias limpas e energia Financiamento máximo central por projeto não definido; financiamento depende das regras nacionais aplicáveis. Projetos transnacionais de I&D em low-carbon technologies; mínimo 2 entidades independentes de 2 países Eureka. Deve existir pelo menos uma empresa para financiamento PT; universidades/research organisations PT até 85%, sujeitas às regras nacionais. Decisão internacional prevista para dezembro de 2026; MPr-2026-04 identificado como mecanismo nacional atual. Confirmar compatibilidade temporal entre decisão/selo e prazo nacional. Grupo Power Systems indicado na validação, mas não existe na lista controlada atual; não foi criado novo valor. https://www.eurekanetwork.org/programmes-and-calls/eureka-clusters/eurogia2030-call-31/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-066",
@@ -16274,7 +16274,7 @@
       "programId": "program-23",
       "sourceId": "excel-import",
       "searchableText": "ITEA Call 2026 ITEA / Eureka Eureka Network / ANI I&D Internacional Tecnologias Digitais e Deep Tech Software innovation; sistemas digitais; I&D colaborativa Transversal Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis; Applied Mathematics; Multimedia Signal Processing software innovation; digital systems; Eureka cluster; collaborative R&D; ITEA Software innovation Financiamento máximo central por projeto não definido; financiamento depende das regras nacionais aplicáveis. Eureka Cluster orientado para software innovation. Deadline registada no mapa corresponde ao Project Outline: 02/11/2026. FPP deadline: 11/02/2027; label previsto: 31/03/2027. Para financiamento PT deve existir pelo menos uma empresa; universidades/research organisations até 85%, sujeitas às regras nacionais. Mecanismo nacional efetivo em 2027 ainda por confirmar; não apresentar MPr-2026-04 como solução nacional definitivamente aplicável após obtenção do label. https://www.eurekanetwork.org/programmes-and-calls/eureka-clusters/itea-call-for-projects-2026/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-067",
@@ -16399,7 +16399,7 @@
       "programId": "program-24",
       "sourceId": "excel-import",
       "searchableText": "Xecs Call 6 - 2026 Xecs / Eureka Eureka Network / ANI I&D Internacional Tecnologias Digitais e Deep Tech Electronic Components and Systems; componentes eletrónicos; sistemas digitais Transversal Network Architectures and Protocols; Network Applications and Services; Multimedia Signal Processing; Pattern and Image Analysis electronic components and systems; ECS; digital systems; Eureka cluster; collaborative R&D Electronic Components and Systems Financiamento máximo central por projeto não definido; financiamento depende das regras nacionais aplicáveis. Foco em Electronic Components and Systems. Project Outline deadline: 21/01/2027; FPP deadline: 15/04/2027; label previsto: junho de 2027; matchmaking: 06-07/10/2026. Mínimo 2 entidades independentes de 2 países Eureka; recomendação de 3 países; pelo menos 35 person-years. Para financiamento PT deve existir pelo menos uma empresa; mecanismo nacional efetivo em 2027 ainda por confirmar. Grupo Power Systems indicado na validação, mas não existe na lista controlada atual; não foi criado novo valor. https://www.eurekanetwork.org/programmes-and-calls/eureka-clusters/xecs-call-6-2026/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-068",
@@ -16519,7 +16519,7 @@
       "programId": "program-25",
       "sourceId": "excel-import",
       "searchableText": "Apply AI: Piloting AI-based image screening in medical centres (DIGITAL-2026-AI-PILOTING-10-SCREENING) DIGITAL-2026-AI-PILOTING-10-SCREENING Digital Europe Comissão Europeia / HaDEA Inovação Europeu IA e Computer Vision AI/GenAI; medical imaging; cloud integration; technical validation IA & Computer Vision Pattern and Image Analysis; Multimedia Signal Processing; Network Applications and Services AI; GenAI; medical imaging; computer vision; cloud-based AI; healthcare IA e imagem médica Tipo oficial: Simple Grant. Condição crítica: requer centro médico/healthcare provider e parceiro industrial medtech/AI. Consórcio mínimo validado: 7 entidades de 5 países. Papel plausível do IT: computer vision, IA/GenAI, processamento de imagem médica, integração cloud e validação técnica de modelos. Dados médicos e requisitos de segurança; validar redação exata das restrições de segurança/controlo por países terceiros nos Topic Conditions antes de candidatura. Financiamento considerado no KPI: contribuição indicativa por projeto, não orçamento global do topic. https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-AI-PILOTING-10-SCREENING",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-069",
@@ -16636,7 +16636,7 @@
       "programId": "program-25",
       "sourceId": "excel-import",
       "searchableText": "Digital solutions for regulatory compliance through data (DIGITAL-2026-AI-DATA-10-COMPLIANCE) DIGITAL-2026-AI-DATA-10-COMPLIANCE Digital Europe Comissão Europeia / HaDEA Inovação Europeu Tecnologias Digitais e Deep Tech Data engineering; interoperability; privacy; secure compliance reporting Transversal Network Applications and Services; Network Architectures and Protocols; Applied Mathematics data engineering; regulatory compliance; privacy; interoperability; reporting automation Dados, privacidade e compliance Tipo oficial: Lump Sum Grant. Condição crítica: requer regulador, autoridade pública ou entidade com caso real de compliance. Consórcio mínimo validado: 3 entidades de 3 países. Papel plausível do IT: data engineering, interoperabilidade, privacidade, segurança de dados e automação de reporting/compliance. Exige casos/pilotos reais. Duração ainda deve ser confirmada nos Topic Conditions. Financiamento considerado no KPI: limite superior da contribuição UE por projeto, não orçamento global do topic. https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-AI-DATA-10-COMPLIANCE",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-070",
@@ -16749,7 +16749,7 @@
       "programId": "program-25",
       "sourceId": "excel-import",
       "searchableText": "Advanced Digital Skills for AI Uptake in Health (DIGITAL-2026-SKILLS-10-DIGITAL-HEALTH-STEP) DIGITAL-2026-SKILLS-10-DIGITAL-HEALTH-STEP Digital Europe Comissão Europeia / HaDEA Formação Europeu Formação Avançada Advanced digital skills; AI uptake in health; training programmes IA & Computer Vision Pattern and Image Analysis; Multimedia Signal Processing; Applied Mathematics advanced digital skills; AI in health; training; computer vision; health data Formação avançada em IA para saúde Tipo oficial: Lump Sum Grant. Condição crítica: requer parceiros de saúde/formação e indústria e proposta claramente orientada para AI uptake in health. Papel plausível do IT: formação avançada em IA aplicada à saúde, computer vision, dados, software e conteúdos tecnológicos especializados. Articulação com European Network of AI-powered advanced screening centres. Confirmar composição mínima exata do consórcio nos Topic Conditions. Financiamento considerado no KPI: contribuição indicativa máxima por projeto, não orçamento global do topic. https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-SKILLS-10-DIGITAL-HEALTH-STEP",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-071",
@@ -16884,7 +16884,7 @@
       "programId": "program-25",
       "sourceId": "excel-import",
       "searchableText": "Research Support Framework for Situational Awareness on information integrity (DIGITAL-2026-BESTUSE-RSF-10-AWARENESS) DIGITAL-2026-BESTUSE-RSF-10-AWARENESS Digital Europe Comissão Europeia / HaDEA Infraestrutura Europeu Tecnologias Digitais e Deep Tech Information integrity; analytical infrastructure; detection tools; network analysis Transversal Network Applications and Services; Applied Mathematics; Pattern and Image Analysis information integrity; situational awareness; disinformation; analytical tools; network analysis Integridade da informação e análise de redes Tipo oficial: Grant for Financial Support. Potencial validado como Médio/Alto; campo normalizado para Alto por lista controlada. Condição crítica: requer parceiros de fact-checking, media/disinformation e sociedade civil. Consórcio mínimo validado: 4 entidades de 4 países. Papel plausível do IT: infraestrutura analítica, ferramentas de deteção, análise de informação e redes, suporte computacional. Pelo menos 60% do financiamento destinado a terceiros; confirmar requisitos exatos de FSTP nos Topic Conditions. Não classificar como call puramente tecnológica. Financiamento considerado no KPI: limite superior da contribuição por projeto, não orçamento global do topic. https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-BESTUSE-RSF-10-AWARENESS",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-072",
@@ -17009,7 +17009,7 @@
       "programId": "program-25",
       "sourceId": "excel-import",
       "searchableText": "Building capacity to deploy EEHRxF and digital health services under EHDS (DIGITAL-2026-BESTUSE-10-EHDS) DIGITAL-2026-BESTUSE-10-EHDS Digital Europe Comissão Europeia / HaDEA Infraestrutura Europeu Tecnologias Digitais e Deep Tech EHDS; EEHRxF; health data interoperability; EHR/PACS/RIS integration Transversal Network Applications and Services; Network Architectures and Protocols; Applied Mathematics EHDS; EEHRxF; health data; interoperability; EHR; PACS; RIS Interoperabilidade e dados de saúde Tipo oficial: Grant for Financial Support. Condição crítica: requer autoridade pública/entidade de saúde com papel central e experiência em cascading grants. Consórcio mínimo validado: 5 entidades de 5 países. Papel plausível do IT: interoperabilidade, dados de saúde, segurança, integração EHR/PACS/RIS e formação técnica. Papel do IT é complementar; prioridade operacional inferior às restantes DIGITAL. Validar papel efetivo do IT antes de divulgação dirigida. Financiamento considerado no KPI: projeto indicativo único, coincidente com orçamento do topic; não representa orçamento global repartido por múltiplos projetos. https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-BESTUSE-10-EHDS",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-073",
@@ -17188,7 +17188,7 @@
       "programId": "program-26",
       "sourceId": "excel-import",
       "searchableText": "Quantum Machine Learning (HORIZON-JU-EUROHPC-2026-QML-07-01) HORIZON-JU-EUROHPC-2026-QML-07-01 EuroHPC JU / Horizon Europe EuroHPC Joint Undertaking I&D Europeu HPC e Computação Avançada Quantum Machine Learning; hybrid quantum-classical/HPC; optimisation; benchmarking HPC & Computação Applied Mathematics; Pattern and Image Analysis; Multimedia Signal Processing quantum machine learning; hybrid quantum-classical algorithms; HPC; optimisation; mathematical modelling; benchmarking Quantum Machine Learning e HPC Tipo oficial de ação: HORIZON JU Research and Innovation Action (HORIZON-JU-RIA). Alinhamento moderado. IT com papel complementar em ML, otimização, modelação e benchmarking. Requer parceiro especializado em quantum computing/QML. O IT-CV não deve ser considerado parceiro quantum central com base na informação atual. Papel plausível do IT: desenvolvimento e validação de componentes clássicos de machine learning/otimização e benchmarking comparativo de abordagens híbridas quantum-classical. TRL inicial 3/4 e final 5/6. Orçamento total do topic: 6.000.000 €. Contribuição UE esperada por projeto: 2.000.000 € a 3.000.000 €; financiamento numérico regista o limite superior por projeto, não o orçamento global. Taxa: 50% dos custos elegíveis. Número indicativo de projetos: 2. Regra geral Horizon Europe: pelo menos 3 entidades independentes de 3 países elegíveis, incluindo pelo menos uma entidade de um Estado-Membro. IT elegível como research organisation e membro de consórcio. Software sujeito a EUPL ou licença OSI compatível; requisitos de IP/licenciamento e articulação com Quantum Flagship/standardisation. Modalidade lump sum vs actual-cost a confirmar nos Topic Conditions antes de eventual candidatura. Parceiro quantum/QML e papel concreto do IT a validar antes de divulgação dirigida. https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-EUROHPC-2026-QML-07-01",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-074",
@@ -17283,7 +17283,7 @@
       "programId": "program-27",
       "sourceId": "excel-import",
       "searchableText": "Cooperação Bilateral Portugal-Alemanha 2026 — Concurso Conjunto FCT / DAAD Fundação para a Ciência e a Tecnologia / DAAD Mobilidade Internacional Cooperação científica internacional Mobilidade de equipas; preparação de projetos; colaboração Portugal-Alemanha Transversal Applied Mathematics; Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis; Power Electronics Investigador a validar com coordenador do grupo bilateral cooperation; Portugal-Germany; research mobility; scientific collaboration Cooperação científica internacional Oportunidade FCT/DAAD para cooperação bilateral Portugal-Alemanha. Financiamento oficialmente indicado pela FCT: 2.500 €/projeto/ano; duração até 24 meses. Relevante para mobilidade, preparação de colaboração científica e aproximação a parceiros alemães. Matching deve depender da existência de parceiro alemão e plano científico concreto. https://www.fct.pt/concursos/cooperacao-bilateral-portugal-alemanha-2026-concurso-conjunto",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-075",
@@ -17393,7 +17393,7 @@
       "programId": "program-28",
       "sourceId": "excel-import",
       "searchableText": "Reinforcing Europe’s strength in power electronics (HORIZON-Chips-JU-2026-FT1-IA) HORIZON-Chips-JU-2026-FT1-IA Chips JU / Horizon Europe / FCT Chips Joint Undertaking / Fundação para a Ciência e a Tecnologia I&D Europeu Energia e Power Electronics Power electronics; semiconductors; converters; 300mm; agile design Energia & Power Electronics Power Electronics; Applied Mathematics Investigador a validar com coordenador do grupo power electronics; converters; semiconductors; agile design; energy systems; smart grids Power Electronics e semicondutores Topic Chips JU com alinhamento muito forte para IT-CV em eletrónica de potência, conversores, controlo, modelação e validação. Participação portuguesa com financiamento FCT exige pelo menos uma empresa portuguesa no consórcio; candidaturas apenas com ENESII não são elegíveis para financiamento FCT. Financiamento numérico regista o limite nacional por entidade/projeto aplicável ao IT, não o orçamento global do topic. https://www.chips-ju.europa.eu/Call-Details/?id=89c5feaf-d070-f111-ab0e-000d3ab6c0a4",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-076",
@@ -17510,7 +17510,7 @@
       "programId": "program-28",
       "sourceId": "excel-import",
       "searchableText": "RIA Resilience — 6G Front End Module (HORIZON-JU-Chips-2026-2-RIA) HORIZON-JU-Chips-2026-2-RIA Chips JU / Horizon Europe / FCT Chips Joint Undertaking / Fundação para a Ciência e a Tecnologia I&D Europeu Redes e Comunicações Avançadas 6G; front-end module; RF systems; resilience; telecom semiconductors Redes & Comunicações Network Architectures and Protocols; Network Applications and Services; Applied Mathematics Investigador a validar com coordenador do grupo 6G; front-end module; network resilience; RF systems; telecom semiconductors; performance modelling 6G e sistemas de comunicações Topic Chips JU com alinhamento forte para IT-CV em redes, modelação, desempenho e validação de sistemas 6G. O papel do IT deve ser técnico-científico em validação de arquiteturas, métricas de desempenho, modelação e integração com cenários de rede; liderança RF/semicondutor requer parceiro especializado. Participação portuguesa com financiamento FCT exige pelo menos uma empresa portuguesa no consórcio; financiamento numérico regista o limite nacional por entidade/projeto aplicável ao IT. https://www.chips-ju.europa.eu/Call-Details/?id=8fc5feaf-d070-f111-ab0e-000d3ab6c0a4",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-077",
@@ -17628,7 +17628,7 @@
       "programId": "program-28",
       "sourceId": "excel-import",
       "searchableText": "Reinforcing Europe’s strength in health (HORIZON-Chips-JU-2026-FT3-IA) HORIZON-Chips-JU-2026-FT3-IA Chips JU / Horizon Europe / FCT Chips Joint Undertaking / Fundação para a Ciência e a Tecnologia I&D Europeu IA e Saúde Digital Health technologies; AI; imaging; signal processing; sensors; semiconductors IA & Computer Vision Pattern and Image Analysis; Multimedia Signal Processing; Applied Mathematics Investigador a validar com coordenador do grupo digital health; medical imaging; AI; signal processing; sensors; health technologies IA, imagem e saúde digital Topic Chips JU com alinhamento forte condicionado a parceiro medtech/clinical. Papel plausível do IT-CV: algoritmos de IA, imagem, processamento de sinal, validação de pipelines e avaliação de desempenho em aplicações de saúde suportadas por tecnologias ECS. Participação portuguesa com financiamento FCT exige pelo menos uma empresa portuguesa no consórcio; financiamento numérico regista o limite nacional por entidade/projeto aplicável ao IT. https://www.chips-ju.europa.eu/Call-Details/?id=8dc5feaf-d070-f111-ab0e-000d3ab6c0a4",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-078",
@@ -17759,7 +17759,7 @@
       "programId": "program-7",
       "sourceId": "excel-import",
       "searchableText": "SIID — I&D Empresarial — Demonstradores Individuais e em Copromoção (MPr-2026-7) MPr-2026-7 COMPETE 2030 COMPETE 2030 / Portugal 2030 I&D Nacional I&D Empresarial e Demonstração Projetos demonstradores; validação industrial; copromoção empresa-ENESII Transversal Applied Mathematics; Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis; Power Electronics Investigador a validar com coordenador do grupo projetos demonstradores; validação industrial; I&D empresarial; copromoção; ENESII; tecnologia avançada; linha-piloto Demonstração e validação tecnológica Aviso aberto para Projetos Demonstradores, realizados por empresas na modalidade individual ou liderados por empresas e em copromoção com empresas e/ou ENESII. IT elegível como ENESII copromotora. Empresa e liderança empresarial obrigatórias para participação do IT. Objetivo: validação industrial de conhecimento associado a novas tecnologias em situação real, partindo de I&D concluída. Regiões elegíveis NUTS II do Continente, com localização da operação correspondente à região do investimento. Informação financeira registada como dotação total do aviso; financiamento por operação/beneficiário: Por confirmar no AAC/documentos aplicáveis. Instrumento multirregional aplicável ao Centro. IT pode participar como ENESII em operações em copromoção, nas condições previstas no AAC. https://compete2030.gov.pt/avisos/siid-id-empresarial-demonstradores-individuais_mpr-2026-7/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-079",
@@ -17853,7 +17853,7 @@
       "programId": "program-29",
       "sourceId": "excel-import",
       "searchableText": "Innovation Uptake Call EIT Health EIT Health Inovação Europeu IA e Saúde Digital IA e imagem clínica; interoperabilidade; segurança; processamento de sinais; evidência técnica IA & Computer Vision Pattern and Image Analysis; Multimedia Signal Processing; Network Applications and Services clinical AI; medical imaging; signal processing; interoperability; cybersecurity; real-world evidence IA e saúde digital Deadline: 16:00 CET. Papel IT: parceiro científico/tecnológico para integração e avaliação de IA/imagem em ambiente clínico, interoperabilidade, segurança, processamento de sinais e evidência técnica. Exige entidade comercializadora/PME/indústria líder e parceiro/prestador de saúde. Consórcio mínimo: 2 entidades independentes de países diferentes e pelo menos 2 lados do Knowledge Triangle. Cofinanciamento mínimo: 50%. https://eithealth.eu/opportunity/innovation-uptake/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-080",
@@ -17938,7 +17938,7 @@
       "programId": "program-30",
       "sourceId": "excel-import",
       "searchableText": "Skills-based CPD Courses EIT Culture & Creativity EIT Culture & Creativity Formação Europeu Formação Avançada IA na produção audiovisual; synthetic media; automação; ética; soberania digital IA & Computer Vision Multimedia Signal Processing; Pattern and Image Analysis audiovisual AI; synthetic media; workflow automation; digital storytelling; ethics; digital sovereignty Multimédia e IA Deadline: 17:00 CEST. Papel IT: parceiro tecnológico/científico na conceção de formação sobre IA aplicada à produção audiovisual, synthetic media, automação de workflows, ética e soberania digital. Consórcio até 3 entidades de pelo menos 2 países; coordenador obrigatório do setor educativo. Cofinanciamento mínimo: 25%. https://eit-culture-creativity.eu/your-opportunities/calls-funding/skills-based-cpd-courses",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-081",
@@ -18022,7 +18022,7 @@
       "programId": "program-31",
       "sourceId": "excel-import",
       "searchableText": "RIS Education Open Call 2027 EIT Urban Mobility EIT Urban Mobility Formação Europeu Formação Avançada V2X; IoT; mobilidade conectada; redes; dados; otimização; capacity building Redes & Comunicações Network Applications and Services; Network Architectures and Protocols; Applied Mathematics V2X; connected mobility; IoT; network communications; mobility data; optimisation; education Redes e mobilidade conectada Deadline: 17:00 CEST. Portugal é país RIS elegível; membership não obrigatória. Papel IT: formação e capacity building em V2X, IoT, mobilidade conectada, redes, dados e otimização, potencialmente com demonstração em cidade ou operador. Definir atividade RISE antes de divulgação dirigida/preparação de candidatura. Taxa e cofinanciamento por confirmar. https://www.eiturbanmobility.eu/call-for-proposals/ris-education-open-call-2027/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-082",
@@ -18113,7 +18113,7 @@
       "programId": "program-31",
       "sourceId": "excel-import",
       "searchableText": "Master School and Fellowship Open Call 2027 EIT Urban Mobility EIT Urban Mobility Formação Europeu Formação Avançada Summer schools; comunicações veiculares; sensing; IA; otimização da mobilidade Redes & Comunicações Network Applications and Services; Network Architectures and Protocols; Applied Mathematics summer school; vehicular communications; sensing; AI; mobility optimisation; fellowship Redes e mobilidade conectada Deadline: 17:00 CEST. Papel IT: parceiro técnico em summer school, módulo ou atividade aplicada sobre comunicações veiculares, sensing, IA e otimização da mobilidade. O papel e a elegibilidade operacional do IT dependem da atividade escolhida. Maior plausibilidade em MSA1/MSA5; MSA2–MSA4 são mais centradas em HEIs/programas académicos. Taxa e modalidade por confirmar. https://www.eiturbanmobility.eu/call-for-proposals/master-school-and-fellowship-open-call-2027/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-083",
@@ -18185,7 +18185,7 @@
       "programId": "program-32",
       "sourceId": "excel-import",
       "searchableText": "COST Open Call 2026 COST COST Association Networking Europeu Transversal Networking e colaboração científica Transversal Applied Mathematics; Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis; Power Electronics research networking; scientific cooperation; mobility; training schools; consortium building Networking científico e cooperação europeia Deadline: 28/10/2026, 12:00 CET. Financia atividades de networking, reuniões, workshops, mobilidade, Training Schools e comunicação. Não financia diretamente atividades de investigação. https://www.cost.eu/how-to-apply/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-084",
@@ -18283,7 +18283,7 @@
       "programId": "program-33",
       "sourceId": "excel-import",
       "searchableText": "Secured European Critical Communication System (HORIZON-CL3-2026-01-SSRI-04) HORIZON-CL3-2026-01-SSRI-04 Horizon Europe — Cluster 3: Civil Security for Society Comissão Europeia Inovação Europeu Redes e Comunicações Comunicações críticas seguras; interoperabilidade; EUCCS Redes & Comunicações Network Architectures and Protocols; Network Applications and Services; Multimedia Signal Processing critical communications; EUCCS; secure communications; interoperability; post-quantum cryptography; wearable sensors Comunicações críticas seguras e resilientes IA, lump sum, TRL final 6-8. Requer 3 organizações de first responders como beneficiárias. Security-sensitive; restrições de controlo por China e de proteção das redes europeias. Papel IT: arquitetura, segurança, resiliência e interoperabilidade de comunicações críticas. https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2026-01-SSRI-04",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-085",
@@ -18394,7 +18394,7 @@
       "programId": "program-33",
       "sourceId": "excel-import",
       "searchableText": "Resilience of critical entities (HORIZON-CL3-2026-01-INFRA-03) HORIZON-CL3-2026-01-INFRA-03 Horizon Europe — Cluster 3: Civil Security for Society Comissão Europeia Inovação Europeu Redes e Comunicações Infraestruturas cr�ticas; risco din�mico; continuidade de servi�os Transversal Applied Mathematics; Network Architectures and Protocols; Network Applications and Services; Power Electronics critical infrastructure; resilience; dynamic risk assessment; decision support; continuity management; hybrid threats Resiliência digital de infraestruturas críticas IA, lump sum, TRL final 6-7. Requer 3 practitioners como beneficiários: operadores, autoridades, proteção civil ou first responders. Security-sensitive e restrição de controlo por China. Papel IT: plataformas interoperáveis de risco, decisão e continuidade de serviços críticos. https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2026-01-INFRA-03",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-086",
@@ -18491,7 +18491,7 @@
       "programId": "program-33",
       "sourceId": "excel-import",
       "searchableText": "Stress tests of critical infrastructure (HORIZON-CL3-2026-01-INFRA-01) HORIZON-CL3-2026-01-INFRA-01 Horizon Europe — Cluster 3: Civil Security for Society Comissão Europeia Inovação Europeu Redes e Comunicações Stress testing; interdependências; infraestruturas críticas Transversal Applied Mathematics; Network Architectures and Protocols; Network Applications and Services; Power Electronics critical infrastructure; stress testing; resilience metrics; interdependencies; telecommunications; energy Stress testing e modelação de infraestruturas críticas IA, lump sum, TRL final 6-7. Requer 3 practitioners ligados a infraestruturas críticas. Security-sensitive; restrições de controlo por China e de proteção das redes europeias. Papel IT: modelos de interdependência, métricas de resiliência e ferramentas digitais de stress testing. https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2026-01-INFRA-01",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-087",
@@ -18593,7 +18593,7 @@
       "programId": "program-33",
       "sourceId": "excel-import",
       "searchableText": "Misuse of emerging technologies and lawful access (HORIZON-CL3-2026-01-FCT-02) HORIZON-CL3-2026-01-FCT-02 Horizon Europe — Cluster 3: Civil Security for Society Comissão Europeia I&D Europeu Cibersegurança Lawful access; privacidade; tecnologias emergentes Redes & Comunicações Network Architectures and Protocols; Network Applications and Services; Pattern and Image Analysis cybersecurity; lawful access; privacy; cloud; generative AI; biometrics; emerging technologies Cibersegurança, privacidade e lawful access RIA, taxa 100%, lump sum, TRL final 5. Requer 2 autoridades policiais de 2 países como beneficiárias. Security-sensitive e sujeito à proteção das redes europeias. Papel IT: métodos privacy-preserving e ferramentas para análise legal de dados e abuso de tecnologias emergentes. https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2026-01-FCT-02",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-088",
@@ -18700,7 +18700,7 @@
       "programId": "program-33",
       "sourceId": "excel-import",
       "searchableText": "Search and rescue in hazardous conditions (HORIZON-CL3-2026-01-DRS-03) HORIZON-CL3-2026-01-DRS-03 Horizon Europe — Cluster 3: Civil Security for Society Comissão Europeia Inovação Europeu Redes e Comunicações Search and rescue; comunicações de emergência; sensores e drones Redes & Comunicações Multimedia Signal Processing; Network Architectures and Protocols; Network Applications and Services; Pattern and Image Analysis search and rescue; emergency communications; first responders; drones; sensor fusion; edge AI; situational awareness Tecnologias digitais para resposta a emergências IA, lump sum, TRL final 7-8. Requer 2 first responders e 2 autoridades de emergência médica de pelo menos 3 países. Security-sensitive; restrições de controlo por China e de proteção das redes europeias. Papel IT: comunicações resilientes, fusão de sensores, edge AI e situational awareness. https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2026-01-DRS-03",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-089",
@@ -18797,7 +18797,7 @@
       "programId": "program-34",
       "sourceId": "excel-import",
       "searchableText": "Predictive biomarkers using AI (HORIZON-HLTH-2027-02-TOOL-01) HORIZON-HLTH-2027-02-TOOL-01 Horizon Europe — Cluster 1: Health Comissão Europeia I&D Europeu IA e Computer Vision Biomarcadores preditivos; IA multimodal; medicina personalizada IA & Computer Vision Applied Mathematics; Pattern and Image Analysis; Multimedia Signal Processing predictive biomarkers; multimodal AI; federated learning; explainable AI; personalised medicine; clinical validation IA multimodal para biomarcadores preditivos RIA, taxa 100%. Call em duas fases: 13/04/2027 e 22/09/2027. Primeira fase com avaliação cega. Parceiro clínico/data owner indispensável. Papel IT: IA multimodal e federada, explicabilidade, robustez e validação de biomarcadores. https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2027-02-TOOL-01",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-090",
@@ -18891,7 +18891,7 @@
       "programId": "program-34",
       "sourceId": "excel-import",
       "searchableText": "Virtual Human Twins (HORIZON-HLTH-2027-03-TOOL-04) HORIZON-HLTH-2027-03-TOOL-04 Horizon Europe — Cluster 1: Health Comissão Europeia I&D Europeu IA e Computer Vision Virtual Human Twins; decisão clínica; modelação multiescala IA & Computer Vision Applied Mathematics; Pattern and Image Analysis; Multimedia Signal Processing; Network Applications and Services virtual human twins; digital twins; clinical decision support; multiscale modelling; multimodal data; explainable AI Virtual Human Twins e apoio à decisão clínica RIA, taxa 100%. Parceiro clínico indispensável; integração e validação de Virtual Human Twins em contexto clínico. Papel IT: modelos multiescala/multiórgão, fusão de imagem e dados, interoperabilidade e IA explicável. https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2027-03-TOOL-04",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-091",
@@ -18992,7 +18992,7 @@
       "programId": "program-13",
       "sourceId": "excel-import",
       "searchableText": "ARTES 4.0 Technologies & Products Open Call (CfP 4-40017) ESA ARTES 4.0 ESA I&D Internacional Espaço e GNSS Satcom; 5G/6G; redes não terrestres; tecnologias e produtos Espaço & GNSS Applied Mathematics; Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis; Power Electronics Satellite Communications; 5G; 6G; NTN; Signal Processing; Network Architectures Space Technologies; Satellite Communications; Networks Open Call ESA para tecnologias e produtos ARTES. Mecanismo CO-FUNDED_R&D através de contrato ESA, dependente das regras da atividade e do apoio da delegação nacional. Papel IT-CV: algoritmos e protótipos de comunicações NTN/5G/6G, processamento de sinal, arquiteturas e serviços de rede. Participação como parceiro científico/subcontratado de entidade industrial; elegibilidade direta como prime por confirmar. https://resilience.esa.int/open-call-proposals",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-092",
@@ -19090,7 +19090,7 @@
       "programId": "program-13",
       "sourceId": "excel-import",
       "searchableText": "ARTES 4.0 Business Applications Open Call ESA ARTES 4.0 ESA Inovação Internacional Espaço e GNSS Aplicações com satcom, Earth Observation ou GNSS Espaço & GNSS Applied Mathematics; Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis Business Applications; Satellite Communications; Earth Observation; GNSS; Digital Services Space-enabled Applications; Satellite Communications; Earth Observation Open Call ARTES Business Applications para serviços que utilizem ativos espaciais. Processo não competitivo e contratual, sujeito à elegibilidade nacional e apoio da delegação. Empresa necessária como candidata/líder; IT-CV pode contribuir como parceiro científico ou subcontratado em IA, EO, GNSS, satcom, processamento de sinal e serviços digitais. Taxa e duração dependem da modalidade e ficam por confirmar. https://commercialisation.esa.int/opportunities/open-call-for-proposal-for-artes-4-0-business-applications/",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-093",
@@ -19184,7 +19184,7 @@
       "programId": "program-8",
       "sourceId": "excel-import",
       "searchableText": "HORIZON-CL4-2027-04-DATA-08: Demand-side 3C pilot demonstrators HORIZON-CL4-2027-04-DATA-08 Horizon Europe Comissão Europeia / HaDEA Inovação Europeu Redes e Comunicações Cloud-edge-telco; 3C; pilotos Redes & Comunicações Network Applications and Services; Network Architectures and Protocols Cloud-edge-telco; 3C; Network Slicing; ISAC; Programmable Networks Networks; Edge & Cloud Computing; Telecommunications Topic HORIZON-CL4-2027-04-DATA-08. Tipo de ação IA. Dotação total da call: 38 M€. Contribuição esperada por projeto: 19 M€. TRL final 6–8. Papel potencial IT-CV: orquestração telco-edge-cloud, slicing, ISAC e redes programáveis. Duração por confirmar. Não atribuir investigador sem validação de perfil e consórcio. https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-04-data-08",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-094",
@@ -19288,7 +19288,7 @@
       "programId": "program-8",
       "sourceId": "excel-import",
       "searchableText": "HORIZON-CL4-2027-04-DATA-03: Decentralised, federated and sustainable AI processing HORIZON-CL4-2027-04-DATA-03 Horizon Europe Comissão Europeia / HaDEA I&D Europeu Digital e IA IA distribuída; federated learning; edge/cloud/HPC HPC & Computação Applied Mathematics; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis Distributed AI; Federated Learning; Edge Computing; Cloud; HPC; Model Compression Artificial Intelligence & Machine Learning; Edge, Cloud & HPC Topic HORIZON-CL4-2027-04-DATA-03. Tipo de ação RIA. Dotação total da call: 35 M€. Contribuição esperada por projeto: 17,5 M€. TRL 3 → 6/7. Papel potencial IT-CV: IA distribuída, federated learning, edge/cloud/HPC e compressão de modelos. Duração por confirmar. Não atribuir investigador sem validação de perfil e consórcio. https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-04-data-03",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-095",
@@ -19388,7 +19388,7 @@
       "programId": "program-8",
       "sourceId": "excel-import",
       "searchableText": "HORIZON-CL4-2027-04-DIGITAL-EMERGING-11: EU Frontier AI Initiative HORIZON-CL4-2027-04-DIGITAL-EMERGING-11 Horizon Europe Comissão Europeia / HaDEA I&D Europeu Digital e IA Frontier AI; multimodalidade; agentes; segurança IA & Computer Vision Applied Mathematics; Multimedia Signal Processing; Pattern and Image Analysis Frontier AI; Multimodal AI; AI Agents; Interpretability; Safety-by-design Artificial Intelligence & Machine Learning Topic HORIZON-CL4-2027-04-DIGITAL-EMERGING-11. Tipo de ação RIA. Dotação total da call: 44 M€. Contribuição esperada por projeto: 44 M€. TRL 2 → 4. Papel potencial IT-CV: eficiência de modelos, multimodalidade, agentes, interpretabilidade e safety-by-design. Duração por confirmar. Não atribuir investigador sem validação de perfil e consórcio. https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-04-digital-emerging-11",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-096",
@@ -19491,7 +19491,7 @@
       "programId": "program-8",
       "sourceId": "excel-import",
       "searchableText": "HORIZON-CL4-2027-04-DIGITAL-EMERGING-05: AI-Driven Robotics for Industry HORIZON-CL4-2027-04-DIGITAL-EMERGING-05 Horizon Europe Comissão Europeia / HaDEA Inovação Europeu Digital e IA Robótica industrial; visão; sensing multimodal IA & Computer Vision Multimedia Signal Processing; Network Applications and Services; Pattern and Image Analysis Industrial Robotics; Computer Vision; Multimodal Sensing; Secure Protocols; Multi-agent Systems Robotics; Artificial Intelligence & Machine Learning; Computer Vision Topic HORIZON-CL4-2027-04-DIGITAL-EMERGING-05. Tipo de ação IA. Dotação total da call: 18 M€. Contribuição esperada por projeto: 18 M€. TRL 4 → 7. Papel potencial IT-CV: computer vision, sensing multimodal, protocolos seguros e coordenação multiagente. Duração por confirmar. Não atribuir investigador sem validação de perfil e consórcio. https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-04-digital-emerging-05",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-097",
@@ -19597,7 +19597,7 @@
       "programId": "program-8",
       "sourceId": "excel-import",
       "searchableText": "HORIZON-CL4-2027-SPACE-03-33: Collaborative EO and SatCom digital enablers HORIZON-CL4-2027-SPACE-03-33 Horizon Europe Comissão Europeia / HaDEA I&D Europeu Espaço e GNSS Earth Observation; SatCom; Copernicus Espaço & GNSS Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis Earth Observation; Satellite Communications; Copernicus; Signal Processing; Networks Earth Observation & Geospatial Data; Satellite Communications; Space Technologies Topic HORIZON-CL4-2027-SPACE-03-33. Tipo de ação RIA; modalidade lump sum. Dotação total da call: 4 M€. Contribuição esperada por projeto: 1,5–3 M€. TRL final 4–5. Papel potencial IT-CV: integração EO-SatCom, processamento, redes, serviços e dados Copernicus. Duração por confirmar. Não atribuir investigador sem validação de perfil e consórcio. https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-space-03-33",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-call-CALL-098",
@@ -19704,7 +19704,7 @@
       "programId": "program-8",
       "sourceId": "excel-import",
       "searchableText": "HORIZON-CL4-2027-SPACE-03-34: Collaborative EO/SatCom demonstration missions HORIZON-CL4-2027-SPACE-03-34 Horizon Europe Comissão Europeia / HaDEA Inovação Europeu Espaço e GNSS Demonstração EO/SatCom; segmento terrestre; payload Espaço & GNSS Multimedia Signal Processing; Network Applications and Services; Network Architectures and Protocols; Pattern and Image Analysis Earth Observation; Satellite Communications; Demonstration Mission; Ground Segment; Payload Earth Observation & Geospatial Data; Satellite Communications; Space Technologies Topic HORIZON-CL4-2027-SPACE-03-34. Tipo de ação IA. Dotação total da call: 26 M€. Contribuição esperada por projeto: 5–10 M€. TRL final 7–8. Papel potencial IT-CV: software, comunicações, processamento e validação para segmento terrestre/payload. Duração por confirmar. Não atribuir investigador sem validação de perfil e consórcio. https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl4-2027-space-03-34",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-radar-RAD-001",
@@ -19757,7 +19757,7 @@
       "programId": "program-35",
       "sourceId": "radar-import",
       "searchableText": "Atlantic Area 4th Call for Proposals Cooperação transnacional; âmbito final por confirmar Applied Mathematics Multimedia Signal Processing Network Applications and Services Network Architectures and Protocols Pattern and Image Analysis Power Electronics Monitorizar publicação do texto oficial; não inserir em CALLS antes da confirmação operacional.",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-radar-RAD-002",
@@ -19803,7 +19803,7 @@
       "programId": "program-36",
       "sourceId": "radar-import",
       "searchableText": "Call 7 — Mediterranean Multiprogramme Mechanism Transfer Projects Transferência de resultados em turismo sustentável Network Applications and Services Applied Mathematics Pattern and Image Analysis Datas previstas validadas na análise anterior; manter em RADAR até confirmação operacional final.",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-radar-RAD-003",
@@ -19860,7 +19860,7 @@
       "programId": "program-36",
       "sourceId": "radar-import",
       "searchableText": "Call 8 — Thematic Test Projects Projetos-piloto temáticos; âmbito final por confirmar Applied Mathematics Multimedia Signal Processing Network Applications and Services Network Architectures and Protocols Pattern and Image Analysis Power Electronics Lançamento previsto para outubro de 2026 e Terms of Reference previstos para setembro, sem datas operacionais finais confirmadas.",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-radar-RAD-004",
@@ -19909,7 +19909,7 @@
       "programId": "program-37",
       "sourceId": "radar-import",
       "searchableText": "Próxima convocatória POCTEP — monitorização de programa Cooperação transfronteiriça Portugal–Espanha Applied Mathematics Multimedia Signal Processing Network Applications and Services Network Architectures and Protocols Pattern and Image Analysis Power Electronics Sem nova convocatória operacional confirmada em 27/07/2026; entrada apenas para monitorização.",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-radar-RAD-005",
@@ -19944,7 +19944,7 @@
       "programId": "program-38",
       "sourceId": "radar-import",
       "searchableText": "Online harms detection and investigation tools Online harms; investigacao digital; IA Pattern and Image Analysis Network Applications and Services Network Architectures and Protocols Manter em RADAR ate validacao operacional.",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-radar-RAD-006",
@@ -19983,7 +19983,7 @@
       "programId": "program-38",
       "sourceId": "radar-import",
       "searchableText": "Malicious use of Open-Source Intelligence OSINT; infraestruturas criticas; continuidade Network Applications and Services Network Architectures and Protocols Pattern and Image Analysis Validar condicoes especificas antes de entrada em CALLS.",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-radar-RAD-007",
@@ -20022,7 +20022,7 @@
       "programId": "program-38",
       "sourceId": "radar-import",
       "searchableText": "Decision support for disaster crises Gestao de crises; digital twins; decisao Applied Mathematics Network Applications and Services Network Architectures and Protocols Pattern and Image Analysis Condicoes detalhadas a validar antes de CALLS.",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-radar-RAD-008",
@@ -20063,7 +20063,7 @@
       "programId": "program-39",
       "sourceId": "radar-import",
       "searchableText": "Portable and versatile Point-of-care diagnostics Diagnostico point-of-care; dispositivos e sinal Multimedia Signal Processing Pattern and Image Analysis Network Applications and Services Call em duas fases: 13/04/2027 e 22/09/2027.",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-radar-RAD-009",
@@ -20101,7 +20101,7 @@
       "programId": "program-39",
       "sourceId": "radar-import",
       "searchableText": "Towards Artificial General Intelligence for healthcare AGI; saude; avaliacao e interoperabilidade Applied Mathematics Pattern and Image Analysis Network Applications and Services Validar restricoes de controlo e redes aplicaveis.",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-radar-RAD-010",
@@ -20139,7 +20139,7 @@
       "programId": "program-39",
       "sourceId": "radar-import",
       "searchableText": "Health adaptation technologies Adaptacao climatica; saude; monitorizacao Applied Mathematics Multimedia Signal Processing Network Applications and Services Pattern and Image Analysis Manter em RADAR ate existir buyer group.",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-radar-RAD-011",
@@ -20200,7 +20200,7 @@
       "programId": "program-40",
       "sourceId": "radar-import",
       "searchableText": "SIID – I&D Empresarial – Operações Individuais e em Copromoção I&D empresarial; copromoção empresa-ENESII Applied Mathematics Multimedia Signal Processing Network Applications and Services Network Architectures and Protocols Pattern and Image Analysis Power Electronics Monitorizar publicação do AAC e transferir para CALLS quando existirem condições oficiais completas. Não confundir com CALL-078, que corresponde especificamente a Demonstradores.",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-radar-RAD-012",
@@ -20258,7 +20258,7 @@
       "programId": "program-41",
       "sourceId": "radar-import",
       "searchableText": "SICE – Investimento Empresarial Produtivo – Sector da Defesa Defesa; investimento empresarial produtivo Multimedia Signal Processing Network Applications and Services Network Architectures and Protocols Pattern and Image Analysis Power Electronics Monitorizar publicação do AAC e verificar relação com CALL-053/054 antes de criar qualquer nova call. Beneficiário principal previsivelmente empresarial; participação financiada do IT ainda não confirmada.",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-radar-RAD-013",
@@ -20303,7 +20303,7 @@
       "programId": "program-41",
       "sourceId": "radar-import",
       "searchableText": "SICE – Rede de Fornecedores Inovadores Redes de fornecedores; inovação produtiva Multimedia Signal Processing Network Applications and Services Network Architectures and Protocols Pattern and Image Analysis Power Electronics Não confundir com CALL-014, que corresponde apenas à Manifestação de Interesse.",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-radar-RAD-014",
@@ -20363,7 +20363,7 @@
       "programId": "program-41",
       "sourceId": "radar-import",
       "searchableText": "Apoio a Incubadoras de Base Tecnológica (Centro2030-2026-16) Incubadoras de Base Tecnológica; transferência de conhecimento Applied Mathematics Multimedia Signal Processing Network Applications and Services Network Architectures and Protocols Pattern and Image Analysis Power Electronics Elegibilidade direta do IT não demonstrada. Beneficiários limitados a instituições de ensino superior e entidades gestoras de IBT. Operações localizadas na NUTS II Centro.",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-radar-RAD-015",
@@ -20409,7 +20409,7 @@
       "programId": "program-42",
       "sourceId": "radar-import",
       "searchableText": "InCubed Earth Observation comercial; produtos e serviços Applied Mathematics Multimedia Signal Processing Network Applications and Services Pattern and Image Analysis Não transferir para CALLS até existir oportunidade/projeto concreto e elegibilidade nacional confirmada. Não alimentar KPI financeiro.",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-radar-RAD-016",
@@ -20451,7 +20451,7 @@
       "programId": "program-11",
       "sourceId": "radar-import",
       "searchableText": "NAVISP Element 3 PNT/GNSS; prioridades nacionais Applied Mathematics Network Applications and Services Network Architectures and Protocols Pattern and Image Analysis Natureza CO-FUNDED_R&D/CONTRACT. Financiamento e condições específicas por confirmar.",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-radar-RAD-017",
@@ -20505,7 +20505,7 @@
       "programId": "program-43",
       "sourceId": "radar-import",
       "searchableText": "Flight Ticket Initiative Acesso a lançamento para satélite/payload pronto para voo Network Applications and Services Network Architectures and Protocols Multimedia Signal Processing Cut-off operacional seguinte: 01/10/2026; cut-off posterior: 15/03/2027. Mantido no RADAR, sem duplicação em NETWORKING & MOBILITY e sem impacto no KPI.",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-radar-RAD-018",
@@ -20553,7 +20553,7 @@
       "programId": "program-44",
       "sourceId": "radar-import",
       "searchableText": "HydRON Demonstration System – Element 3 User Segment and Evolution Redes ópticas de alta capacidade; segmento de utilizador Multimedia Signal Processing Network Applications and Services Network Architectures and Protocols Natureza CONTRACT/PROCUREMENT por confirmar na documentação específica. Não alimentar KPI financeiro.",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-radar-RAD-019",
@@ -20603,7 +20603,7 @@
       "programId": "program-14",
       "sourceId": "radar-import",
       "searchableText": "Sustainable and Adaptive Agriculture Solutions Earth Observation, IA, agricultura e gestão da água Applied Mathematics Multimedia Signal Processing Network Applications and Services Pattern and Image Analysis PROCUREMENT/CONTRACT; quatro projetos coordenados. Manter em RADAR até validação do aviso esa-star.",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-radar-RAD-020",
@@ -20653,7 +20653,7 @@
       "programId": "program-45",
       "sourceId": "radar-import",
       "searchableText": "HORIZON-CL4-2027-04-DATA-09: Energy efficiency of AI data processing in Data Centres IA; eficiência energética; data centres Applied Mathematics Network Applications and Services Network Architectures and Protocols Power Electronics Monitorizar formação de consórcio; não transferir para CALLS sem operador e infraestrutura.",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-radar-RAD-021",
@@ -20703,7 +20703,7 @@
       "programId": "program-45",
       "sourceId": "radar-import",
       "searchableText": "HORIZON-CL4-2027-04-DIGITAL-EMERGING-04: Challenge-Driven AI Innovation Booster IA; desafios; validação e adoção Applied Mathematics Multimedia Signal Processing Pattern and Image Analysis Manter em RADAR até existir desafio concreto e papel material para o IT-CV.",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-radar-RAD-022",
@@ -20752,7 +20752,7 @@
       "programId": "program-45",
       "sourceId": "radar-import",
       "searchableText": "HORIZON-CL4-2027-02-DIGITAL-EMERGING-52: Human/AI collaboration for the workforce Colaboração humano-IA; interfaces; trabalho Multimedia Signal Processing Network Applications and Services Pattern and Image Analysis Call em duas fases; segunda deadline prevista para 02/09/2027.",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-radar-RAD-023",
@@ -20796,7 +20796,7 @@
       "programId": "program-45",
       "sourceId": "radar-import",
       "searchableText": "HORIZON-CL4-2027-SPACE-03-12: Digital solutions for space transportation autonomy Transporte espacial; autonomia; modelação e comunicações Applied Mathematics Network Applications and Services Network Architectures and Protocols Monitorização tecnológica; forte dependência de parceiro aeroespacial.",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-radar-RAD-024",
@@ -20847,7 +20847,7 @@
       "programId": "program-45",
       "sourceId": "radar-import",
       "searchableText": "HORIZON-CL4-2027-01-MAT-PROD-49: Proof of market for Horizon results Valorização; proof of market; resultados Horizon Applied Mathematics Multimedia Signal Processing Network Applications and Services Network Architectures and Protocols Pattern and Image Analysis Power Electronics Não é oportunidade transversal sem resultado Horizon elegível previamente identificado.",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-researcher-INV-001",
@@ -20878,7 +20878,7 @@
       "programId": null,
       "sourceId": "researcher-import",
       "searchableText": "Silvério Simões Rosa Optimisation Mathematical Modelling Optimal Control Nonlinear Optimisation Fractional Differential Equations Sensitivity Analysis Applied Statistics Optimisation Mathematical Modelling Optimal Control Nonlinear Optimisation Fractional Differential Equations Sensitivity Analysis Applied Statistics Health Epidemiology Environmental Modelling Mathematical Modelling; Applied Statistics",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-researcher-INV-002",
@@ -20917,7 +20917,7 @@
       "programId": null,
       "sourceId": "researcher-import",
       "searchableText": "Dário Jorge da Conceição Ferreira Statistics Statistical Inference Linear Mixed Models Variance Components Probability Distributions Data Analytics Risk Analysis Variance Component Estimation Statistics Statistical Inference Linear Mixed Models Variance Components Probability Distributions Data Analytics Risk Analysis Variance Component Estimation Health Economics Social Sciences Applied Mathematics; Risk Analysis",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-researcher-INV-003",
@@ -20957,7 +20957,7 @@
       "programId": null,
       "sourceId": "researcher-import",
       "searchableText": "Sandra Maria Bargão Saraiva Ferreira Statistics Statistical Inference Linear Mixed Models Variance Components Probability Distributions Data Analytics Linear Models Variance Component Estimation Distribution Analysis Statistics Statistical Inference Linear Mixed Models Variance Components Probability Distributions Data Analytics Linear Models Variance Component Estimation Distribution Analysis Health Education Social Sciences Risk Analysis Applied Mathematics; Probability",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-researcher-INV-004",
@@ -20988,7 +20988,7 @@
       "programId": null,
       "sourceId": "researcher-import",
       "searchableText": "Celino José Martins Miguel Applied Linear Algebra Coding Theory Commutative Algebra Algebraic Number Theory Computational Mathematics Algebraic Methods Applied Linear Algebra Coding Theory Commutative Algebra Algebraic Number Theory Computational Mathematics Algebraic Methods Telecommunications Information Coding Mathematical Foundations Applied Algebra Coding Theory; Computational Mathematics",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-researcher-INV-005",
@@ -21029,7 +21029,7 @@
       "programId": null,
       "sourceId": "researcher-import",
       "searchableText": "Virginie dos Santos Felizardo Signal Processing Biomedical Signals Machine Learning Predictive Analytics Feature Engineering Digital Health Internet of Medical Things Time-Series Analysis Signal Processing Biomedical Signals Machine Learning Predictive Analytics Feature Engineering Digital Health Internet of Medical Things Time-Series Analysis Clinical Decision Support Neurological Disorders Diabetes Biomedical Signal Processing Machine Learning; Digital Health",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-researcher-INV-006",
@@ -21065,7 +21065,7 @@
       "programId": null,
       "sourceId": "researcher-import",
       "searchableText": "António Manuel Gonçalves Pinheiro Image Processing Video Processing Multimedia Computer Vision Quality Assessment Image Coding 3D Imaging Light Fields Point Clouds Video Coding Multimedia Quality Assessment Image Processing Video Processing Multimedia Computer Vision Quality Assessment Image Coding 3D Imaging Light Fields Point Clouds Video Coding Multimedia Quality Assessment Digital Media Medical Imaging Visual Communications Multimedia; Computer Vision",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-researcher-INV-007",
@@ -21110,7 +21110,7 @@
       "programId": null,
       "sourceId": "researcher-import",
       "searchableText": "Bruno Miguel Correia da Silva Internet of Things Internet of Medical Things Mobile Networks Machine Learning Network Cooperation Reputation Systems Data Analytics Blockchain IoT Platforms Cooperation Mechanisms Mobile Computing Internet of Things Internet of Medical Things Mobile Networks Machine Learning Network Cooperation Reputation Systems Data Analytics Blockchain IoT Platforms Cooperation Mechanisms Mobile Computing Digital Health Smart Cities Tourism Industry 4.0 Machine Learning; Mobile Applications",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-researcher-INV-008",
@@ -21147,7 +21147,7 @@
       "programId": null,
       "sourceId": "researcher-import",
       "searchableText": "João Bernardo Ferreira Sequeiros Cybersecurity Cryptography Internet of Things Blockchain Intrusion Detection Network Security Privacy Secure Software Supply Chain Security Security by Design Cybersecurity Cryptography Internet of Things Blockchain Intrusion Detection Network Security Privacy Secure Software Supply Chain Security Security by Design Security Aviation Critical Infrastructure Education Internet of Things; Blockchain",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-researcher-INV-009",
@@ -21187,7 +21187,7 @@
       "programId": null,
       "sourceId": "researcher-import",
       "searchableText": "Nuno Gonçalo Coelho Costa Pombo Software Engineering Software Testing Machine Learning Data Fusion Digital Health Clinical Decision Support Internet of Things Cloud Computing Software Engineering Software Testing Machine Learning Data Fusion Digital Health Clinical Decision Support Internet of Things Cloud Computing Autonomous Mobility Education Environmental Monitoring Digital Health; Data Analytics",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-researcher-INV-010",
@@ -21224,7 +21224,7 @@
       "programId": null,
       "sourceId": "researcher-import",
       "searchableText": "Pedro Ricardo Morais Inácio Cybersecurity Network Security Cryptography Privacy Cloud Computing Internet of Things Network Traffic Analysis Digital Forensics Modelling and Simulation Security Engineering Cybersecurity Network Security Cryptography Privacy Cloud Computing Internet of Things Network Traffic Analysis Digital Forensics Modelling and Simulation Security Engineering Security Critical Infrastructure Cloud Telecommunications Network Traffic Analysis; Cloud Security",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-researcher-INV-011",
@@ -21257,7 +21257,7 @@
       "programId": null,
       "sourceId": "researcher-import",
       "searchableText": "Maria Paula Prata de Sousa Distributed Systems Fault Tolerance Cloud Computing HPC Parallel Computing GPU Computing Data Privacy High Availability Distributed Computing Distributed Systems Fault Tolerance Cloud Computing HPC Parallel Computing GPU Computing Data Privacy High Availability Distributed Computing Cloud Education Industry Data Platforms Cloud Computing; HPC",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-researcher-INV-012",
@@ -21289,7 +21289,7 @@
       "programId": null,
       "sourceId": "researcher-import",
       "searchableText": "Paul Andrew Crocker Distributed Systems HPC Cloud Computing Cybersecurity Cryptography Privacy Blockchain GNSS Parallel Computing Distributed Computing Distributed Systems HPC Cloud Computing Cybersecurity Cryptography Privacy Blockchain GNSS Parallel Computing Distributed Computing Cloud Security Geosciences GNSS Data Services Distributed and Secure Computing Cloud Security; Blockchain",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-researcher-INV-013",
@@ -21326,7 +21326,7 @@
       "programId": null,
       "sourceId": "researcher-import",
       "searchableText": "Frutuoso Gomes Mendes da Silva Computer Graphics Virtual Reality Serious Games Geometric Modelling Mesh Processing Data Visualisation Network Analysis Mesh Simplification Computer Graphics Virtual Reality Serious Games Geometric Modelling Mesh Processing Data Visualisation Network Analysis Mesh Simplification Education Health Sports Interactive Media Virtual Reality; Network Analysis",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-researcher-INV-014",
@@ -21375,7 +21375,7 @@
       "programId": null,
       "sourceId": "researcher-import",
       "searchableText": "Fernando José da Silva Velez 5G 6G Wireless Communications Mobile Networks Radio Resource Management Spectrum Management Satellite Communications RF and Millimetre-Wave Network Planning Energy Harvesting Wearable Sensors Cellular Planning Cross-Layer Design 5G 6G Wireless Communications Mobile Networks Radio Resource Management Spectrum Management Satellite Communications RF and Millimetre-Wave Network Planning Energy Harvesting Wearable Sensors Cellular Planning Cross-Layer Design Telecommunications Space Mobility Digital Health Smart Cities Mobile Networks; Radio Resource Management",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-researcher-INV-015",
@@ -21413,7 +21413,7 @@
       "programId": null,
       "sourceId": "researcher-import",
       "searchableText": "Kailash Anandrao Hambarde Artificial Intelligence Machine Learning Deep Learning Computer Vision Biometrics Person Re-Identification Visual Surveillance UAV Vision Anomaly Detection Pattern Recognition Representation Learning Artificial Intelligence Machine Learning Deep Learning Computer Vision Biometrics Person Re-Identification Visual Surveillance UAV Vision Anomaly Detection Pattern Recognition Representation Learning Security Defence Surveillance Industrial Inspection Biometrics; Artificial Intelligence",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-researcher-INV-016",
@@ -21450,7 +21450,7 @@
       "programId": null,
       "sourceId": "researcher-import",
       "searchableText": "Paulo André Pais Fazendeiro Artificial Intelligence Machine Learning Computational Intelligence Fuzzy Systems Evolutionary Computation Optimisation Bioinformatics Agent-Based Modelling Data Analytics Artificial Intelligence Machine Learning Computational Intelligence Fuzzy Systems Evolutionary Computation Optimisation Bioinformatics Agent-Based Modelling Data Analytics Environment Energy Education Health Computational Intelligence; Environmental Modelling",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-researcher-INV-017",
@@ -21491,7 +21491,7 @@
       "programId": null,
       "sourceId": "researcher-import",
       "searchableText": "António Eduardo Vitória do Espírito Santo Embedded Systems Smart Sensors Instrumentation Control Systems Energy Harvesting Internet of Things Industrial Interoperability Biomedical Signals IEEE 1451 Embedded Systems Smart Sensors Instrumentation Control Systems Energy Harvesting Internet of Things Industrial Interoperability Biomedical Signals IEEE 1451 Industry 4.0 Energy Digital Health Smart Homes Instrumentation; Smart Sensors",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-researcher-INV-018",
@@ -21529,7 +21529,7 @@
       "programId": null,
       "sourceId": "researcher-import",
       "searchableText": "José Álvaro Nunes Pombo Energy Systems Renewable Energy Energy Storage Smart Grids Power Electronics Photovoltaics Battery Management Optimisation Energy Forecasting Energy System Modelling MPPT Battery Modelling Forecasting Energy Systems Renewable Energy Energy Storage Smart Grids Power Electronics Photovoltaics Battery Management Optimisation Energy Forecasting Energy System Modelling MPPT Battery Modelling Forecasting Energy Communities Electric Mobility Buildings Electricity Markets Renewable Energy; Energy Storage",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-researcher-INV-019",
@@ -21565,7 +21565,7 @@
       "programId": null,
       "sourceId": "researcher-import",
       "searchableText": "Sílvio José Pinto Simões Mariano Energy Systems Renewable Energy Smart Grids Power Electronics Control Systems Energy Storage Power System Optimisation Energy Forecasting Power System Control Energy Management Optimisation Forecasting Energy Systems Renewable Energy Smart Grids Power Electronics Control Systems Energy Storage Power System Optimisation Energy Forecasting Power System Control Energy Management Optimisation Forecasting Electricity Markets Energy Communities Renewable Generation Grid Integration Power Systems Renewable Energy; Control Systems",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     },
     {
       "id": "index-researcher-PERFIS COMPLEMENTARES (fora da tblInvestigadores): Hugo Pedro Martins Carriço Proença — Pattern and Image Analysis; Maria do Rosário Alves Calado — Power Electronics.",
@@ -21576,7 +21576,7 @@
       "programId": null,
       "sourceId": "researcher-import",
       "searchableText": "  ",
-      "lastIndexedAt": "2026-08-11T13:54:48.626Z"
+      "lastIndexedAt": "2026-08-13T14:37:42.024Z"
     }
   ]
 }
