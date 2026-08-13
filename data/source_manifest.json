@@ -1,7 +1,7 @@
 {
   "title": "SFIP Source Manifest",
   "version": 1,
-  "generatedAt": "2026-08-13T14:37:42.124Z",
+  "generatedAt": "2026-08-13T14:39:24.156Z",
   "sourceCatalogRef": "data/sfip-official-source-catalog.json",
   "pipelineStages": [
     "Discovery",
